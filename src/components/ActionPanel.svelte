@@ -9,6 +9,7 @@
 
     export let subject;
     import {repeat} from 'lodash'
+    import {CurrentUser} from "../lib/UserService.js";
 
     let cachedDetail = ''
     let shouldShowDetail = false
@@ -27,7 +28,7 @@
         return await (await fetch(`http://localhost:8081/api/${sub}/book-lists`)).json()
     }
 
-    let current_user = 'li6q'
+    let current_user = $CurrentUser
     let shouldShowBookList = false;
 
 </script>
