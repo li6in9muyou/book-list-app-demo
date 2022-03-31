@@ -1,0 +1,36 @@
+### Read book-lists of a user
+GET http://localhost:8081/api/li6q/book-lists
+Accept: application/json
+
+### Create a book-list
+POST http://localhost:8081/api/li6q/book-lists/
+Content-Type: application/json
+
+{
+  "id": "那些年那些显卡",
+  "books": [
+    1050,
+    1060,
+    1080,
+    2080
+  ],
+  "creator": "li6q"
+}
+
+### Update a book-list
+PATCH http://localhost:8081/api/li6q/book-lists/那些年那些显卡
+Content-Type: application/json
+
+{
+  "books": [
+    1050,
+    1060,
+    1080,
+    2080,
+    3080
+  ]
+}
+
+### Delete book-list
+DELETE http://localhost:8081/api/li6q/book-lists/那些年那些显卡
+Content-Type: application/json
