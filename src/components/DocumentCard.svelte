@@ -1,8 +1,8 @@
 <script>
-    export let book;
+    export let book
 
-    import {fileNameWithoutExtension, takeExtension} from "./utility.js";
-    import ActionPanel from './ActionPanel.svelte';
+    import {fileNameWithoutExtension, takeExtension} from './utility.js'
+    import ActionPanel from './ActionPanel.svelte'
 </script>
 
 <style>

@@ -74,20 +74,20 @@
           rel="icon">
 </svelte:head>
 <script>
-    import DocumentCard from "./components/DocumentCard.svelte";
-    import {VirtualScroll} from "svelte-virtual-scroll-list";
-    import SearchTip from "./components/SearchTip.svelte";
-    import {fileNameWithoutExtension} from "./components/utility.js";
-    import {search} from "./components/searchEengine.js";
+    import DocumentCard from './components/DocumentCard.svelte'
+    import {VirtualScroll} from 'svelte-virtual-scroll-list'
+    import SearchTip from './components/SearchTip.svelte'
+    import {fileNameWithoutExtension} from './components/utility.js'
+    import {search} from './components/searchEengine.js'
 
-    let all_fucking_ebooks = [];
+    let all_fucking_ebooks = []
 
     const populate_books = async () => {
-        const url = "http://localhost:8081/api/books"
+        const url = 'http://localhost:8081/api/books'
         all_fucking_ebooks = await (await fetch(url)).json()
     }
 
-    let query = ""
+    let query = ''
     let good
     let books_to_show
     let showing_count

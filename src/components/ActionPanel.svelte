@@ -5,14 +5,15 @@
     }
 </style>
 <script>
-    import TextDisplay from "../lib/TextDisplay.svelte";
-    import {fetchBookDetail} from "../lib/BookDetailService.js";
-    import {fetchBookList} from "../lib/BookListService";
+    import TextDisplay from '../lib/TextDisplay.svelte'
+    import {fetchBookDetail} from '../lib/BookDetailService.js'
+    import {fetchBookList} from '../lib/BookListService'
+    import {CurrentUser} from '../lib/UserService.js'
 
-    export let subject;
+    export let subject
 
     let current_user = $CurrentUser
-    let shouldShowBookList = false;
+    let shouldShowBookList = false
     let shouldShowDetail = false
 </script>
 <div>
