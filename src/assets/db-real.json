@@ -1,0 +1,3566 @@
+{
+ "book-lists": [
+  {
+   "creator": "li6q",
+   "title": "programming",
+   "books": [
+    1989,
+    1111,
+    1232
+   ]
+  },
+  {
+   "creator": "li6q",
+   "title": "人生感悟",
+   "books": [
+    1111,
+    1112,
+    1189
+   ]
+  },
+  {
+   "creator": "guoqingguang",
+   "title": "爱情物语",
+   "books": [
+    1520,
+    1521,
+    1555,
+    999
+   ]
+  }
+ ],
+ "books": [
+  {
+   "id": 1193,
+   "path": "Deep Learning A Visual Aproach by Andrew Glassner [Andrew Glassner].pdf"
+  },
+  {
+   "id": 1643,
+   "path": "The 8020 Principle The Secret of Achieving More With Less by Richard Koch.pdf"
+  },
+  {
+   "id": 1703,
+   "path": "The Road Less Traveled.mobi"
+  },
+  {
+   "id": 1840,
+   "path": "深度强化学习算法与应用研究现状综述_刘朝阳.pdf"
+  },
+  {
+   "id": 1726,
+   "path": "Thoughtful Machine Learning with Python A Test-Driven Approach by Matthew Kirk.pdf"
+  },
+  {
+   "id": 1354,
+   "path": "Introduction to the Design and Analysis of Algorithms by Anany Levitin.pdf"
+  },
+  {
+   "id": 1399,
+   "path": "Learning TensorFlow A Guide to Building Deep Learning Systems by Tom Hope, Yehezkel S. Resheff, and Itay Lieder.pdf"
+  },
+  {
+   "id": 1237,
+   "path": "element of programming.pdf"
+  },
+  {
+   "id": 1102,
+   "path": "Beginning React with Hooks by Lim, Greg.epub"
+  },
+  {
+   "id": 1789,
+   "path": "[Anatomy series Bodyweight strength training anatomy.pdf"
+  },
+  {
+   "id": 1572,
+   "path": "Rich Dad Poor Dad What the Rich Teach Their Kids About Money—That the Poor and Middle Class Do Not by Robert T. Kiyosaki.epub"
+  },
+  {
+   "id": 1767,
+   "path": "WebAssembly in Action With examples using C++ and Emscripten by Gerard Gallant.pdf"
+  },
+  {
+   "id": 1551,
+   "path": "Real-Time Collision Detection by Christer Ericson.pdf"
+  },
+  {
+   "id": 1769,
+   "path": "What Causes War An Introduction to Theories of International Conflict by Greg Cashman.pdf"
+  },
+  {
+   "id": 1308,
+   "path": "Hands-On Data Structures and Algorithms with Rust by Claus Matzinger.pdf"
+  },
+  {
+   "id": 1177,
+   "path": "Data Structures  Algorithms in Kotlin Implementing Practical Data Structures in Kotlin by raywenderlich Tutorial Team, Irina Galata, Matei Suica.pdf"
+  },
+  {
+   "id": 1089,
+   "path": "Attract WomanThe Ultimate Alpha Male Box Set - How To Attract Woman, How To Be An Alpha Male (law of attraction,how to communicate,independence, persuasion, sex talk, masculinity Book 2) by Rick Johns (z-lib.epub"
+  },
+  {
+   "id": 1211,
+   "path": "Django - The Easy Way A step-by-step guide on building Django websites by Samuli Natri.azw3"
+  },
+  {
+   "id": 1195,
+   "path": "Deep Reinforcement Learning Hands-On Apply modern RL methods, with deep Q-networks, value iteration, policy gradients, TRPO, AlphaGo Zero and more by Maxim Lapan.epub"
+  },
+  {
+   "id": 1116,
+   "path": "Build Your Own Website A Comic Guide to HTML, CSS and Wordpress by Nate Cooper.pdf"
+  },
+  {
+   "id": 1129,
+   "path": "Calculated bets computers, gambling, and mathematical modeling to win by Steven Skiena.pdf"
+  },
+  {
+   "id": 1582,
+   "path": "Semantic Software Design A New Theory and Practical Guide for Modern Architects by Eben Hewitt.pdf"
+  },
+  {
+   "id": 1830,
+   "path": "普林斯顿微积分读本(修订版) by Adrain Banner.pdf"
+  },
+  {
+   "id": 1009,
+   "path": "2021考研数学一汤家凤接力题典1800【解答册】 by 汤家凤.pdf"
+  },
+  {
+   "id": 1233,
+   "path": "Eight Dates by John Gottman.epub"
+  },
+  {
+   "id": 1497,
+   "path": "Practical Foundations For Programming Languages by Robert Harper_2.pdf"
+  },
+  {
+   "id": 1676,
+   "path": "The Linux programming interface a Linux und UNIX system programming handbook by Kerrisk, Michael.pdf"
+  },
+  {
+   "id": 1131,
+   "path": "CHAT APPLICATION WITH DISTRIBUTED SYSTEM.pdf"
+  },
+  {
+   "id": 1720,
+   "path": "Think Python An Introduction to Software Design How To Think Like A Computer Scientist by Allen B. Downey.pdf"
+  },
+  {
+   "id": 1710,
+   "path": "The Ten Equations That Rule the World And How You Can Use Them Too by David Sumpter.pdf"
+  },
+  {
+   "id": 1846,
+   "path": "經濟史的趣味 by 賴建誠.pdf"
+  },
+  {
+   "id": 1229,
+   "path": "Dynamic programming. Foundations and principles by Sniedovich M..pdf"
+  },
+  {
+   "id": 1013,
+   "path": "2022张宇考研数学题源探析经典1000题-解析分册 数学一.pdf by 张宇.pdf"
+  },
+  {
+   "id": 1439,
+   "path": "Microservices with Docker, Flask, and React by Michael Herman.pdf"
+  },
+  {
+   "id": 1617,
+   "path": "Start With Why How Great Leaders Inspire Everyone to Take Action by Simon Sinek.pdf"
+  },
+  {
+   "id": 1600,
+   "path": "Software Engineering at Google by Hyrum Wright, Tom Manshreck, Titus Winters.pdf"
+  },
+  {
+   "id": 1806,
+   "path": "基于变量选择和遗传网络规划的期货高频交易策略研究_陈艳.pdf"
+  },
+  {
+   "id": 1791,
+   "path": "《数学建模》姜启源第四版 by 姜启源、谢金星、叶俊.PDF"
+  },
+  {
+   "id": 1421,
+   "path": "Mastering Flask Web Development - Second Edition by Daniel Gaspar, Jack Stouffer.pdf"
+  },
+  {
+   "id": 1036,
+   "path": "A Philosophy of Software Design by Ousterhout, John K.azw3"
+  },
+  {
+   "id": 1787,
+   "path": "Yale Patt - Introduction to Computing Systems_ From Bits & Gates to C & Beyond.pdf"
+  },
+  {
+   "id": 1080,
+   "path": "approvaltestscpp-readthedocs-io-en-latest.pdf"
+  },
+  {
+   "id": 1740,
+   "path": "UML Distilled A Brief Guide to the Standard Object Modeling Language (Martin Fowler).pdf"
+  },
+  {
+   "id": 1056,
+   "path": "Algorithms Illuminated, Part 1 The Basics by Tim Roughgarden.pdf"
+  },
+  {
+   "id": 1242,
+   "path": "Elements of Programming Interviews in Python The Insiders’ Guide by Adnan Aziz, Tsung-Hsien Lee, Amit Prakash.pdf"
+  },
+  {
+   "id": 1733,
+   "path": "tr-2002-02.pdf"
+  },
+  {
+   "id": 1649,
+   "path": "The Art of Computer Programming. Volume 4, Pre-Fascicle 5A Mathematical Preliminaries Redux by Donald E. Knuth.pdf"
+  },
+  {
+   "id": 1764,
+   "path": "Weapons of Math Destruction by Cathy O’Neil.pdf"
+  },
+  {
+   "id": 1201,
+   "path": "Designing Microservices with Django An Overview of Tools and Practices by Akos Hochrein.pdf"
+  },
+  {
+   "id": 1750,
+   "path": "UNIX传奇：历史与回忆（UNIX的诞生记与发展史，贝尔实验室的幕后故事！ ） by 布莱恩·W·克尼汉.mobi"
+  },
+  {
+   "id": 1331,
+   "path": "How to Invent Everything by Ryan North [North, Ryan].epub"
+  },
+  {
+   "id": 1563,
+   "path": "Regular Expression Pocket Reference Regular Expressions for Perl, Ruby, PHP, Python, C, Java and .NET by Tony Stubblebine.pdf"
+  },
+  {
+   "id": 1422,
+   "path": "Mastering Java 11  develop modular and secure Java applications using concurrency and advanced DJK libraries by Lavieri, Edward D..epub"
+  },
+  {
+   "id": 1472,
+   "path": "Operating Systems Principles and Practice, Vol. 2 Concurrency by Thomas Anderson, Michael Dahlin.epub"
+  },
+  {
+   "id": 1030,
+   "path": "A First Course in Abstract Algebra Solution Manual by John B. Fraleigh.pdf"
+  },
+  {
+   "id": 1412,
+   "path": "Love A Very Short Introduction by De Sousa, Ronald.epub"
+  },
+  {
+   "id": 1181,
+   "path": "Data Structures and Algorithms Made Easy Data Structures and Algorithmic Puzzles by Narasimha Karumanchi.pdf"
+  },
+  {
+   "id": 1072,
+   "path": "Angular in Action by Jeremy Wilken.pdf"
+  },
+  {
+   "id": 1831,
+   "path": "普林斯顿概率论读本(图灵出品）.pdf"
+  },
+  {
+   "id": 1371,
+   "path": "Just Enough English Grammar Illustrated by Gabrielle Stobbe.pdf"
+  },
+  {
+   "id": 1066,
+   "path": "Analysis of Financial Time Series, Third Edition (Wiley Series in Probability and Statistics) by Ruey S. Tsay.pdf"
+  },
+  {
+   "id": 1150,
+   "path": "Concepts in Programming Languages by John C. Mitchell.pdf"
+  },
+  {
+   "id": 1521,
+   "path": "progit.pdf"
+  },
+  {
+   "id": 1038,
+   "path": "A Practical Guide to Database Design by Rex Hogan.pdf"
+  },
+  {
+   "id": 1380,
+   "path": "lab-tutorial.pdf"
+  },
+  {
+   "id": 1417,
+   "path": "machine-learning-cheat-sheet.pdf"
+  },
+  {
+   "id": 1082,
+   "path": "Arnold G. Nelson, Jouko Kokkonen, Jason M. McAlexander - Stretching anatomy-Human Kinetics (2007).pdf"
+  },
+  {
+   "id": 1721,
+   "path": "Thinking in C++ vol.1.pdf"
+  },
+  {
+   "id": 1437,
+   "path": "Michael Dawson - Beginning C++ Through Game Programming-Cengage Learning.pdf"
+  },
+  {
+   "id": 1716,
+   "path": "Theory of Computation.pdf"
+  },
+  {
+   "id": 1825,
+   "path": "数学建模 by Frank R. Giordano  Maurice D. Weir  William P. Fox.pdf"
+  },
+  {
+   "id": 1245,
+   "path": "Ember.js Web Development with Ember CLI Build ambitious single-page web applications using the power of Ember.js and Ember CLI by Suchit Puri.pdf"
+  },
+  {
+   "id": 1694,
+   "path": "The Probability Lifesaver All the Tools You Need to Understand Chance by Steven J. Miller.pdf"
+  },
+  {
+   "id": 1854,
+   "path": "肖秀荣考研政治2021 精讲精练 by 肖秀荣.pdf"
+  },
+  {
+   "id": 1798,
+   "path": "原子習慣 細微改變帶來巨大成就的實證法則 (Atomic Habits An Easy  Proven Way to Build Good Habits  Break Bad Ones) by 詹姆斯‧克利爾（James Clear）.epub"
+  },
+  {
+   "id": 1685,
+   "path": "The Missing README A Guide for the New Software Engineer by Chris Riccomini Dmitriy Ryaboy.pdf"
+  },
+  {
+   "id": 1459,
+   "path": "object orinted with c.pdf"
+  },
+  {
+   "id": 1658,
+   "path": "The Complete Software Developer’s Career Guide by John Sonmez.pdf"
+  },
+  {
+   "id": 1607,
+   "path": "Spring Boot Up and Running Building Cloud Native Java and Kotlin Applications by Mark Heckler [Mark Heckler].epub"
+  },
+  {
+   "id": 1252,
+   "path": "Everything Is Fcked A Book About Hope by Mark Manson.epub"
+  },
+  {
+   "id": 1763,
+   "path": "WaveletTutorial.pdf"
+  },
+  {
+   "id": 1824,
+   "path": "搭配其实很好玩2跟阿秋秋一起穿出风格 by 阿秋秋.mobi"
+  },
+  {
+   "id": 1580,
+   "path": "Self-supervised learning for Time Series.pdf"
+  },
+  {
+   "id": 1158,
+   "path": "Concurrent Programming in Java Design Principles and Pattern by Doug Lea.pdf"
+  },
+  {
+   "id": 1311,
+   "path": "Hands-On Reinforcement Learning with Python Master reinforcement and deep reinforcement learning using OpenAI Gym and TensorFlow by Sudharsan Ravichandiran.epub"
+  },
+  {
+   "id": 1564,
+   "path": "Reinforcement Learning  With Open AI, TensorFlow and Keras Using Python by Abhishek Nandy,Manisha Biswas (auth.).pdf"
+  },
+  {
+   "id": 1025,
+   "path": "97 Things Every Programmer Should Know by Kevlin Henney.pdf"
+  },
+  {
+   "id": 1688,
+   "path": "The new and improved Flask mega-tutorial by Miguel Grinberg.pdf"
+  },
+  {
+   "id": 1273,
+   "path": "Fullstack Vue 3 The Complete Guide to Vue.js by Hassan Djirdeh, Nate Murray, and Ari Lerner.pdf"
+  },
+  {
+   "id": 1742,
+   "path": "UML for Java (TM) Programmers by Robert C. Martin.pdf"
+  },
+  {
+   "id": 1619,
+   "path": "STL Tutorial and Reference Guide  C++ Programming with the Standard Template Library by Musser D.R..pdf"
+  },
+  {
+   "id": 1511,
+   "path": "Pro Vim by Mark McDonnell.pdf"
+  },
+  {
+   "id": 1568,
+   "path": "Requirements Engineering From System Goals to UML Models to Software Specifications by Axel van Lamsweerde.pdf"
+  },
+  {
+   "id": 1608,
+   "path": "Spring Boot实战 = Spring Boot in action by Craig Walls.pdf"
+  },
+  {
+   "id": 1239,
+   "path": "Elements of Kotlin by Mark L. Murphy.pdf"
+  },
+  {
+   "id": 1867,
+   "path": "魔鬼搭讪学瞬间与陌生人成为朋友 by 成杰.azw3"
+  },
+  {
+   "id": 1339,
+   "path": "Impact of News on the Trend of Stock Price Change an Analysis.pdf"
+  },
+  {
+   "id": 1801,
+   "path": "图解TCPIP（第五版） by 乌尼日其其格.pdf"
+  },
+  {
+   "id": 1823,
+   "path": "掌控习惯.pdf"
+  },
+  {
+   "id": 1799,
+   "path": "图灵程序设计丛书图解TCPIP(第5版) by 村山公保  竹下隆史  苅田幸雄  荒井透.mobi"
+  },
+  {
+   "id": 1356,
+   "path": "Jared M. Diamond - Guns, Germs, and Steel-C.T. Zen (2003).pdf"
+  },
+  {
+   "id": 1113,
+   "path": "Bootstrap 4 – Responsive Web Design by Silvio Moreto, Matt Lambert, Benjamin Jakobus, Jason Marah.azw3"
+  },
+  {
+   "id": 1302,
+   "path": "Handbook of Data Structures and Applications, Second Edition by Mehta, Dinesh P. Sahni, Sartaj  (eds.).pdf"
+  },
+  {
+   "id": 1592,
+   "path": "Sex Positions Guide The Complete Guide with Fully Illustrated 101+ Top Positions for Exploding your Sex Life and Increase Libido. Advanced Tips on Foreplay for Men and Women (Beginners Friendly). by L.epub"
+  },
+  {
+   "id": 1453,
+   "path": "No Excuses The Power of Self-Discipline by Brian Tracy.epub"
+  },
+  {
+   "id": 1423,
+   "path": "Mastering Java An Effective Project Based Approach including Web Development, Data Structures, GUI Programming and Object Oriented Programming (Beginner to Advanced) by White, Michael B..pdf"
+  },
+  {
+   "id": 1199,
+   "path": "Designing Data-Intensive Applications The Big Ideas Behind Reliable, Scalable, and Maintainable Systems by Martin Kleppmann.pdf"
+  },
+  {
+   "id": 1573,
+   "path": "Romantic Relationships in Emerging Adulthood by Frank D. Fincham, Ming Cui.pdf"
+  },
+  {
+   "id": 1224,
+   "path": "Domain-Driven Design Quickly by Abel Avram, Floyd Marinescu.pdf"
+  },
+  {
+   "id": 1014,
+   "path": "2022汤家凤考研数学复习大全 数学一 by 汤家凤.pdf"
+  },
+  {
+   "id": 1042,
+   "path": "Accelerated C++ - Andrew Koenig, Barbara E. Moo.pdf"
+  },
+  {
+   "id": 1047,
+   "path": "Advanced Data Structures Theory and Applications by Suman Saha Shailendra Shukla.pdf"
+  },
+  {
+   "id": 1548,
+   "path": "Ray Tracing in a Weekend.pdf"
+  },
+  {
+   "id": 1279,
+   "path": "Fundamentals of Software Architecture An Engineering Approach by Mark Richards Neal Ford_2.epub"
+  },
+  {
+   "id": 1796,
+   "path": "前端Serverless 面向全栈的无服务器架构实战 by 杨凯 著.epub"
+  },
+  {
+   "id": 995,
+   "path": "1-s2.0-S1877050919302789-main.pdf"
+  },
+  {
+   "id": 1011,
+   "path": "2022 汤家凤数学经典接力1800题 数学一 解析册 by 汤家凤考研.pdf"
+  },
+  {
+   "id": 1152,
+   "path": "Concepts, techniques, and models of computer programming by by Peter Van Roy, Seif Haridi..pdf"
+  },
+  {
+   "id": 1809,
+   "path": "基于改进的支持向量机的股票预测方法_郝知远.pdf"
+  },
+  {
+   "id": 1647,
+   "path": "The Art of Computer Programming, Vol. 1 Fundamental Algorithms, 3rd Edition by Donald E. Knuth.pdf"
+  },
+  {
+   "id": 1673,
+   "path": "The Java® Virtual Machine Specification, Java SE 8 Edition by Alex Buckley  Gilad Bracha  Frank Yellin  Tim Lindholm [Alex Buckley].epub"
+  },
+  {
+   "id": 1843,
+   "path": "程序员修炼之道：通向务实的最高境界（第2版）【这本书颠覆了无数人的软件生涯！并推动整个IT行业走到今天！时隔20年的再版重磅来袭！】 by (美)David Thomas(大卫·托马斯), Andrew Hunt(安德鲁·亨特).mobi"
+  },
+  {
+   "id": 1408,
+   "path": "Linux Kernel in a Nutshell (In a Nutshell (O'Reilly)).pdf"
+  },
+  {
+   "id": 1818,
+   "path": "强化学习算法与应用综述_李茹杨.pdf"
+  },
+  {
+   "id": 1207,
+   "path": "Discrete Algorithmic Mathematics, Third Edition by Stephen B. Maurer, Anthony Ralston.epub"
+  },
+  {
+   "id": 1546,
+   "path": "Randolph Hock, Gary Price - The Extreme Searcher’s Internet Handbook-CyberAge Books (2013) (1).pdf"
+  },
+  {
+   "id": 1862,
+   "path": "身体图景：艺术、现代性与理想形体  Bodyscape Art. Modernity and the Ideal Figure by [美] 尼古拉斯·米尔佐夫（Nicholas Mirzoeff） 著；萧易 译.pdf"
+  },
+  {
+   "id": 1778,
+   "path": "Willpower Doesn’t Work Discover the Hidden Keys to Success by Benjamin Hardy.epub"
+  },
+  {
+   "id": 1334,
+   "path": "How to Think About Algorithms by Jeff Edmonds.pdf"
+  },
+  {
+   "id": 1761,
+   "path": "Visual Math - See How Math Makes Sense by Jessika Sobanski.pdf"
+  },
+  {
+   "id": 1560,
+   "path": "Redis设计与实现 (数据库技术丛书) by 黄健宏.epub"
+  },
+  {
+   "id": 1210,
+   "path": "Distributed Systems Principles and Paradigms by Andrew S. Tanenbaum Maarten van Steen.pdf"
+  },
+  {
+   "id": 1812,
+   "path": "大数据下主题数据库的研究现状与展望.pdf"
+  },
+  {
+   "id": 1328,
+   "path": "How to invent everything  a survival guide for the stranded time traveler by North, Ryan.epub"
+  },
+  {
+   "id": 1057,
+   "path": "Algorithms Illuminated. Part 3 Greedy Algorithms and Dynamic Programming by Tim Roughgarden.pdf"
+  },
+  {
+   "id": 1248,
+   "path": "Eric Elliott - Composing Software.pdf"
+  },
+  {
+   "id": 1159,
+   "path": "Contemporary Society An Introduction to Social Science by John A Perry, Erna K Perry.epub"
+  },
+  {
+   "id": 1758,
+   "path": "vimfromscratch_first_chapter.pdf"
+  },
+  {
+   "id": 1436,
+   "path": "Meaning of Life A Very Short Introduction by Terry Eagleton.pdf"
+  },
+  {
+   "id": 1774,
+   "path": "Why Programs Fail, Second Edition A Guide to Systematic Debugging by Andreas Zeller.pdf"
+  },
+  {
+   "id": 1085,
+   "path": "Atomic Habits An Easy  Proven Way to Build Good Habits  Break Bad Ones by James Clear.pdf"
+  },
+  {
+   "id": 1841,
+   "path": "爱的八次约会 (EIGHT DATES Essential Conversations for a Lifetime of Love) by 约翰•戈特曼, 朱莉•施瓦茨•戈特曼, 瑞秋•卡尔顿•艾布拉姆斯, 道格•艾布拉姆斯.epub"
+  },
+  {
+   "id": 1448,
+   "path": "multiple SA compared.pdf"
+  },
+  {
+   "id": 1785,
+   "path": "Writing compilers and interpreters software engineering approach using Java by Mak, Ronald.pdf"
+  },
+  {
+   "id": 1321,
+   "path": "Head First SQL Your Brain on SQL -- A Learners Guide by Beighley, Lynn.pdf"
+  },
+  {
+   "id": 1504,
+   "path": "Practicing the Power of Now by Eckhart Tolle.epub"
+  },
+  {
+   "id": 1759,
+   "path": "vim_tutorial.pdf"
+  },
+  {
+   "id": 1505,
+   "path": "Pragmatic Programmer, The From Journeyman to Master (for Jan S Morrison) by Cunningham, Ward Hunt, Andrew Thomas, David.epub"
+  },
+  {
+   "id": 1579,
+   "path": "Self Discipline Mindset Why Self Discipline Is Lacking in Most and How to Unleash It Now by Curtis Leone.epub"
+  },
+  {
+   "id": 1848,
+   "path": "网络是怎样连接的 by 户根勤_2.pdf"
+  },
+  {
+   "id": 1409,
+   "path": "Linux Kernel source code - Heavily Commented (Kernel Version 0.12) by Zhao Jiong.pdf"
+  },
+  {
+   "id": 999,
+   "path": "2-4-6-8 how do you communicate how to make your point in just a minute by Phillip Khan-Panni.pdf"
+  },
+  {
+   "id": 1142,
+   "path": "Competitive Programming 3 The New Lower Bound of Programming Contests by Steven Halim, Felix Halim.pdf"
+  },
+  {
+   "id": 1166,
+   "path": "Counselling for Toads A Psychological Adventure by Board, Robert De.pdf"
+  },
+  {
+   "id": 1191,
+   "path": "Debug It Find, Repair, and Prevent Bugs in Your Code by Paul Butcher.pdf"
+  },
+  {
+   "id": 1869,
+   "path": "魔鬼聊天术 by 阮琦.azw3"
+  },
+  {
+   "id": 1615,
+   "path": "SQL Injection Strategies Practical techniques to secure old vulnerabilities against modern attacks by Ettore Galluccio, Edoardo Caselli, Gabriele Lombari.pdf"
+  },
+  {
+   "id": 1687,
+   "path": "The Modern C++ Challenge Become an expert programmer by solving real-world problems by Marius Bancila.pdf"
+  },
+  {
+   "id": 1290,
+   "path": "Git Notes For Professionals. 100+ pages of professional hints and tricks by GoalKicker.com.pdf"
+  },
+  {
+   "id": 1415,
+   "path": "Machine Learning with Python Cookbook Practical Solutions from Preprocessing to Deep Learning by Chris Albon.pdf"
+  },
+  {
+   "id": 1744,
+   "path": "Understanding MySQL Internals Discovering and Improving a Great Database by Sasha Pachev.pdf"
+  },
+  {
+   "id": 1185,
+   "path": "Database Internals A Deep-Dive into How Distributed Data Systems Work by Alex Petrov.pdf"
+  },
+  {
+   "id": 1093,
+   "path": "BDD in Action Behavior-Driven Development for the whole software lifecycle by John Ferguson Smart.pdf"
+  },
+  {
+   "id": 1518,
+   "path": "Professional CMake A Practical Guide by Craig Scott.pdf"
+  },
+  {
+   "id": 1284,
+   "path": "Genome Res.-2011-Lee-2167-80.pdf"
+  },
+  {
+   "id": 1223,
+   "path": "Domain-Driven Design Distilled by Vaughn Vernon.epub"
+  },
+  {
+   "id": 1212,
+   "path": "Django 3 By Example Build powerful and reliable Python web applications from scratch by Antonio Melé.pdf"
+  },
+  {
+   "id": 1803,
+   "path": "基于ARIMA_SVM组合模型的股票价格预测_程昌品.pdf"
+  },
+  {
+   "id": 1571,
+   "path": "Retrain Your Brain Cognitive Behavioral Therapy in 7 Weeks A Workbook for Managing Depression and Anxiety by Gillihan PhD, Seth J..epub"
+  },
+  {
+   "id": 1462,
+   "path": "Object-Oriented Software Construction (BookCD-ROM) by Bertrand Meyer.pdf"
+  },
+  {
+   "id": 1807,
+   "path": "基于强化学习的金融交易系统研究与发展_梁天新.pdf"
+  },
+  {
+   "id": 1684,
+   "path": "The Mindful Way Workbook An 8-Week Program to Free Yourself from Depression and Emotional Distress by John D. Teasdale, J. Mark G. Williams, Zindel V. Segal.pdf"
+  },
+  {
+   "id": 1188,
+   "path": "Day Bang How To Casually Pick Up Girls During The Day by Roosh V.epub"
+  },
+  {
+   "id": 1692,
+   "path": "The Power of Now A Guide to Spiritual Enlightenment by Eckhart Tolle.epub"
+  },
+  {
+   "id": 1051,
+   "path": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman-Compilers - Principles, Techniques, and Tools-Pearson_Addison Wesley (2006).pdf"
+  },
+  {
+   "id": 1552,
+   "path": "Real-World Bug Hunting A Field Guide to Web Hacking by Peter Yaworski.epub"
+  },
+  {
+   "id": 1566,
+   "path": "Relational Database Design and Implementation Clearly Explained by Jan L. Harrington.pdf"
+  },
+  {
+   "id": 1578,
+   "path": "Seeing What Others Dont The Remarkable Ways We Gain Insights by Gary Klein.epub"
+  },
+  {
+   "id": 1554,
+   "path": "Real-World Software Development A Project-Driven Guide to Fundamentals in Java by Raoul-Gabriel Urma Richard Warburton.pdf"
+  },
+  {
+   "id": 1864,
+   "path": "这就是搜索引擎：核心技术详解 by 张俊林.pdf"
+  },
+  {
+   "id": 1545,
+   "path": "Qt5 Python GUI Programming Cookbook Building responsive and powerful cross-platform applications with PyQt by Harwani, B.M..pdf"
+  },
+  {
+   "id": 1601,
+   "path": "Software Engineering with UML by Bhuvan Unhelkar.pdf"
+  },
+  {
+   "id": 1861,
+   "path": "超級聊天學為中國人量身定制的口才實操指南 by 陳建偉 [陳建偉].epub"
+  },
+  {
+   "id": 1162,
+   "path": "Content_Mining_and_Network_Analysis_of_Microblog_S.pdf"
+  },
+  {
+   "id": 1299,
+   "path": "Guide to graph algorithms. Sequential, parallel and distributed by Erciyes K..pdf"
+  },
+  {
+   "id": 1496,
+   "path": "Practical Foundations for Programming Languages by Robert Harper.pdf"
+  },
+  {
+   "id": 1146,
+   "path": "Computer Graphics from Scratch A Programmers Introduction to 3D Rendering by Gabriel Gambetta.pdf"
+  },
+  {
+   "id": 1120,
+   "path": "Building RESTful Web Services with Java EE 8 by Mario-Leander Reimer [Mario-Leander Reimer].epub"
+  },
+  {
+   "id": 1625,
+   "path": "Svelte 3 Up and Running A practical guide to building production-ready static web apps with Svelte 3 (Alessandro Segala).pdf"
+  },
+  {
+   "id": 1829,
+   "path": "日剧男友穿搭圣经 by [日本] 大山旬  [日本]Smart+Moonmax编辑部.pdf"
+  },
+  {
+   "id": 1226,
+   "path": "Domain-Specific Languages by Martin Fowler.pdf"
+  },
+  {
+   "id": 1260,
+   "path": "Fifty Quick Ideas To Improve Your Tests (Gojko Adzic, David Evans, Tom Roden).epub"
+  },
+  {
+   "id": 1098,
+   "path": "Beginning Java MVC 1.0 Model View Controller Development to Build Web, Cloud, and Microservices Applications by Peter Späth.pdf"
+  },
+  {
+   "id": 1419,
+   "path": "Make Her Chase You The Guide To Attracting Girls Who Are Out Of Your League Even If YouRe Not Rich Or Handsome by Tynan.pdf"
+  },
+  {
+   "id": 1637,
+   "path": "Text Appeal A Quickie Read (Love Online Book 2) by Ashley Bostock.epub"
+  },
+  {
+   "id": 1559,
+   "path": "Redis Essentials by Maxwell Dayvson Da Silva, Hugo Lopes Tavares.pdf"
+  },
+  {
+   "id": 1171,
+   "path": "CSS Grid Layout 5 Practical Projects by Diego Souza, Ahmed Bouchefra, Giulio Mainardi, Ilya Bodrov-Krukowski, Craig Buckler.epub"
+  },
+  {
+   "id": 1868,
+   "path": "魔鬼约会学 by 阮琦.azw3"
+  },
+  {
+   "id": 1366,
+   "path": "JavaScript Everywhere Building Cross-Platform Applications with GraphQL, React, React Native, and Electron by Adam D. Scott.epub"
+  },
+  {
+   "id": 1590,
+   "path": "Seven More Languages in Seven Weeks Languages That Are Shaping the Future by Bruce Tate, Fred Daoud, Jack Moffitt, Ian Dees.pdf"
+  },
+  {
+   "id": 1285,
+   "path": "Get Programming with Haskell by Will Kurt.pdf"
+  },
+  {
+   "id": 1827,
+   "path": "数学建模算法与应用（第2版） by 司守奎 孙兆亮.pdf"
+  },
+  {
+   "id": 1313,
+   "path": "Hands-On Simulation Modeling with Python Develop simulation models to get accurate results and enhance decision-making processes by Giuseppe Ciaburro.pdf"
+  },
+  {
+   "id": 1638,
+   "path": "Text Data Management and Analysis A Practical Introduction to Information Retrieval and Text Mining by ChengXiang Zhai, Sean Massung.pdf"
+  },
+  {
+   "id": 1250,
+   "path": "Everybody Lies Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are by Seth Stephens-Davidowitz.epub"
+  },
+  {
+   "id": 1870,
+   "path": "麦肯锡笔记思考法 by 大岛祥誉, 沈海泳.epub"
+  },
+  {
+   "id": 1396,
+   "path": "Learning React Modern Patterns for Developing React Apps by Alex Banks and Eve Porcello.pdf"
+  },
+  {
+   "id": 1820,
+   "path": "把妹百科泉书 by 陈泉.pdf"
+  },
+  {
+   "id": 1078,
+   "path": "Applied Time Series Analysis A Practical Guide to Modeling and Forecasting by Terence C. Mills.pdf"
+  },
+  {
+   "id": 1695,
+   "path": "The Question Book - What Makes You Tick by Mikael Krogerus Roman Tschäppeler.epub"
+  },
+  {
+   "id": 1792,
+   "path": "一种基于Python和BP神经网络的股票预测方法_曾武序.pdf"
+  },
+  {
+   "id": 1702,
+   "path": "The Road Less Traveled, 25th Anniversary Edition.pdf"
+  },
+  {
+   "id": 1363,
+   "path": "Java Web程序开发入门 by 传智播客高教产品研发部.epub"
+  },
+  {
+   "id": 990,
+   "path": "(Sports Anatomy) Jacqui Haas - Dance Anatomy-Human Kinetics (2010).pdf"
+  },
+  {
+   "id": 1392,
+   "path": "Learning C programming with Unity 3D by Alex Okita.pdf"
+  },
+  {
+   "id": 1514,
+   "path": "Probability for Dummies by Rumsey, Deborah J.pdf"
+  },
+  {
+   "id": 1485,
+   "path": "PowerShell Cookbook, 4th Edition by Lee Holmes.epub"
+  },
+  {
+   "id": 1632,
+   "path": "Taking the Leap Freeing Ourselves from Old Habits and Fears by Pema Chödrön.epub"
+  },
+  {
+   "id": 1783,
+   "path": "Working in the Dark Understanding the pre-suicide state of mind by Donald Campbell, Rob Hale.pdf"
+  },
+  {
+   "id": 1243,
+   "path": "Elements of Programming Interviews The Insiders’ Guide by Adnan Aziz, Tsung-Hsien Lee, Amit Prakash.pdf"
+  },
+  {
+   "id": 1544,
+   "path": "Python高性能编程 by [美] Micha Gorelick 戈雷利克 Ian Ozsvald 欧日沃尔德.pdf"
+  },
+  {
+   "id": 1081,
+   "path": "Architecture Patterns with Python Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices by Bob Gregory Harry Percival.epub"
+  },
+  {
+   "id": 1668,
+   "path": "The Emotionally Intelligent Manager How to Develop and Use the Four Key Emotional Skills of Leadership by David R. Caruso, Peter Salovey.pdf"
+  },
+  {
+   "id": 1037,
+   "path": "A Philosophy of Software Design, 2nd Edition by Ousterhout, John.djvu"
+  },
+  {
+   "id": 1529,
+   "path": "Programming Rust, 2nd Edition (Early Release) by Jim Blandy, Jason Orendorff.epub"
+  },
+  {
+   "id": 1451,
+   "path": "Natural Game - The System For Being A Natural With Women by PUA-Traning.pdf"
+  },
+  {
+   "id": 1853,
+   "path": "肖秀荣考研政治2021 1000题 by 肖秀荣.pdf"
+  },
+  {
+   "id": 1069,
+   "path": "Andrew Hunt, David Thomas - The Pragmatic Programmer_ From Journeyman to Master (1999, Addison-Wesley Professional) - libgen.lc.epub"
+  },
+  {
+   "id": 1749,
+   "path": "UNIX and Linux System Administration Handbook by Evi Nemeth et al..pdf"
+  },
+  {
+   "id": 1531,
+   "path": "Programming with MATLAB for Scientists A Beginner’s Introduction by Eugeniy E. Mikhailov.pdf"
+  },
+  {
+   "id": 1640,
+   "path": "The 4-Hour Work Week by NA.pdf"
+  },
+  {
+   "id": 1275,
+   "path": "Functional Programming in Kotlin by Marco Vermeulen, Rúnar Bjarnason, Paul Chiusano.pdf"
+  },
+  {
+   "id": 1393,
+   "path": "Learning Concurrency in Kotlin Build highly efficient and robust applications by Miguel Angel Castiblanco Torres.pdf"
+  },
+  {
+   "id": 1603,
+   "path": "Some Quantative Tests For Stock Price Generating Models And Trading Folklore by Osborne M.F.M..pdf"
+  },
+  {
+   "id": 1457,
+   "path": "NoSQL Distilled A Brief Guide to the Emerging World of Polyglot Persistence (Pramod J. Sadalage, Martin Fowler).pdf"
+  },
+  {
+   "id": 1704,
+   "path": "The Road to learn React Your journey to master plain yet pragmatic React.js by Robin Wieruch.pdf"
+  },
+  {
+   "id": 1332,
+   "path": "How to Make Love All Night (and Drive Your Woman Wild) (And Drive a Woman Wild  Male Multiple Orgasm and Other Secrets for Prolonged Lovemaking) by Barbara Keesling.pdf"
+  },
+  {
+   "id": 1696,
+   "path": "The Ray Tracer Challenge A Test-Driven Guide to Your First 3D Renderer by Jamis Buck.epub"
+  },
+  {
+   "id": 1136,
+   "path": "CMake Cookbook by Radovan Bast.epub"
+  },
+  {
+   "id": 1049,
+   "path": "Advanced TypeScript programming projects  build 9 different apps with TypeScript 3 and JavaScript frameworks such as Angular, React, and Vue by O’Hanlon, Peter.epub"
+  },
+  {
+   "id": 1835,
+   "path": "机器学习在股价预测中的研究综述_林升.pdf"
+  },
+  {
+   "id": 1003,
+   "path": "2016_Book_CryptographyMadeSimple.pdf"
+  },
+  {
+   "id": 1613,
+   "path": "SQL for Dummies by Allen G. Taylor.pdf"
+  },
+  {
+   "id": 1376,
+   "path": "Kotlin Coroutines by Tutorial Mastering Coroutines in Kotlin and Android by raywenderlich Tutorial Team, Filip Babić, Nishant Srivastava.pdf"
+  },
+  {
+   "id": 1205,
+   "path": "Did She Reply Yet The Gentlemans Guide to Owning Online Dating by Patrick King.epub"
+  },
+  {
+   "id": 1706,
+   "path": "The science of trust  emotional attunement for couples by Gottman, John Mordechai.epub"
+  },
+  {
+   "id": 1610,
+   "path": "Sprint How to Solve Big Problem (Chayon Shaah Book series) by Jake Knapp, John Zeratsky, Braden Kowitz.pdf"
+  },
+  {
+   "id": 1487,
+   "path": "PowerShell in Depth An administrators guide by Don Jones, Richard Siddaway, Jeffrey Hicks.pdf"
+  },
+  {
+   "id": 1327,
+   "path": "How to Instantly Connect with Anyone 96 All-New Little Tricks for Big Success in Relationships by Leil Lowndes.pdf"
+  },
+  {
+   "id": 1605,
+   "path": "Spring Boot in Action by Craig Walls.pdf"
+  },
+  {
+   "id": 1197,
+   "path": "deep transformer models for time series forecasting.pdf"
+  },
+  {
+   "id": 1048,
+   "path": "Advanced Python Programming Build high performance, concurrent, and multi-threaded apps with Python using proven design patterns by Lanaro, Dr GabrieleNguyen, QuanKasampalis, Sakis.pdf"
+  },
+  {
+   "id": 1701,
+   "path": "The Road Less Traveled by Peck M Scott.epub"
+  },
+  {
+   "id": 1838,
+   "path": "洗脑的历史：祸害世界三千年的极端思想控制术解析 by 傅志彬.mobi"
+  },
+  {
+   "id": 1108,
+   "path": "bit-chat.pdf"
+  },
+  {
+   "id": 994,
+   "path": "1-s2.0-S106294081730400X-main.pdf"
+  },
+  {
+   "id": 1340,
+   "path": "Implementing domain-driven design by Addison-Wesley.Evans, EricVernon, Vaughn.pdf"
+  },
+  {
+   "id": 1659,
+   "path": "The Courage to be Disliked How to Change Your Life and Achieve Real Happiness by Ichiro Kishimi Fumitake Koga.epub"
+  },
+  {
+   "id": 1513,
+   "path": "Probability Demystified by Allan Bluman.pdf"
+  },
+  {
+   "id": 1509,
+   "path": "Pro Spring Boot 2 An Authoritative Guide to Building Microservices, Web and Enterprise Applications, and Best Practices by Felipe Gutierrez.pdf"
+  },
+  {
+   "id": 1524,
+   "path": "Programming DSLs in Kotlin Design Expressive and Robust Special Purpose Code by Venkat Subramaniam.epub"
+  },
+  {
+   "id": 1050,
+   "path": "Agile Modeling with UML Code Generation, Testing, Refactoring by Bernhard Rumpe.pdf"
+  },
+  {
+   "id": 1664,
+   "path": "The developers guide to debugging by Thorsten Grötker, Ulrich Holtmann, Holger Keding, Markus Wloka.pdf"
+  },
+  {
+   "id": 1271,
+   "path": "Full Stack Serverless Modern Application Development with React, AWS, and GraphQL by Nader Dabit.epub"
+  },
+  {
+   "id": 1832,
+   "path": "最強網路聊天術 by 白鳥麻紀 [白鳥麻紀].epub"
+  },
+  {
+   "id": 1293,
+   "path": "Google Data Studio for Beginners Start Making Your Data Actionable by Grant Kemp Gerry White.epub"
+  },
+  {
+   "id": 1452,
+   "path": "Ng-Book The Complete Guide to Angular 9 by Nathan Murray Felipe Coury Ari Lerner Carlos Taborda.pdf"
+  },
+  {
+   "id": 1322,
+   "path": "Heineman, George T._Pollice, Gary_Selkow, Stanley - Algorithms in a nutshell-O'Reilly Media (2016).pdf"
+  },
+  {
+   "id": 1724,
+   "path": "Thinking Recursively by Eric S. Roberts.pdf"
+  },
+  {
+   "id": 1567,
+   "path": "Relationship Grit A True Story with Lessons to Stay Together, Grow Together, and Thrive Together by Jon Gordon.epub"
+  },
+  {
+   "id": 1288,
+   "path": "Getting Started with SQL A Hands-On Approach for Beginners by Thomas Nield.pdf"
+  },
+  {
+   "id": 1661,
+   "path": "The Demon-Haunted World by Carl Sagan.pdf"
+  },
+  {
+   "id": 1594,
+   "path": "Skepticism 101  how to think like a scientist by Shermer, Michael.pdf"
+  },
+  {
+   "id": 1469,
+   "path": "Operating Systems by Harvey M. Deitel, Paul Deitel, David R. Choffnes_2.pdf"
+  },
+  {
+   "id": 1709,
+   "path": "The Soul of A New Machine by Tracy Kidder.epub"
+  },
+  {
+   "id": 1591,
+   "path": "Seven Web Frameworks in Seven Weeks. Adventures in Better Web Apps by Jack Moffitt, Frederic Daoud.pdf"
+  },
+  {
+   "id": 1256,
+   "path": "FastSLAM算法的仿生优化改进研究_张铠翔.pdf"
+  },
+  {
+   "id": 1186,
+   "path": "Database System Concepts by Abraham Silberschatz, Henry F. Korth, S. Sudarshan.pdf"
+  },
+  {
+   "id": 1124,
+   "path": "C++ Coding Standards 101 Rules, Guidelines, and Best Practices by Herb Sutter, Andrei Alexandrescu.epub"
+  },
+  {
+   "id": 1414,
+   "path": "Machine Learning for Dummies 2nd Edition by John Paul Mueller.epub"
+  },
+  {
+   "id": 1420,
+   "path": "Mastering CMake by Ken Martin Bill Hoffman.djvu"
+  },
+  {
+   "id": 1053,
+   "path": "Algorithmic Thinking A Problem-Based Introduction by Daniel Zingaro.pdf"
+  },
+  {
+   "id": 1871,
+   "path": "麻美姐姐教你：手放這裡女人會很想要 by 麻美由真.pdf"
+  },
+  {
+   "id": 1585,
+   "path": "Serverless架构应用开发：Python实现-2021 by [印] 贾莱姆 • 拉杰 • 罗希特 [罗希特, 贾莱姆 • 拉杰 •].epub"
+  },
+  {
+   "id": 1104,
+   "path": "Beyond Infinity An Expedition to the Outer Limits of the Mathematical Universe by Eugenia Cheng.epub"
+  },
+  {
+   "id": 1307,
+   "path": "Hands-On Concurrency with Rust Confidently build memory-safe, parallel, and efficient software in Rust by Brian L. Troutwine.epub"
+  },
+  {
+   "id": 1244,
+   "path": "Ember.js in Action by Joachim Haagen Skeie.pdf"
+  },
+  {
+   "id": 1117,
+   "path": "Building Microservices by Sam Newman.pdf"
+  },
+  {
+   "id": 1753,
+   "path": "UNSCRIPTED by MJ DeMarco.mobi"
+  },
+  {
+   "id": 1130,
+   "path": "Care of the Soul, Twenty-fifth Anniversary Ed A Guide for Cultivating Depth and Sacredness in Everyday Life by Thomas Moore.epub"
+  },
+  {
+   "id": 1836,
+   "path": "洗脑的历史 by 傅志彬.pdf"
+  },
+  {
+   "id": 1386,
+   "path": "Learn Linux in a Month of Lunches by Steven Ovadia.pdf"
+  },
+  {
+   "id": 1597,
+   "path": "Soft Skills The Software Developers Life Manual by John Sonmez.pdf"
+  },
+  {
+   "id": 1808,
+   "path": "基于微博情绪信息的股票市场预测_黄润鹏.pdf"
+  },
+  {
+   "id": 1672,
+   "path": "The Java Workshop - A practical, no-nonsense guide to Java. by David Cuartielles, Andreas Göransson, Eric Foster-Johnson.pdf"
+  },
+  {
+   "id": 1383,
+   "path": "Learn Bootstrap The Collection A Three Volume Set by Maria Antonietta Perna, Syed Fazle Rahman, Ilya Bodrov-Krukowski, Ahmed Bouchefra, Craig Watson, Rhiana Heath, Ivaylo Gerchev, George Martsoukos, A.epub"
+  },
+  {
+   "id": 1734,
+   "path": "tsp95.pdf"
+  },
+  {
+   "id": 1802,
+   "path": "图解TCPIP（第五版） by 乌尼日其其格_2.pdf"
+  },
+  {
+   "id": 1476,
+   "path": "Operating Systems Three Easy Pieces.pdf"
+  },
+  {
+   "id": 1757,
+   "path": "Using Docker Developing and Deploying Software with Containers by Adrian Mouat.pdf"
+  },
+  {
+   "id": 1139,
+   "path": "Communication Skills For Dummies by Elizabeth Kuhnke.pdf"
+  },
+  {
+   "id": 1679,
+   "path": "The Long View Career Strategies to Start Strong, Reach High, and Go Far by Brian Fetherstonhaugh.epub"
+  },
+  {
+   "id": 1793,
+   "path": "一開口撩人又聊心 by 瑪那熊（陳家維） [瑪那熊（陳家維）].epub"
+  },
+  {
+   "id": 1149,
+   "path": "Computer Simulation A Foundational Approach Using Python by Yahya Esmail Osais.pdf"
+  },
+  {
+   "id": 1312,
+   "path": "Hands-on Rust Effective Learning through 2D Game Development and Play by Herbert Wolverson.epub"
+  },
+  {
+   "id": 1852,
+   "path": "聽懂了，桃花自然來：從理解暗示語到完美回話，讓家人信賴‧情人愛你‧朋友挺你的無往不利GAS說話術 by 王介安 [王介安].epub"
+  },
+  {
+   "id": 1584,
+   "path": "Serverless从入门到进阶：架构、原理与实践 by 方坤丁, 孙远高.epub"
+  },
+  {
+   "id": 1837,
+   "path": "洗脑的历史禍害三千年的極端思想控制術 by 傅志彬.epub"
+  },
+  {
+   "id": 1262,
+   "path": "Finish What You Start The Art of Following Through, Taking Action, Executing,  Self-Discipline by Peter Hollins.epub"
+  },
+  {
+   "id": 1528,
+   "path": "Programming Rust - 2nd Edition by Jim Blandy, Jason Orendorff, Leonora F.S. Tindall.pdf"
+  },
+  {
+   "id": 1300,
+   "path": "Guide to Operating Systems by Greg Tomsho.pdf"
+  },
+  {
+   "id": 1165,
+   "path": "Core Bazel Fast Builds For Busy People by Mustiata, Bogdan.pdf"
+  },
+  {
+   "id": 1700,
+   "path": "The Righteous Mind Why Good People Are Divided by Politics and Religion by Jonathan Haidt_2.epub"
+  },
+  {
+   "id": 1246,
+   "path": "Empirical analysis of GUI programming concerns.pdf"
+  },
+  {
+   "id": 1623,
+   "path": "Structure and Interpretation of Computer Programs by Harold Abelson, Gerald Jay Sussman.pdf"
+  },
+  {
+   "id": 1362,
+   "path": "Java Threads Understanding and Mastering Concurrent Programming by Scott Oaks, Henry Wong.pdf"
+  },
+  {
+   "id": 1677,
+   "path": "The Little Book of HTMLCSS Frameworks by Jens Oliver Meiert.pdf"
+  },
+  {
+   "id": 1143,
+   "path": "Competitive Programming in Python 128 Algorithms to Develop your Coding Skills by Christoph Dürr, Jill-Jênn Vie.pdf"
+  },
+  {
+   "id": 1682,
+   "path": "The millionaire fastlane crack the code to wealth and live rich for a lifetime by DeMarco, M. J.epub"
+  },
+  {
+   "id": 1126,
+   "path": "C++ Concurrency in Action by Anthony Williams.pdf"
+  },
+  {
+   "id": 1292,
+   "path": "Google Cloud Cookbook by Rui Costa  Drew Hodun [Rui Costa].pdf"
+  },
+  {
+   "id": 1046,
+   "path": "Advanced Data Structures by Peter Brass.pdf"
+  },
+  {
+   "id": 1602,
+   "path": "Software Engineering, 10th Edition by Ian Sommerville.pdf"
+  },
+  {
+   "id": 1026,
+   "path": "97 Things Every Programmer Should Know Collective Wisdom from the Experts by Kevlin Henney.epub"
+  },
+  {
+   "id": 1768,
+   "path": "Weird Maths At the Edge of Infinity and Beyond by David Darling, Agnijo Banerjee.epub"
+  },
+  {
+   "id": 1765,
+   "path": "Weapons of Math Destruction How Big Data Increases Inequality and Threatens Democracy by Cathy O’Neil.epub"
+  },
+  {
+   "id": 1547,
+   "path": "Rapid GUI Programming with Python and Qt The Definitive Guide to PyQt Programming by Mark Summerfield.pdf"
+  },
+  {
+   "id": 1071,
+   "path": "Anger Management For Dummies by Smith, Laura L..pdf"
+  },
+  {
+   "id": 991,
+   "path": "05-bufferpool.pdf"
+  },
+  {
+   "id": 1530,
+   "path": "Programming Scala, 3rd Edition by Dean Wampler.epub"
+  },
+  {
+   "id": 1689,
+   "path": "The Object-Oriented Thought Process by Weisfeld, Matt.pdf"
+  },
+  {
+   "id": 1294,
+   "path": "Google Flutter Mobile Development Quick Start Guide by Prajyot Mainkar Salvatore Giordano.pdf"
+  },
+  {
+   "id": 1330,
+   "path": "How to Invent Everything A Survival Guide for the Stranded Time Traveler by North, Ryan.azw3"
+  },
+  {
+   "id": 1491,
+   "path": "Practical C++ Design From Programming to Architecture by Adam B. Singer.pdf"
+  },
+  {
+   "id": 1055,
+   "path": "Algorithms illuminated Part 2 Graph Algorithms and Data Structures by Tim Roughgarden.pdf"
+  },
+  {
+   "id": 1766,
+   "path": "Web App Development Book Guide to Ember.js by David V..epub"
+  },
+  {
+   "id": 1501,
+   "path": "Practical Svelte Create Performant Applications with the Svelte Component Framework by Alex Libby.pdf"
+  },
+  {
+   "id": 1350,
+   "path": "Introduction to algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein.pdf"
+  },
+  {
+   "id": 1519,
+   "path": "Professional CMake A Practical Guide by Craig Scott_2.pdf"
+  },
+  {
+   "id": 1163,
+   "path": "Convict Conditioning 2 Advanced Prison Training Tactics for Muscle Gain, Fat Loss, and Bulletproof Joints by Paul Wade.pdf"
+  },
+  {
+   "id": 1770,
+   "path": "What life should mean to you by Adler, Alfred, 1870-1937.pdf"
+  },
+  {
+   "id": 1352,
+   "path": "Introduction to Software Design with Java by Martin P. Robillard.pdf"
+  },
+  {
+   "id": 1059,
+   "path": "Algorithms to Live By The Computer Science of Human Decisions by Brian Christian, Tom Griffiths.epub"
+  },
+  {
+   "id": 1466,
+   "path": "Operating System Concepts by Abraham Silberschatz, Greg Gagne, Peter B. Galvin.pdf"
+  },
+  {
+   "id": 1063,
+   "path": "An Engineers Guide to Mathematica by Edward B. Magrab.pdf"
+  },
+  {
+   "id": 1310,
+   "path": "Hands-On Functional Programming in Rust by Andrew Johnson.pdf"
+  },
+  {
+   "id": 1819,
+   "path": "怎样征服美丽少女 by 刘国章.pdf"
+  },
+  {
+   "id": 1576,
+   "path": "Scientific and Technological Thinking by Michael E  Gorman.pdf"
+  },
+  {
+   "id": 1259,
+   "path": "FFT_2.pdf"
+  },
+  {
+   "id": 1280,
+   "path": "Game How To Meet, Attract, And Date Women. by Roosh V.epub"
+  },
+  {
+   "id": 1378,
+   "path": "Kotlin Programming Cookbook Explore more than 100 recipes that show how to build robust mobile and web applications with Kotlin, Spring Boot, and Android by Aanand Shekhar Roy, Rashi Karanpuria.pdf"
+  },
+  {
+   "id": 1634,
+   "path": "TensorFlow in 1 Day Make your own Neural Network by Krishna Rungta.pdf"
+  },
+  {
+   "id": 1441,
+   "path": "Modern C++ programming with test-driven development code better, sleep better by Jeff Langr.pdf"
+  },
+  {
+   "id": 1527,
+   "path": "Programming Pearls (2nd Edition) by Jon Bentley.pdf"
+  },
+  {
+   "id": 1495,
+   "path": "Practical Flutter Improve your Mobile Development with Google’s Latest Open-Source SDK by Frank Zammetti.pdf"
+  },
+  {
+   "id": 1569,
+   "path": "Research and Analysis of the Front-end Frameworks and.pdf"
+  },
+  {
+   "id": 1828,
+   "path": "数学模型(第五版) by 姜启源 谢金星 叶俊.pdf"
+  },
+  {
+   "id": 1814,
+   "path": "姜启源数学建模第四版答案 by 姜启源.pdf"
+  },
+  {
+   "id": 1016,
+   "path": "2103.11943.pdf"
+  },
+  {
+   "id": 1698,
+   "path": "The Righteous Mind Why Good People Are Divided by Politics and Religion by Jonathan Haidt.epub"
+  },
+  {
+   "id": 1500,
+   "path": "Practical Svelte Create Performant Applications with the Svelte Component Framework by Alex Libby.epub"
+  },
+  {
+   "id": 1084,
+   "path": "asi-04-00017.pdf"
+  },
+  {
+   "id": 1484,
+   "path": "Power, Sex, Suicide Mitochondria and the Meaning of Life by Nick Lane.pdf"
+  },
+  {
+   "id": 1147,
+   "path": "Computer Networking A Top-Down Approach, 7th Edition by James Kurose, Keith Ross.pdf"
+  },
+  {
+   "id": 1800,
+   "path": "图灵程序设计丛书：Python 高手进阶之路（套装全10册）.pdf"
+  },
+  {
+   "id": 1351,
+   "path": "Introduction to Algorithms for Data Mining and Machine Learning by Xin-She Yang.pdf"
+  },
+  {
+   "id": 1272,
+   "path": "Full Stack Serverless Modern Application Development with React, AWS, and GraphQL by Nader Dabit.pdf"
+  },
+  {
+   "id": 1693,
+   "path": "The Power of Now A Guide to Spiritual Enlightenment by Eckhart Tolle_2.epub"
+  },
+  {
+   "id": 1022,
+   "path": "365 Days With Self-Discipline 365 Life-Altering Thoughts on Self-Control, Mental Resilience, and Success by Martin Meadows.epub"
+  },
+  {
+   "id": 1278,
+   "path": "Fundamentals of Software Architecture An Engineering Approach by Mark Richards Neal Ford.epub"
+  },
+  {
+   "id": 1635,
+   "path": "Testing Angular Applications by Jesse Palmer, Corinna Cohn, Mike Giambalvo, Craig Nishina.pdf"
+  },
+  {
+   "id": 1587,
+   "path": "Serverless架构：无服务器单页应用开发 by 郑美赞, 简传挺.epub"
+  },
+  {
+   "id": 1555,
+   "path": "Real-World Software Development A Project-Driven Guide to Fundamentals in Java by Raoul-Gabriel Urma, Richard Warburton.epub"
+  },
+  {
+   "id": 1333,
+   "path": "How to Talk to Girls Simplified 3 Steps How to Have Her at Hello and Attract Women Through Honesty by German Muhlenberg.epub"
+  },
+  {
+   "id": 1542,
+   "path": "Python Programming Blueprints Build nine projects by leveraging powerful frameworks such as Flask, Nameko, and Django by Daniel Furtado, Marcus Pennington_2.pdf"
+  },
+  {
+   "id": 1522,
+   "path": "Programming Challenges The Programming Contest Training Manual by Steven S. Skiena, Miguel Revilla.pdf"
+  },
+  {
+   "id": 1736,
+   "path": "Two Scoops of Django 3.x by Daniel  Audrey Feldroy.pdf"
+  },
+  {
+   "id": 1115,
+   "path": "Build a Website with Django 3 by Nigel George.pdf"
+  },
+  {
+   "id": 1281,
+   "path": "Game Theory 101 The Rationality of War by William Spaniel.pdf"
+  },
+  {
+   "id": 1303,
+   "path": "Handbook of depression by Gotlib, Ian H. Hammen, Constance L  (eds.).pdf"
+  },
+  {
+   "id": 1776,
+   "path": "Why We Sleep Unlocking the Power of Sleep and Dreams by Matthew Walker PhD.pdf"
+  },
+  {
+   "id": 997,
+   "path": "1999 - The Pragmatic Programmer; From Journeyman To Master - Pearson Education.pdf"
+  },
+  {
+   "id": 1872,
+   "path": "（2021）考研英语阅读理解精读100篇（高分版） by 印建坤 [印建坤].epub"
+  },
+  {
+   "id": 1856,
+   "path": "裙裾之美 日本女生制服史 by 难波知子.epub"
+  },
+  {
+   "id": 1629,
+   "path": "Systematic analysis and review of stock market prediction techniques.pdf"
+  },
+  {
+   "id": 1471,
+   "path": "Operating Systems Principles and Practice, Vol. 1 Kernels and Processes by Thomas Anderson, Michael Dahlin.epub"
+  },
+  {
+   "id": 1494,
+   "path": "Practical Discrete Mathematics Discover math principles that fuel algorithms for computer science and machine learning with Python by Ryan T. White, Archana Tikayat Ray.pdf"
+  },
+  {
+   "id": 1111,
+   "path": "book-rev7.pdf"
+  },
+  {
+   "id": 1534,
+   "path": "Python and Tkinter Programming by John E Grayson Ph.D..pdf"
+  },
+  {
+   "id": 1079,
+   "path": "Applying Domain-Driven Design and Patterns With Examples in C and .NET by Jimmy Nilsson.pdf"
+  },
+  {
+   "id": 1675,
+   "path": "The Linux programming interface a Linux and UNIX system programming handbook by Michael Kerrisk.pdf"
+  },
+  {
+   "id": 1345,
+   "path": "Informer-Beyond Efficient Transformer for Long Sequence Time-Series Forecasting-2012.07436.pdf"
+  },
+  {
+   "id": 1596,
+   "path": "sm.pdf"
+  },
+  {
+   "id": 1760,
+   "path": "Visual Group Theory by Nathan Carter.pdf"
+  },
+  {
+   "id": 1581,
+   "path": "Semantic Software Design A New Theory and Practical Guide for Modern Architects by Eben Hewitt.epub"
+  },
+  {
+   "id": 1019,
+   "path": "30 Bomb Productivity Tools- Time Management Cure- How To Increase Your Productivity Through Motivation And Techniques by 30 Bomb Productivity Tools- Time Management Cure- How To Increase Your Producti.pdf"
+  },
+  {
+   "id": 1235,
+   "path": "ejsYC2sWca14e3b34ac748d4862444af0c44d1fd.pdf"
+  },
+  {
+   "id": 1002,
+   "path": "2012.07436.pdf"
+  },
+  {
+   "id": 1424,
+   "path": "Mastering Java An Effective Project Based Approach including Web Development, Data Structures, GUI Programming and Object Oriented Programming (Beginner to Advanced) by White, Michael B. [White, Micha.epub"
+  },
+  {
+   "id": 1850,
+   "path": "网络是怎样连接的 by ［日］ 户根勤.mobi"
+  },
+  {
+   "id": 1478,
+   "path": "Oracle Database Transactions and Locking Revealed Building High Performance Through Concurrency by Darl Kuhn, Thomas Kyte.pdf"
+  },
+  {
+   "id": 1797,
+   "path": "原则 by Ray Dalio.mobi"
+  },
+  {
+   "id": 1295,
+   "path": "GPU ray tracing with CUDA.pdf"
+  },
+  {
+   "id": 1346,
+   "path": "Instructor’s Manual to Accompany Database System Concepts by Abraham Silberschatz, Henry F. Korth, S. Sudarshan.pdf"
+  },
+  {
+   "id": 1203,
+   "path": "Developing 2D Games with Unity Independent Game Programming with C by Jared Halpern.pdf"
+  },
+  {
+   "id": 1015,
+   "path": "21 Difficult Conversations Tools To Navigate Your Most Important Talk And Master Exactly What to Say by Vijaybaskar, Dr. Latha.pdf"
+  },
+  {
+   "id": 1486,
+   "path": "PowerShell for Sysadmins Workflow Automation Made Easy by Adam Bertram.pdf"
+  },
+  {
+   "id": 1435,
+   "path": "Mazes for Programmers Code Your Own Twisty Little Passages by Jamis Buck.pdf"
+  },
+  {
+   "id": 1822,
+   "path": "拆解一切问题（用降维思考让困局归零，把所遇难题化难为易，拆解并重构成具体可执行的步骤） by 横田尚哉.azw3"
+  },
+  {
+   "id": 1465,
+   "path": "Oop - Learn Object Oriented Thinking and Programming by Rudolf Pecinovsky.pdf"
+  },
+  {
+   "id": 1645,
+   "path": "The Architecture of Computer Hardware, Systems Software, and Networking An Information Technology Approach by Irv Englander.pdf"
+  },
+  {
+   "id": 1449,
+   "path": "Multithreaded JavaScript Concurrency Beyond the Event Loop by Hunter, II Thomas, English, Bryan.pdf"
+  },
+  {
+   "id": 1012,
+   "path": "2022张宇考研数学题源探析经典1000题-习题分册 数学一 by 张宇.pdf"
+  },
+  {
+   "id": 1027,
+   "path": "97 things every programmer should know collective wisdom from the experts by Kevlin Henney.pdf"
+  },
+  {
+   "id": 1403,
+   "path": "lex  yacc by Doug Brown, John Levine, Tony Mason.pdf"
+  },
+  {
+   "id": 1287,
+   "path": "Getting Started with Containers in Google Cloud Platform  Deploy, Manage, and Secure Containerized Applications by Shimon Ifrah.pdf"
+  },
+  {
+   "id": 1461,
+   "path": "Object-oriented analysis and design with applications by Grady Booch, Robert A. Maksimchuk, Michael W. Engel, Bobbi J. Young, Jim Conallen, Kelli A. Houston.pdf"
+  },
+  {
+   "id": 1187,
+   "path": "David Hounshell - From the American System to Mass Production, 1800-1932_ The Development of Manufacturing Technology in the United States.pdf"
+  },
+  {
+   "id": 1639,
+   "path": "Text You Up A Quickie Read (Love Online Book 3) by Ashley Bostock.epub"
+  },
+  {
+   "id": 1255,
+   "path": "Extreme C Taking You To The Limit In Concurrency, OOP, And The Most Advanced Capabilities Of C by Kamran Amini.pdf"
+  },
+  {
+   "id": 1624,
+   "path": "Supp_Material.pdf"
+  },
+  {
+   "id": 1858,
+   "path": "话有引力(讲话有趣,是一个人高级的性感日本家喻户晓的综艺大咖说话术) by 美浓部达宏 [美浓部达宏].epub"
+  },
+  {
+   "id": 1781,
+   "path": "Word Power Made Easy The Complete Handbook for Building a Superior Vocabulary by Norman Lewis.pdf"
+  },
+  {
+   "id": 1283,
+   "path": "Gary Chapman. - The Five Love Languages for Singles by Gary Chapman..pdf"
+  },
+  {
+   "id": 1192,
+   "path": "Debugging by Thinking  A Multidisciplinary Approach (HP Technologies) by Robert Charles Metzger.pdf"
+  },
+  {
+   "id": 1241,
+   "path": "Elements of Programming Interviews in Java The Insiders’ Guide by Adnan Aziz, Tsung-Hsien Lee, Amit Prakash.pdf"
+  },
+  {
+   "id": 1411,
+   "path": "LittleBookOfSemaphores.pdf"
+  },
+  {
+   "id": 1232,
+   "path": "Effective Modern C++ 42 Specific Ways to Improve Your Use of C++11 and C++14 by Scott Meyers.pdf"
+  },
+  {
+   "id": 1729,
+   "path": "Tkinter 8.4 reference  a GUI for Python by John W. Shipman.pdf"
+  },
+  {
+   "id": 1444,
+   "path": "Modern Information Retrieval The Concepts and Technology Behind Search by Ricardo Baeza-Yates, Berthier Ribeiro-Neto.pdf"
+  },
+  {
+   "id": 1438,
+   "path": "Microservices Patterns With examples in Java by Chris Richardson.pdf"
+  },
+  {
+   "id": 1196,
+   "path": "Deep Reinforcement Learning in Action by Alexander Zai, Brandon Brown.pdf"
+  },
+  {
+   "id": 1440,
+   "path": "Models, Languages, and Tools for Concurrent and Distributed Programming Essays Dedicated to Rocco De Nicola on the Occasion of His 65th Birthday by Michele Boreale, Flavio Corradini, Michele Loreti, R.pdf"
+  },
+  {
+   "id": 1788,
+   "path": "z4llEnwN2ec8ffb4889334a74f5b1c770baddb25.pdf"
+  },
+  {
+   "id": 1859,
+   "path": "说话心理学（若水集）把话说到对方心坎上。实用有效的说话技巧，含读心术攻心术洗脑术说服术搭讪术 by 端木自在 [端木自在].epub"
+  },
+  {
+   "id": 1219,
+   "path": "Django Standalone Apps Learn to Develop Reusable Django Libraries by Ben Lopatin.pdf"
+  },
+  {
+   "id": 1565,
+   "path": "Reinforcement Learning An Introduction, 2nd Edition by Richard S. Sutton, Andrew G Barto.pdf"
+  },
+  {
+   "id": 1479,
+   "path": "PAT蓝桥LeetCode学习路径刷题经验.pdf"
+  },
+  {
+   "id": 1834,
+   "path": "有效学习 by 乌尔里希·伯泽尔.azw3"
+  },
+  {
+   "id": 1507,
+   "path": "Principles Life and Work by Ray Dalio.epub"
+  },
+  {
+   "id": 1618,
+   "path": "Steven D. Levitt, Stephen J. Dubner - Freakonomics_ A Rogue Economist Explores the Hidden Side of Everything (Revised and Expanded) (2009) - libgen.lc.pdf"
+  },
+  {
+   "id": 1857,
+   "path": "言语操纵术：跟任何人都聊得来系列（共2册）说话心理学+高难度谈话的艺术 by 端木自在等 [端木自在等].epub"
+  },
+  {
+   "id": 1204,
+   "path": "DHT-CHAT.pdf"
+  },
+  {
+   "id": 1348,
+   "path": "Introducing Maven - A Build Tool for Today’s Java Developers. by Balaji Varanasi.pdf"
+  },
+  {
+   "id": 1557,
+   "path": "realistic ray tracing.djvu"
+  },
+  {
+   "id": 1406,
+   "path": "Linux All-In-One For Dummies, 6th Edition by Emmett Dulaney.pdf"
+  },
+  {
+   "id": 1369,
+   "path": "jQuery Notes For Professionals by httpsgoalkicker.com.pdf"
+  },
+  {
+   "id": 1249,
+   "path": "Essentials of Programming Languages by Daniel P. Friedman, Mitchell Wand.pdf"
+  },
+  {
+   "id": 1407,
+   "path": "Linux Kernel Development, 3rd Edition A thorough guide to the design and implementation of the Linux kernel by Robert Love.pdf"
+  },
+  {
+   "id": 1786,
+   "path": "xv6-rev7.pdf"
+  },
+  {
+   "id": 1628,
+   "path": "Svelte and Sapper in Action by Mark Volkmann.pdf"
+  },
+  {
+   "id": 1023,
+   "path": "4 Hour Work Week, 2009 - Tim Ferriss by Tim Ferriss.pdf"
+  },
+  {
+   "id": 1863,
+   "path": "软件创新之路：冲破高技术营造的牢笼.pdf"
+  },
+  {
+   "id": 1680,
+   "path": "The Man’s Guide to Women Scientifically Proven Secrets from the Love Lab About What Women Really Want by John Gottman, Julie Schwartz Gottman.epub"
+  },
+  {
+   "id": 1771,
+   "path": "What Makes Love Last How to Build Trust and Avoid Betrayal by John Gottman Ph.D., Nan Silver.epub"
+  },
+  {
+   "id": 1470,
+   "path": "Operating Systems Design and Implementation by Andrew S Tanenbaum, Albert S Woodhull.pdf"
+  },
+  {
+   "id": 1355,
+   "path": "Ivor Horton, Peter Van Weert - Beginning C++17-Apress (2018).pdf"
+  },
+  {
+   "id": 1866,
+   "path": "魔鬼搭讪学 这样追女孩真的很容易 by 魔鬼咨询师.pdf"
+  },
+  {
+   "id": 1274,
+   "path": "FULLTEXT01.pdf"
+  },
+  {
+   "id": 1029,
+   "path": "A Course in In-Memory Data Management The Inner Mechanics of In-Memory Databases by Hasso Plattner (auth.).pdf"
+  },
+  {
+   "id": 1722,
+   "path": "Thinking in C++ vol.2.pdf"
+  },
+  {
+   "id": 1811,
+   "path": "基本穿搭：适用一生的穿衣法则 by 大山旬.epub"
+  },
+  {
+   "id": 1711,
+   "path": "The Ultimate Guide to Picking Up a Woman How to Get a Girlfriend or Friend With Benefits in 30 Days or Less Attract True Love, Attract The Right Girl, ... seduction, get the girl, get the woman) by Lo.epub"
+  },
+  {
+   "id": 1209,
+   "path": "Distributed Systems An Algorithmic Approach by Ghosh, Sukumar.pdf"
+  },
+  {
+   "id": 1385,
+   "path": "Learn Java in One Day and Learn It Well by Jamie Chan.pdf"
+  },
+  {
+   "id": 1206,
+   "path": "Discovering Modern C++ An Intensive Course for Scientists, Engineers, and Programmers by Peter Gottschling.pdf"
+  },
+  {
+   "id": 1317,
+   "path": "Head First Git by Raju Gandhi [Raju Gandhi].pdf"
+  },
+  {
+   "id": 1338,
+   "path": "iLearnPlus a comprehensive and automated.pdf"
+  },
+  {
+   "id": 1553,
+   "path": "Real-World Software Development - A Project-Driven Guide to Fundamentals in Java. by Raoul-Gabriel Urma, Richard Warburton..epub"
+  },
+  {
+   "id": 1058,
+   "path": "Algorithms on Trees and Graphs by Prof. Dr. Gabriel Valiente (auth.).pdf"
+  },
+  {
+   "id": 1666,
+   "path": "The Elements of Computing Systems Building a Modern Computer from First Principles by Noam Nisan, Shimon Schocken.epub"
+  },
+  {
+   "id": 1145,
+   "path": "Computer Architecture A Quantitative Approach (5th edition).pdf"
+  },
+  {
+   "id": 1442,
+   "path": "Modern Compiler Design by Dick Grune, Kees van Reeuwijk, Henri E. Bal, Ceriel J.H. Jacobs, Koen Langendoen.pdf"
+  },
+  {
+   "id": 1463,
+   "path": "Object-oriented software engineering a use case driven approach by Ivar Jacobson.djvu"
+  },
+  {
+   "id": 1215,
+   "path": "Django Admin Cookbook How to do Things with Django Admin by Shabda Raaj.epub"
+  },
+  {
+   "id": 1138,
+   "path": "Cohen, Harlan - Naked Roommate_ And 107 Other Issues You Might Run Into in College-Sourcebooks (2015).epub"
+  },
+  {
+   "id": 1004,
+   "path": "2016_Book_RecommenderSystems.pdf"
+  },
+  {
+   "id": 1361,
+   "path": "Java in a Nutshell - A Desktop Quick Reference.pdf"
+  },
+  {
+   "id": 1184,
+   "path": "Database in Depth by C.J. Date.chm"
+  },
+  {
+   "id": 1360,
+   "path": "Java How to Program Early Objects.pdf"
+  },
+  {
+   "id": 1741,
+   "path": "UML Distilled A Brief Guide to the Standard Object Modeling Language (Martin Fowler)_2.pdf"
+  },
+  {
+   "id": 1705,
+   "path": "The Road to React by Robin Wieruch.pdf"
+  },
+  {
+   "id": 1731,
+   "path": "Toggl_Track_summary_report_2021-06-21_2021-06-27.pdf"
+  },
+  {
+   "id": 993,
+   "path": "1-s2.0-S0950705118305264-main.pdf"
+  },
+  {
+   "id": 1512,
+   "path": "Probability and Statistics A Course for Physicists and Engineers by Arak M. Mathai Hans J. Haubold.pdf"
+  },
+  {
+   "id": 1391,
+   "path": "Learning Behavior-driven Development with JavaScript Create powerful yet simple-to-code BDD test suites in JavaScript using the most popular tools in the community by Enrique Amodeo.pdf"
+  },
+  {
+   "id": 1732,
+   "path": "Tony Gaddis - Starting Out with C++ from Control Structures to Objects.pdf"
+  },
+  {
+   "id": 1404,
+   "path": "Lex  yacc UNIX programming tools by Brown, DougLevine, John R.Mason, Tony.mobi"
+  },
+  {
+   "id": 1216,
+   "path": "Django for APIs Build Web APIs with Python  Django by William S. Vincent.pdf"
+  },
+  {
+   "id": 1254,
+   "path": "Exactly What to Say The Magic Words for Influence and Impact by Phil M Jones [Jones, Phil M].pdf"
+  },
+  {
+   "id": 1429,
+   "path": "Math for Programmers 3D Graphics, Machine Learning and Simulations with Python by Paul Orland.pdf"
+  },
+  {
+   "id": 1266,
+   "path": "Flutter in Action by Eric Windmill.pdf"
+  },
+  {
+   "id": 998,
+   "path": "1aslam_blas_repo.pdf"
+  },
+  {
+   "id": 1134,
+   "path": "Clojure for the Brave and True by Daniel Higginbotham.pdf"
+  },
+  {
+   "id": 1743,
+   "path": "Understanding Machine Learning From Theory to Algorithms by Shalev-Shwartz S., Ben-David S..pdf"
+  },
+  {
+   "id": 1467,
+   "path": "Operating System Concepts by Abraham Silberschatz, Peter B. Galvin, Greg Gagne.pdf"
+  },
+  {
+   "id": 1373,
+   "path": "Kissing Everything You Ever Wanted to Know about One of Lifes Sweetest Pleasures by Andréa Demirjian.pdf"
+  },
+  {
+   "id": 1533,
+   "path": "Python Algorithms Mastering Basic Algorithms in the Python Language by Magnus Lie Hetland.pdf"
+  },
+  {
+   "id": 1304,
+   "path": "Handbook of Software Engineering by Sungdeok Cha, Richard N. Taylor, Kyochul Kang.pdf"
+  },
+  {
+   "id": 1368,
+   "path": "Jonny Mayhem - Prepper's Underground Guide to Improvised Weapons! How to Protect Yourself Without a Firearm Using Everyday Items! (2012, Danger Zone Publishing) - libgen.lc.epub"
+  },
+  {
+   "id": 1413,
+   "path": "MACHINE LEARNING FOR ALGORITHM TRADING  Master as a PRO applied artificial intelligence and Python for predict systematic strategies for options and stocks. Learn data-driven finance using keras by Br.epub"
+  },
+  {
+   "id": 1450,
+   "path": "Murachs Java Servlets and JSP by Joel Murach, Michael Urban.pdf"
+  },
+  {
+   "id": 1727,
+   "path": "TICPP-V1.pdf"
+  },
+  {
+   "id": 1636,
+   "path": "Text Activity (Love Online 1) by Ashley Bostock [Bostock, Ashley].epub"
+  },
+  {
+   "id": 1477,
+   "path": "Optimization in Practice with MATLAB® For Engineering Students and Professionals by Achille Messac.pdf"
+  },
+  {
+   "id": 1849,
+   "path": "网络是怎样连接的 by ［日］ 户根勤.epub"
+  },
+  {
+   "id": 1739,
+   "path": "Types and Programming Languages by Benjamin C. Pierce_3.pdf"
+  },
+  {
+   "id": 1095,
+   "path": "Beginning Bazel Building and Testing for Java, Go, and More by P.J. McNerney.pdf"
+  },
+  {
+   "id": 1257,
+   "path": "FB_2020_c.pdf"
+  },
+  {
+   "id": 1779,
+   "path": "Wired for Love How Understanding Your Partners Brain and Attachment Style Can Help You Defuse Conflict and Build a Secure Relationship by Stan Tatkin, Harville Hendrix.epub"
+  },
+  {
+   "id": 1173,
+   "path": "CSS Notes for Professionals by GoalKicker.com.pdf"
+  },
+  {
+   "id": 1498,
+   "path": "Practical Microservices Architectural Patterns - Event-Based Java Microservices with Spring Boot and Spring Cloud by Binildas Christudas.pdf"
+  },
+  {
+   "id": 1005,
+   "path": "2017_Book_ConciseGuideToSoftwareEngineer.pdf"
+  },
+  {
+   "id": 1068,
+   "path": "Andrew Binstock, John Rex - Practical Algorithms for Programmers-Addison-Wesley Professional (1995).pdf"
+  },
+  {
+   "id": 1316,
+   "path": "Head First Android Development A Learners Guide to Building Android Apps with Kotlin by Dawn Griffiths, David Griffiths.pdf"
+  },
+  {
+   "id": 1430,
+   "path": "Mathematics For Human Flourishing by Francis Su, Christopher Jackson.pdf"
+  },
+  {
+   "id": 1697,
+   "path": "The Real Online Game Phone and Texting Edition by Joshua Pompey.pdf"
+  },
+  {
+   "id": 1483,
+   "path": "PostgreSQL Up and Running A Practical Guide to the Advanced Open Source Database by Regina O. Obe, Leo S. Hsu.pdf"
+  },
+  {
+   "id": 1780,
+   "path": "Word Power Made Easy red cover.pdf"
+  },
+  {
+   "id": 1091,
+   "path": "Bang by Roosh V.epub"
+  },
+  {
+   "id": 1227,
+   "path": "drevo.pdf"
+  },
+  {
+   "id": 1156,
+   "path": "Concurrency in Go Tools and Techniques for Developers by Katherine Cox-Buday.pdf"
+  },
+  {
+   "id": 1777,
+   "path": "Willard Cleon Skousen - 赤裸裸的共產黨 _ 共產主義如何危害自由世界 The naked communist _ exposing communism and restoring freedom-遠足文化事業股份有限公司發行 (2019).epub"
+  },
+  {
+   "id": 1426,
+   "path": "Mastering Regular Expressions by Jeffrey E.F. Friedl.pdf"
+  },
+  {
+   "id": 1044,
+   "path": "Advanced Algorithms and Data Structures by Marcello La Rocca.epub"
+  },
+  {
+   "id": 1626,
+   "path": "Svelte 3 Up and Running A practical guide to building production-ready static web apps with Svelte 3 by Alessandro Segala.epub"
+  },
+  {
+   "id": 1481,
+   "path": "polymultiply.pdf"
+  },
+  {
+   "id": 1179,
+   "path": "Data Structures and Algorithm Analysis in C++, 3rd Edition by Dr. Clifford A. Shaffer.pdf"
+  },
+  {
+   "id": 1006,
+   "path": "2017_Book_GuideToCompetitiveProgramming.pdf"
+  },
+  {
+   "id": 1410,
+   "path": "Linux Pocket Guide Essential Commands by Daniel J. Barrett.pdf"
+  },
+  {
+   "id": 1106,
+   "path": "Beyond the Power of Now A Guide To, and Beyond, Eckhart Tolle’s Teachings by L Ron Gardner_2.pdf"
+  },
+  {
+   "id": 1715,
+   "path": "The Wonder Book of Geometry A Mathematical Story by David Acheson.epub"
+  },
+  {
+   "id": 992,
+   "path": "05-bufferpool_notes.pdf"
+  },
+  {
+   "id": 1606,
+   "path": "Spring Boot Primer An introductory book to not regret [Hands-On] Learn spring boot 2.4 from the basics~ Java, Spring Data JPA, Spring MVC, Spring Security, Spring Web, Mybatis, Spring Framework by Tat.epub"
+  },
+  {
+   "id": 1267,
+   "path": "Forecasting price movements using technical indicators Investigating the impact of varying input window length.pdf"
+  },
+  {
+   "id": 1043,
+   "path": "Adaptive object-oriented software the Demeter method by Karl Lieberherr.djvu"
+  },
+  {
+   "id": 1595,
+   "path": "Skousen, Willard Cleon - The naked communist-Reviewer (1962).pdf"
+  },
+  {
+   "id": 1070,
+   "path": "Andrew Hunt, David Thomas - The Pragmatic Programmer_ From Journeyman to Master (2000, Addison Wesley Longman) - libgen.lc.pdf"
+  },
+  {
+   "id": 1586,
+   "path": "Serverless架构：从原理、设计到项目实战 by 刘宇.epub"
+  },
+  {
+   "id": 1234,
+   "path": "Eight Dates by John Gottman [Gottman, John].pdf"
+  },
+  {
+   "id": 1032,
+   "path": "A Mind For Numbers How to Excel at Math and Science (Even if You Flunked Algebra) by Barbara Oakley.epub"
+  },
+  {
+   "id": 1167,
+   "path": "CPython Internals Your Guide to the Python 3 Interpreter by Anthony Shaw.pdf"
+  },
+  {
+   "id": 1401,
+   "path": "lecture22.pdf"
+  },
+  {
+   "id": 1669,
+   "path": "The Essence of Software Engineering by Volker Gruhn, Rüdiger Striemer.pdf"
+  },
+  {
+   "id": 1135,
+   "path": "Close Romantic Relationships Maintenance and Enhancement by John H. Harvey, Amy Wenzel.epub"
+  },
+  {
+   "id": 1133,
+   "path": "Clean Architecture Comprehensive Beginners Guide to Learn and Understand Clean Architecture by Wallace, Connor.epub"
+  },
+  {
+   "id": 1176,
+   "path": "Data Structures  Algorithms In Go by Hemant Jain [Jain, Hemant].pdf"
+  },
+  {
+   "id": 1577,
+   "path": "scikit-learn机器学习 第2版 by [美]加文·海克（Gavin Hackeling）.pdf"
+  },
+  {
+   "id": 1326,
+   "path": "How To Give Good Sex A 100 Comprehensive Guide For Men And Women Featuring Actual Lovemaking Tips That Have Been Mostly Tested by Hans Uberass.epub"
+  },
+  {
+   "id": 1074,
+   "path": "Angular Up and Running Learning Angular, Step by Step by Shyam Seshadri.pdf"
+  },
+  {
+   "id": 1398,
+   "path": "Learning SQL Generate, Manipulate, and Retrieve Data by Alan Beaulieu.epub"
+  },
+  {
+   "id": 1665,
+   "path": "The elements of computing systems building a modern computer from first principles by Nisan, NoamSchocken, Shimon.pdf"
+  },
+  {
+   "id": 1405,
+   "path": "Linda Fiore - The College Roommate from Hell. Skills and Strategies for Surviving College With a Problem Roommate-Atlantic Publishing Group (2009).epub"
+  },
+  {
+   "id": 1851,
+   "path": "罗尔夫·多贝里：The Art of Thinking Clearly.pdf"
+  },
+  {
+   "id": 1574,
+   "path": "Sandi Metz - Practical Object-oriented Design. An agile Primer ising Ruby [2nd ed.] (2019, Addison-Wesley) - libgen.lc.pdf"
+  },
+  {
+   "id": 1432,
+   "path": "Matlab For Dummies by Jim Sizemore, John Paul Mueller.pdf"
+  },
+  {
+   "id": 1621,
+   "path": "Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Harold Abelson, Gerald Jay Sussman.pdf"
+  },
+  {
+   "id": 1748,
+   "path": "Unit_8_solve_congruences.pdf"
+  },
+  {
+   "id": 1324,
+   "path": "How Linux Works What Every Superuser Should Know by Brian Ward.pdf"
+  },
+  {
+   "id": 1644,
+   "path": "The Algorithm Design Manual by Steven S. Skiena.pdf"
+  },
+  {
+   "id": 1200,
+   "path": "Designing Games A Guide to Engineering Experiences by Tynan Sylvester.pdf"
+  },
+  {
+   "id": 1183,
+   "path": "Database Design Know It All by Toby J. Teorey, Stephen Buxton, Lowell Fryman, Ralf Hartmut Güting, Terry Halpin, Jan L. Harrington, William H. Inmon, Sam S. Lightstone, Jim Melton, Tony Morgan, Thoma.pdf"
+  },
+  {
+   "id": 1674,
+   "path": "The Joy of Kotlin by Pierre-Yves Saumont.pdf"
+  },
+  {
+   "id": 1045,
+   "path": "Advanced Algorithms and Data Structures in Action by La Rocca, Marcello.pdf"
+  },
+  {
+   "id": 1474,
+   "path": "Operating Systems Principles and Practice, Vol. 4 Persistent Storage by Thomas Anderson, Michael Dahlin.epub"
+  },
+  {
+   "id": 1816,
+   "path": "寻找生命的逻辑：生物学观念的发展 by 方舟子_2.pdf"
+  },
+  {
+   "id": 1024,
+   "path": "8.pdf"
+  },
+  {
+   "id": 1123,
+   "path": "C Interfaces and Implementations Techniques for Creating Reusable Software by David R. Hanson.pdf"
+  },
+  {
+   "id": 1217,
+   "path": "Django for Professionals Production Websites with Python  Django by William S. Vincent.pdf"
+  },
+  {
+   "id": 1364,
+   "path": "Java Web程序设计任务教程 by 黑马程序员.pdf"
+  },
+  {
+   "id": 1258,
+   "path": "fft.pdf"
+  },
+  {
+   "id": 1122,
+   "path": "Building Web Applications with Flask Use Python and Flask to build amazing web applications, just the way you want them by Italo Maia_2.pdf"
+  },
+  {
+   "id": 1738,
+   "path": "Types and Programming Languages by Benjamin C. Pierce_2.pdf"
+  },
+  {
+   "id": 1344,
+   "path": "In Search of Certainty The Science of Our Information Infrastructure by Mark Burgess.epub"
+  },
+  {
+   "id": 1515,
+   "path": "Probability theory the logic of science by E. T. Jaynes, G. Larry Bretthorst.pdf"
+  },
+  {
+   "id": 1712,
+   "path": "The Ultimate Guide to Picking Up a Woman How to Get a Girlfriend or Friend With Benefits in 30 Days or Less Attract True Love, Attract The Right Girl, ... seduction, get the girl, get the woman) by Lo_2.epub"
+  },
+  {
+   "id": 1319,
+   "path": "Head First Kotlin A Brain-Friendly Guide by Dawn Griffiths, David Griffiths.epub"
+  },
+  {
+   "id": 1020,
+   "path": "30 days of react by fullstack react.pdf"
+  },
+  {
+   "id": 1083,
+   "path": "Ashley Kalym_ Mike Seymour_ Chris Frosin - Complete Calisthenics_ The Ultimate Guide To Bodyweight Exercise-Ashley Kalym (2014).epub"
+  },
+  {
+   "id": 1539,
+   "path": "Python GUI Programming - A Complete Reference Guide Develop responsive and powerful GUI applications with PyQt and Tkinter by Alan D. Moore B. M. Harwani.epub"
+  },
+  {
+   "id": 1397,
+   "path": "Learning React Modern Patterns for Developing React Apps by Alex Banks, Eve Porcello.pdf"
+  },
+  {
+   "id": 1681,
+   "path": "The Mathematics of Marriage Dynamic Nonlinear Models by John Mordechai Gottman, James D. Murray, Catherine Swanson, Rebecca Tyson, Kristin R. Swanson,.pdf"
+  },
+  {
+   "id": 1860,
+   "path": "说话心理学：渗透潜意识的语言说服力 by 斯蒂芬·C·杨.pdf"
+  },
+  {
+   "id": 1090,
+   "path": "Attract womenWhat women want in a man How to build self confidence,dating advice,how to win her heart and get her to open more,how to get laid,best ... picking up girls,guide for becoming alpha by Lor.epub"
+  },
+  {
+   "id": 1488,
+   "path": "Practical Algorithms for Programmers by Andrew Binstock, John Rex.djvu"
+  },
+  {
+   "id": 1784,
+   "path": "Writing an interpreter in Go by Thorsten Ball.pdf"
+  },
+  {
+   "id": 1517,
+   "path": "Problems on algorithms by Ian Parberry.pdf"
+  },
+  {
+   "id": 1247,
+   "path": "Engineering a Compiler by Keith Cooper, Linda Torczon.pdf"
+  },
+  {
+   "id": 1416,
+   "path": "Machine Learning with TensorFlow by Nishant Shukla with Kenneth Fricklas.pdf"
+  },
+  {
+   "id": 1427,
+   "path": "Mastering Vim Build a software development environment with Vim and Neovim by Ruslan Osipov.pdf"
+  },
+  {
+   "id": 1034,
+   "path": "A Philosophy of Software Design by John Ousterhout.epub"
+  },
+  {
+   "id": 1061,
+   "path": "AlgorithmsNotes for Professionals by Goal Kickers Team (GoalKickers.com).pdf"
+  },
+  {
+   "id": 1174,
+   "path": "CStock_一种结合新闻与股价的股票走势预测模型_陈可心.pdf"
+  },
+  {
+   "id": 1202,
+   "path": "Designing with CSS Grid Layout by Nitish Kumar, Adrian Roworth, Ahmad Ajmi.pdf"
+  },
+  {
+   "id": 1492,
+   "path": "Practical Computer Vision Applications Using Deep Learning with CNNs With Detailed Examples in Python Using TensorFlow and Kivy by Ahmed Fawzy Gad.pdf"
+  },
+  {
+   "id": 1431,
+   "path": "Maths on the Back of an Envelope Clever Ways to (Roughly) Calculate Anything by Rob Eastaway.epub"
+  },
+  {
+   "id": 1588,
+   "path": "Seven Concurrency Models in Seven Weeks When Threads Unravel (The Pragmatic Programmers) by Paul Butcher.pdf"
+  },
+  {
+   "id": 1747,
+   "path": "Unity in Action Multiplatform game development in C by Joe Hocking.pdf"
+  },
+  {
+   "id": 1010,
+   "path": "2021考研数学一汤家凤接力题典1800【题目册】 by 汤家凤.pdf"
+  },
+  {
+   "id": 1454,
+   "path": "Nonviolent Communication A Language of Life Create Your Life, Your Relationships, and Your World in Harmony with Your Values by Marshall B. Rosenberg.pdf"
+  },
+  {
+   "id": 1343,
+   "path": "Implementing Domain-Driven Design by Vaughn Vernon_3.pdf"
+  },
+  {
+   "id": 1077,
+   "path": "Applied Statistics and Probability for Engineers by Douglas C. Montgomery, George C. Runger.pdf"
+  },
+  {
+   "id": 1795,
+   "path": "五天變身說話達人【暢銷改版】 by 西野浩輝.epub"
+  },
+  {
+   "id": 1652,
+   "path": "The Art Of Thinking In Systems Improve Your Logic, Think More Critically, And Use Proven Systems To Solve Your Problems by Steven Schuster.epub"
+  },
+  {
+   "id": 1325,
+   "path": "How to be a 3 man  winning the heart of the woman of your dreams by Wayne, Corey.pdf"
+  },
+  {
+   "id": 1541,
+   "path": "Python Programming Blueprints Build nine projects by leveraging powerful frameworks such as Flask, Nameko, and Django by Daniel Furtado, Marcus Pennington.pdf"
+  },
+  {
+   "id": 1707,
+   "path": "The Seventeen Theoretical Constructs of Information.pdf"
+  },
+  {
+   "id": 1713,
+   "path": "The Willpower Instinct How Self-Control Works, Why It Matters, and What You Can Do To Get More of It by Kelly McGonigal.epub"
+  },
+  {
+   "id": 1614,
+   "path": "SQL Injection Attacks and Defense by Justin Clarke.pdf"
+  },
+  {
+   "id": 1620,
+   "path": "STL源码剖析 by 侯捷.pdf"
+  },
+  {
+   "id": 1790,
+   "path": "[图灵程序设计丛书].深度学习的数学.pdf"
+  },
+  {
+   "id": 1537,
+   "path": "Python for Probability, Statistics, and Machine Learning by José Unpingco.pdf"
+  },
+  {
+   "id": 1817,
+   "path": "尼尔·布朗 & 斯图尔特·基利：Asking the Right Questions——A Guide to Critical Thinking (第11版).pdf"
+  },
+  {
+   "id": 1318,
+   "path": "Head First Go by Jay McGavren.pdf"
+  },
+  {
+   "id": 1717,
+   "path": "thesis.pdf"
+  },
+  {
+   "id": 1651,
+   "path": "The Art of Linux Kernel Design Illustrating the Operating System Design Principle and Implementation.pdf"
+  },
+  {
+   "id": 1194,
+   "path": "Deep Learning from Scratch Building with Python from First Principles by Seth Weidman.epub"
+  },
+  {
+   "id": 1110,
+   "path": "Bodyscape Art, modernity and the ideal figure by Mirzoeff, Nicholas.epub"
+  },
+  {
+   "id": 1041,
+   "path": "A Tour of C++ by Bjarne Stroustrup.pdf"
+  },
+  {
+   "id": 1265,
+   "path": "Flutter Cookbook Over 100 proven techniques and solutions for app development with Flutter 2.2 and Dart by Simone Alessandria, Brian Kayfitz.pdf"
+  },
+  {
+   "id": 1073,
+   "path": "ANGULAR up and running by Seshadri, Shyam.epub"
+  },
+  {
+   "id": 1107,
+   "path": "BioSeq-Analysis2.0 an updated platform for analyzing.pdf"
+  },
+  {
+   "id": 1182,
+   "path": "Database design for mere mortals a hands-on guide to relational database design by Hernandez, Michael James.epub"
+  },
+  {
+   "id": 1670,
+   "path": "The Go Programming Language by Alan A. A. Donovan, Brian W. Kernighan.pdf"
+  },
+  {
+   "id": 1198,
+   "path": "Design Patterns in Modern C++. Reusable Approaches for Object-oriented Software Design by Dmitri Nesteruk.pdf"
+  },
+  {
+   "id": 1168,
+   "path": "Crafting Test-Driven Software with Python Write test suites that scale with your applications needs and complexity, using Python and PyTest by Alessandro Molina.pdf"
+  },
+  {
+   "id": 1296,
+   "path": "Grokking Deep Reinforcement Learning by Miguel Morales.pdf"
+  },
+  {
+   "id": 1663,
+   "path": "The Demon-Haunted World Science as a Candle in the Dark by Carl Sagan, Ann Druyan.pdf"
+  },
+  {
+   "id": 1039,
+   "path": "A Stochastic Time Series Model for Predicting Financial 2102.01290.pdf"
+  },
+  {
+   "id": 1153,
+   "path": "Concepts, Techniques, and Models of Computer Programming by Peter Van Roy, Seif Haridi.pdf"
+  },
+  {
+   "id": 1144,
+   "path": "Composing Software by Eric Elliott.pdf"
+  },
+  {
+   "id": 1172,
+   "path": "CSS in Depth by Keith J. Grant.pdf"
+  },
+  {
+   "id": 1103,
+   "path": "Beginning SQL Queries From Novice to Professional by Clare Churcher.pdf"
+  },
+  {
+   "id": 1480,
+   "path": "PHP Learn PHP in One Day and Learn It Well. PHP for Beginners with Hands-on Project. (Learn Coding Fast with Hands-On Project Book 6) by Chan, Jamie Publishing, LCF.epub"
+  },
+  {
+   "id": 1599,
+   "path": "Software Engineering A Practitioners Approach by Roger Pressman, Bruce Maxim.pdf"
+  },
+  {
+   "id": 1719,
+   "path": "Think Again How to Reason and Argue by Walter Sinnott-Armstrong.epub"
+  },
+  {
+   "id": 1543,
+   "path": "Python测试驱动开发：使用Django、Selenium和JavaScript进行Web编程.第2版.pdf"
+  },
+  {
+   "id": 1349,
+   "path": "Introducing Regular Expressions Unraveling regular expressions, step-by-step by Michael Fitzgerald.pdf"
+  },
+  {
+   "id": 1315,
+   "path": "Haskell Programming from First Principles by Chris Allen, Julie Moronuki.pdf"
+  },
+  {
+   "id": 1434,
+   "path": "Maybe You Should Talk to Someone A Therapist, HER Therapist, and Our Lives Revealed by Gottlieb, Lori.epub"
+  },
+  {
+   "id": 1489,
+   "path": "Practical Algorithms for Programmers by Andrew Binstock, John Rex.pdf"
+  },
+  {
+   "id": 1473,
+   "path": "Operating Systems Principles and Practice, Vol. 3 Memory Management by Thomas Anderson, Michael Dahlin.epub"
+  },
+  {
+   "id": 1320,
+   "path": "Head First Kotlin by David Griffiths.pdf"
+  },
+  {
+   "id": 1094,
+   "path": "Beautiful Architecture Leading Thinkers Reveal the Hidden Beauty in Software Design by Diomidis Spinellis, Georgios Gousios (Editors).pdf"
+  },
+  {
+   "id": 1270,
+   "path": "Foundations of Discrete Mathematics with Algorithms and Programming by Sriraman Sridharan, R. Balakrishnan.pdf"
+  },
+  {
+   "id": 1028,
+   "path": "A Concise Introduction to Software Engineering by Pankaj Jalote.pdf"
+  },
+  {
+   "id": 1845,
+   "path": "精通Python网络爬虫 核心技术、框架与项目实战 ,韦玮.pdf"
+  },
+  {
+   "id": 1523,
+   "path": "Programming Concurrency on the JVM Mastering Synchronization, STM, and Actors by Venkat Subramaniam.pdf"
+  },
+  {
+   "id": 1297,
+   "path": "Growing Object-Oriented Software, Guided by Tests by Steve Freeman, Nat Pryce.pdf"
+  },
+  {
+   "id": 1390,
+   "path": "Learn Windows PowerShell in a Month of Lunches by Donald W. Jones, Jeffrey Hicks.pdf"
+  },
+  {
+   "id": 1289,
+   "path": "Getting the Love You Want A Guide for Couples by Harville Hendrix.epub"
+  },
+  {
+   "id": 1161,
+   "path": "Content-Based Networking How to Instantly Connect with Anyone You Want to Know by James Carbary.pdf"
+  },
+  {
+   "id": 1065,
+   "path": "An Introduction to Ray Tracing (The Morgan Kaufmann Series in Computer Graphics) by Eric Haines, Pat Hanrahan, Robert L. Cook, James Arvo, David Kirk, Paul S. Heckbert.pdf"
+  },
+  {
+   "id": 1455,
+   "path": "Nonviolent Communication by Marshall B. Rosenberg.epub"
+  },
+  {
+   "id": 1839,
+   "path": "深入理解Java虚拟机：JVM高级特性与最佳实践（第3版） (华章原创精品) by 周志明 [周志明].pdf"
+  },
+  {
+   "id": 1653,
+   "path": "The Art of WebAssembly Build Secure, Portable, High-Performance Applications by Rick Battagline.pdf"
+  },
+  {
+   "id": 1691,
+   "path": "The Passionate Programmer Creating a Remarkable Career in Software Development (Pragmatic Life) by Chad Fowler.pdf"
+  },
+  {
+   "id": 1305,
+   "path": "Handbook of Theoretical Computer Science. Volume A Algorithms and Complexity by Jan van Leeuwen (ed.).pdf"
+  },
+  {
+   "id": 1535,
+   "path": "Python Distilled (Developers Library) (1st Edition) by David Beazley.epub"
+  },
+  {
+   "id": 1387,
+   "path": "Learn PowerShell Scripting in a Month of Lunches by Don Jones Jeffery Hicks.epub"
+  },
+  {
+   "id": 1154,
+   "path": "Concepts, techniques, and models of computer programming by Peter Van Roy, Seif Haridi_2.pdf"
+  },
+  {
+   "id": 1096,
+   "path": "Beginning Django Web Application Development and Deployment with Python by Daniel Rubio (auth.).pdf"
+  },
+  {
+   "id": 1298,
+   "path": "Guide to Competitive Programming Learning and Improving Algorithms Through Contests (Undergraduate Topics in Computer Science) by Antti Laaksonen.pdf"
+  },
+  {
+   "id": 1178,
+   "path": "Data Structures and Algorithm Analysis in C++ by Mark A. Weiss.pdf"
+  },
+  {
+   "id": 1253,
+   "path": "Everything You Always Wanted to Know about Synchronization but Were Afraid to Ask.pdf"
+  },
+  {
+   "id": 1277,
+   "path": "Fundamentals of discrete math for computer science a problem-solving primer by Jenkyns, Tom A. Stephenson, Benjamin David.pdf"
+  },
+  {
+   "id": 1251,
+   "path": "Everybody Lies Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are by Stephens-Davidowitz, S..pdf"
+  },
+  {
+   "id": 1762,
+   "path": "Vue.js从入门到项目实践：超值版 by 聚慕课教育研发中心.epub"
+  },
+  {
+   "id": 1394,
+   "path": "Learning Domain-Driven Design Aligning Software Architecture and Business Strategy by Vladik Khononov.pdf"
+  },
+  {
+   "id": 1151,
+   "path": "Concepts in Programming Languages by John C. Mitchell, Krzysztof Apt.pdf"
+  },
+  {
+   "id": 1609,
+   "path": "Spring MVC Domine o principal framework web Java by Alberto Souza.pdf"
+  },
+  {
+   "id": 1833,
+   "path": "最高學以致用法：讓學習發揮最大成果的輸出大全 by 樺澤紫苑.epub"
+  },
+  {
+   "id": 1503,
+   "path": "Practical Vim Edit Text at the Speed of Thought by Drew Neil.pdf"
+  },
+  {
+   "id": 1109,
+   "path": "Bodyscape Art, Modernity and the Ideal Figure (Visual Cultures) by N. Mirzoeff.pdf"
+  },
+  {
+   "id": 1087,
+   "path": "Attached The New Science of Adult Attachment and How It Can Help You Find – and Keep – Love by Amir Levine, Rachel Heller.epub"
+  },
+  {
+   "id": 1035,
+   "path": "A Philosophy of Software Design by Ousterhout, John.epub"
+  },
+  {
+   "id": 1214,
+   "path": "Django 3 Web Development Cookbook - Fourth Edition by Aidas Bendoraitis [Aidas Bendoraitis].pdf"
+  },
+  {
+   "id": 1730,
+   "path": "Tkinter GUI programming by example by David Love.pdf"
+  },
+  {
+   "id": 1782,
+   "path": "Word Power Made Easy white cover.pdf"
+  },
+  {
+   "id": 1263,
+   "path": "Flask By Example Unleash the full potential of the Flask web framework by creating simple yet powerful web applications by Gareth Dwyer.pdf"
+  },
+  {
+   "id": 1622,
+   "path": "Structure and Interpretation of Computer Programs by by Harold Abelson, Gerald Jay Sussman, Julie Sussman.pdf"
+  },
+  {
+   "id": 1086,
+   "path": "Attached  the new science of adult attachment and how it can help you find- and keep -love by Amir Levine and Rachel Heller.pdf"
+  },
+  {
+   "id": 1052,
+   "path": "Algorithmic Puzzles by Anany Levitin, Maria Levitin.pdf"
+  },
+  {
+   "id": 1752,
+   "path": "UNSCRIPTED - The Great Rat Race Escape From Wage Slavery to Wealth How to Start a Purpose Driven Business and Win Financial Freedom for a Lifetime by MJ DeMarco.pdf"
+  },
+  {
+   "id": 1499,
+   "path": "Practical SQL A Beginner’s Guide to Storytelling with Data by Anthony DeBarros.pdf"
+  },
+  {
+   "id": 1261,
+   "path": "Fifty quick ideas to improve your user stories (Gojko Adzic, David Evans, Nikola Korac).epub"
+  },
+  {
+   "id": 1269,
+   "path": "Foundation Dynamic Web Pages with Python Create Dynamic Web Pages with Django and Flask by David Ashley.pdf"
+  },
+  {
+   "id": 1060,
+   "path": "Algorithms Unlocked by Thomas H. Cormen.pdf"
+  },
+  {
+   "id": 1323,
+   "path": "Herb Sutter & Andrei Alexandrescu：C++ Coding Standards——101 Rules, Guidelines and Best Practices@2004.chm"
+  },
+  {
+   "id": 1238,
+   "path": "Elements of Abstract Algebra by Allan Clark.pdf"
+  },
+  {
+   "id": 1097,
+   "path": "Beginning Game AI with Unity Programming Artificial Intelligence with C by Sebastiano M. Cossu.epub"
+  },
+  {
+   "id": 1291,
+   "path": "Git小书.pdf"
+  },
+  {
+   "id": 1357,
+   "path": "Java Concurrency in Practice by Safari Books Online LLC.pdf"
+  },
+  {
+   "id": 1612,
+   "path": "Sprint How to Solve Big Problems and Test New Ideas in Just Five Days by Knapp, JakeZeratsky, JohnKowitz, Braden.azw3"
+  },
+  {
+   "id": 1099,
+   "path": "Beginning JSP, JSF and Tomcat Java Web Development by Giulio Zambon (auth.).pdf"
+  },
+  {
+   "id": 1723,
+   "path": "Thinking Philosophically An Introduction to Critical Reflection and Rational Dialogue by Richard E. Creel.pdf"
+  },
+  {
+   "id": 1683,
+   "path": "The Millionaire Fastlane Crack the Code to Wealth and Live Rich for a Lifetime. by MJ DeMarco.pdf"
+  },
+  {
+   "id": 1128,
+   "path": "C++ High Performance by Björn Andrist, Viktor Sehr.pdf"
+  },
+  {
+   "id": 1804,
+   "path": "基于BoW模型的增强RGB_D_SLAM算法_荆树旭.pdf"
+  },
+  {
+   "id": 1678,
+   "path": "The Little Schemer - 4th Edition by Daniel P. Friedman, Matthias Felleisen, Gerald J. Sussman.pdf"
+  },
+  {
+   "id": 1180,
+   "path": "Data Structures and Algorithms in Java Fourth Edition.pdf"
+  },
+  {
+   "id": 1611,
+   "path": "Sprint How to Solve Big Problems and Test New Ideas in Just Five Days by Jake Knapp, John Zeratsky, Braden Kowitz.epub"
+  },
+  {
+   "id": 1101,
+   "path": "Beginning PyQt A Hands-On Approach to GUI Programming by Joshua Willman.pdf"
+  },
+  {
+   "id": 1826,
+   "path": "数学建模算法与应用习题解答 by 司守奎等编著.pdf"
+  },
+  {
+   "id": 1309,
+   "path": "Hands-On Domain-Driven Design with .NET Core Tackling complexity in the heart of software by putting DDD principles into practice by Alexey Zimarev.pdf"
+  },
+  {
+   "id": 1190,
+   "path": "de7f56fe-7d82-4f8f-8630-4e9a72e4209d_2.pdf"
+  },
+  {
+   "id": 1657,
+   "path": "The C++ Standard Library A Tutorial and Reference by Nicolai M. Josuttis.pdf"
+  },
+  {
+   "id": 1064,
+   "path": "An introduction to algorithmic trading basic to advanced strategies by Edward Leshik, Jane Cralle.pdf"
+  },
+  {
+   "id": 1815,
+   "path": "完美伴侣：缓慢性爱 by 德永.pdf"
+  },
+  {
+   "id": 1532,
+   "path": "PxlccSn08fa45acf2cdaa7cf638f088efb289ee3.pdf"
+  },
+  {
+   "id": 1525,
+   "path": "Programming For Computations - Python A Gentle Introduction To Numerical Simulations With Python 3.6 by Svein Linge, Hans Petter Langtangen.pdf"
+  },
+  {
+   "id": 1382,
+   "path": "Large-Scale Software Architecture A Practical Guide using UML (Jeff Garland, Richard Anthony).pdf"
+  },
+  {
+   "id": 1236,
+   "path": "Electronics Projects with the ESP8266 and ESP32 Building Web Pages, Applications, and WiFi Enabled Devices by Neil Cameron.pdf"
+  },
+  {
+   "id": 1370,
+   "path": "jrfm-13-00181.pdf"
+  },
+  {
+   "id": 1456,
+   "path": "Norman Lewis - Word Power Made Easy_ The Complete Handbook for Building a Superior Vocabulary-Anchor (2014).pdf"
+  },
+  {
+   "id": 1813,
+   "path": "大数据研究综述.pdf"
+  },
+  {
+   "id": 1714,
+   "path": "The Willpower Instinct How Self-Control Works, Why It Matters, and What You Can Do To Get More of It by Kelly McGonigal.pdf"
+  },
+  {
+   "id": 1112,
+   "path": "Bootstrap 4 Cookbook by Ajdin Imsirovic.pdf"
+  },
+  {
+   "id": 1855,
+   "path": "肖秀荣考研政治2021讲真题 by 肖秀荣.pdf"
+  },
+  {
+   "id": 1225,
+   "path": "Domain-Driven Design Tackling Complexity in the Heart of Software by Eric Evans.pdf"
+  },
+  {
+   "id": 1667,
+   "path": "The Elements of Computing Systems Building a Modern Computer from First Principles by Noam Nisan, Shimon Schocken.pdf"
+  },
+  {
+   "id": 1008,
+   "path": "2021_ICM_Problem_F.pdf"
+  },
+  {
+   "id": 1230,
+   "path": "EANN_Signal2Vec.pdf"
+  },
+  {
+   "id": 1384,
+   "path": "Learn Docker in a Month of Lunches by Elton Stoneman.pdf"
+  },
+  {
+   "id": 1400,
+   "path": "Learning the Pandas Library Python Tools for Data Munging, Analysis, and Visual by Matt Harrison Michael Prentiss.pdf"
+  },
+  {
+   "id": 1276,
+   "path": "Functional Programming in Scala (draft version) by Paul Chiusano, Runar Bjarnason.pdf"
+  },
+  {
+   "id": 1654,
+   "path": "The Blind Watchmaker by Dawkins Richard.mobi"
+  },
+  {
+   "id": 1367,
+   "path": "JECEI_Volume 9_Issue 1_Pages 1-10.pdf"
+  },
+  {
+   "id": 1464,
+   "path": "On Human Nature With a new Preface, Revised Edition by Edward O. Wilson.pdf"
+  },
+  {
+   "id": 1395,
+   "path": "Learning Java - An Introduction to Real-World Programming with Java by Daniel Leuck, Patrick Niemeyer, Marc Loy.pdf"
+  },
+  {
+   "id": 1562,
+   "path": "Regex Quick Syntax Reference Understanding and Using Regular Expressions by Zsolt Nagy.pdf"
+  },
+  {
+   "id": 1240,
+   "path": "Elements of Programming Interviews  The Insiders’ Guide by Adnan Aziz, Tsung-Hsien Lee, Amit Prakash.pdf"
+  },
+  {
+   "id": 1447,
+   "path": "Modern Vim Craft Your Development Environment with Vim 8 and Neovim by Drew Neil.pdf"
+  },
+  {
+   "id": 1100,
+   "path": "Beginning PHP and MySQL From Novice to Professional by Frank M. Kromann.pdf"
+  },
+  {
+   "id": 1598,
+   "path": "Software Architecture for Busy Developers Talk and act like a software architect in one weekend by Stéphane Eyskens.pdf"
+  },
+  {
+   "id": 1075,
+   "path": "Antipatterns. Refactoring Software, Archtectures and Projects in Crisis by William J. Brown, Raphael C. Malveau, Hays W. Skip McCormick, Thomas J. Mowbray.pdf"
+  },
+  {
+   "id": 1170,
+   "path": "CSS (Cascading Style Sheets) Visual Dictionary by Greg Sidelnikov.epub"
+  },
+  {
+   "id": 1088,
+   "path": "Attachment Theory in Practice Emotionally Focused Therapy (EFT) with Individuals, Couples, and Families by Susan M. Johnson.pdf"
+  },
+  {
+   "id": 1755,
+   "path": "UNSCRIPTED Life, Liberty, and the Pursuit of Entrepreneurship by MJ DeMarco.pdf"
+  },
+  {
+   "id": 1708,
+   "path": "The Social Skills Guidebook by Chris MacLeod.epub"
+  },
+  {
+   "id": 1549,
+   "path": "Reactive Programming with Kotlin (First Edition) Learn Rx with RxJava, RxKotlin, and RXAndroid by Alex Sullivan, Marin Todorov, Scott Gardner, Florent Pillet, Junior Bontognali.pdf"
+  },
+  {
+   "id": 1189,
+   "path": "de7f56fe-7d82-4f8f-8630-4e9a72e4209d.pdf"
+  },
+  {
+   "id": 1604,
+   "path": "Sources of Power How People Make Decisions by Gary A. Klein.epub"
+  },
+  {
+   "id": 1508,
+   "path": "Pro Angular 9 Build Powerful and Dynamic Web Apps by Adam Freeman.pdf"
+  },
+  {
+   "id": 1365,
+   "path": "JavaScript Domain-Driven Design Speed up your application development by leveraging the patterns of domain-driven design by Philipp Fehre.pdf"
+  },
+  {
+   "id": 1306,
+   "path": "Hands On JavaScript High Performance Build faster web apps using Node.js, Svelte.js and WebAssembly by Justin Scherer.pdf"
+  },
+  {
+   "id": 1031,
+   "path": "A First Course in Abstract Algebra, 7th Edition by Fraleigh, John.pdf"
+  },
+  {
+   "id": 1540,
+   "path": "Python Object-Oriented Programming Build robust and maintainable object-oriented Python applications and libraries by Steven F. Lott, Dusty Phillips.pdf"
+  },
+  {
+   "id": 1506,
+   "path": "Premature Ejaculation - How to Last Longer in Bed, Increase Sex Drive, Pleasure your Partner, and have Rock Star Sex by David Armstrong.epub"
+  },
+  {
+   "id": 1062,
+   "path": "Always Talk to Strangers 3 Simple Steps to Finding the Love of Your Life by David Wygant, Bryan Swerling.pdf"
+  },
+  {
+   "id": 1616,
+   "path": "SQL Practice Problems 57 Beginning, Intermediate, and Advanced Challenges for You to Solve Using a Learn-By-Doing Approach by Vasilik, Sylvia Moestl.pdf"
+  },
+  {
+   "id": 1468,
+   "path": "Operating Systems by Harvey M. Deitel, Paul Deitel, David R. Choffnes.pdf"
+  },
+  {
+   "id": 1443,
+   "path": "Modern CSS with Tailwind Flexible Styling Without the Fuss by Noel Rappin.pdf"
+  },
+  {
+   "id": 1402,
+   "path": "lecture4.pdf"
+  },
+  {
+   "id": 1756,
+   "path": "Using Asyncio in Python Understanding Pythons Asynchronous Programming Features by Caleb Hattingh.pdf"
+  },
+  {
+   "id": 1794,
+   "path": "中国股票市场的非线性分析_臧玉卫.pdf"
+  },
+  {
+   "id": 1329,
+   "path": "How to invent everything  a survival guide for the stranded time traveler by North, Ryan.pdf"
+  },
+  {
+   "id": 1017,
+   "path": "24722-Article Text-37662-1-10-20200617.pdf"
+  },
+  {
+   "id": 1218,
+   "path": "Django for Professionals Production Websites with Python  Django by William S. Vincent_2.pdf"
+  },
+  {
+   "id": 1114,
+   "path": "Bootstrap Responsive Web Development by Jake Spurlock.pdf"
+  },
+  {
+   "id": 1169,
+   "path": "Cross-Platform Development with Qt 6 and Modern C++ Design and build applications with modern graphical user interfaces without worrying about platform dependency by Nibedit Dey.pdf"
+  },
+  {
+   "id": 1510,
+   "path": "Pro Spring Boot 2 An Authoritative Guide to Building Microservices, Web and Enterprise Applications, and Best Practices by Felipe Gutierrez_2.pdf"
+  },
+  {
+   "id": 1175,
+   "path": "Darren Levine, John Whitman - Complete Krav maga _ the ultimate guide to over 250 self-defense and combative techniques (2016, Ulysses Press) - libgen.lc.epub"
+  },
+  {
+   "id": 1358,
+   "path": "Java Cookbook - Problems and Solutions for Java Developers (Early Release) by Ian F. Darwin.epub"
+  },
+  {
+   "id": 1865,
+   "path": "野兽绅士（单身男士必备撩妹宝典。坏男孩创始人、教父Tango终极力作！汇集超人气恋爱社区「坏男孩」中超经典追女生技巧和领悟。无数情感导师的必修教材！亚洲一线追女社区「坏男孩」指导思想精华提炼。让你喜欢的女孩喜欢上你！） by 巫家民（Tango）.azw3"
+  },
+  {
+   "id": 1633,
+   "path": "TensorFlow for Machine Intelligence A Hands-On Introduction to Learning Algorithms by Sam Abrahams, Danijar Hafner, Erik Erwitt, Ariel Scarpinelli.pdf"
+  },
+  {
+   "id": 1656,
+   "path": "The Blind Watchmaker Why the Evidence of Evolution Reveals a Universe Without Design by Richard Dawkins.epub"
+  },
+  {
+   "id": 1335,
+   "path": "HTML and CSS Design and Build Websites by Jon Duckett.pdf"
+  },
+  {
+   "id": 1583,
+   "path": "Serverless Applications with Node.js Using AWS Lambda and Claudia.js by Slobodan Stojanovic, Aleksandar Simovic.pdf"
+  },
+  {
+   "id": 1067,
+   "path": "Analysis of Front-end Frameworks for Web Applications.pdf"
+  },
+  {
+   "id": 1810,
+   "path": "基于深度强化学习的交易模型风险控制算法_王炜鹏.pdf"
+  },
+  {
+   "id": 1458,
+   "path": "Numb and Number How to Avoid Being Mystified by the Mathematics of Modern Life by William Hartston.epub"
+  },
+  {
+   "id": 1054,
+   "path": "Algorithms Illuminated (Part 4) Algorithms for NP-Hard Problems by Tim Roughgarden_2.pdf"
+  },
+  {
+   "id": 1561,
+   "path": "Refactoring for Software Design Smells Managing Technical Debt by Girish Suryanarayana, Ganesh Samarthyam, Tushar Sharma.pdf"
+  },
+  {
+   "id": 1570,
+   "path": "RESTful Web APIs by Leonard Richardson, Mike Amundsen, Sam Ruby.pdf"
+  },
+  {
+   "id": 1690,
+   "path": "The Origin of Concurrent Programming  From Semaphores to Remote Procedure Calls by Per Brinch Hansen (Editor).pdf"
+  },
+  {
+   "id": 1718,
+   "path": "The_Ball-Pivoting_Algorithm_for_Surface_Reconstruc.pdf"
+  },
+  {
+   "id": 1773,
+   "path": "Why People Believe Weird Things Pseudoscience, Superstition, and Other Confusions of Our Time by Michael Shermer.pdf"
+  },
+  {
+   "id": 1526,
+   "path": "Programming Kotlin Create Elegant, Expressive, and Performant JVM and Android Applications by Venkat Subramaniam.pdf"
+  },
+  {
+   "id": 1575,
+   "path": "Schaums Outline of Discrete Mathematics, Revised Third Edition by Seymour Lipschutz, Marc Lipson.pdf"
+  },
+  {
+   "id": 1728,
+   "path": "TICPP-V2.pdf"
+  },
+  {
+   "id": 1231,
+   "path": "Effective Kotlin Best Practices by Marcin Moskala.pdf"
+  },
+  {
+   "id": 1589,
+   "path": "Seven Databases in Seven Weeks A Guide to Modern Databases and the NoSQL Movement by Luc Perkins, Eric Redmond, Jim Wilson.pdf"
+  },
+  {
+   "id": 1460,
+   "path": "Object-oriented Analysis And Design Understanding System Development With UML 2.0 by Mike ODocherty.pdf"
+  },
+  {
+   "id": 1772,
+   "path": "Why Men Love Bitches From Doormat to Dreamgirl – A Womans Guide to Holding Her Own in a Relationship by Sherry Argov.pdf"
+  },
+  {
+   "id": 1641,
+   "path": "The 4-Hour Workweek Escape 9-5, Live Anywhere, and Join the New Rich (Expanded and Updated) by Timothy Ferriss.epub"
+  },
+  {
+   "id": 1538,
+   "path": "Python GUI Develop Android Applications using Python, Qt and PyQt5 by Ananda, Olaf Art [Ananda, Olaf Art].epub"
+  },
+  {
+   "id": 1558,
+   "path": "reconstar.pdf"
+  },
+  {
+   "id": 1282,
+   "path": "Gardner_CognitivePatterns.pdf"
+  },
+  {
+   "id": 1155,
+   "path": "Concurrency in C Cookbook Asynchronous, Parallel, and Multithreaded Programming by Stephen Cleary.epub"
+  },
+  {
+   "id": 1314,
+   "path": "Hands-On Software Engineering with Python Move beyond basic programming and construct reliable and efficient software with complex code by Brian Allbee.pdf"
+  },
+  {
+   "id": 1631,
+   "path": "tacl_a_00298.pdf"
+  },
+  {
+   "id": 1520,
+   "path": "Professional CMake A Practical Guide by Craig Scott_3.pdf"
+  },
+  {
+   "id": 1381,
+   "path": "Laravel Up  Running A Framework for Building Modern PHP Apps by Matt Stauffer.pdf"
+  },
+  {
+   "id": 1119,
+   "path": "Building Progressive Web Applications with Vue.js  Reliable, Fast, and Engaging Apps with Vue.js by Carlos Rojas.pdf"
+  },
+  {
+   "id": 1536,
+   "path": "Python for Algorithmic Trading From Idea to Cloud Deployment (EARLY RELEASE) by Yves Hilpisch.epub"
+  },
+  {
+   "id": 1737,
+   "path": "Types and Programming Languages by Benjamin C. Pierce.pdf"
+  },
+  {
+   "id": 1105,
+   "path": "Beyond the Power of Now A Guide To, and Beyond, Eckhart Tolle’s Teachings by L Ron Gardner.pdf"
+  },
+  {
+   "id": 1341,
+   "path": "Implementing Domain-Driven Design by Vaughn Vernon.pdf"
+  },
+  {
+   "id": 1228,
+   "path": "Dynamic Programming for Coding Interviews A Bottom-Up Approach to Problem Solving by Meenakshi , Kamal Rawat.pdf"
+  },
+  {
+   "id": 1660,
+   "path": "The Cucumber for Java Book Behaviour-Driven Development for Testers and Developers by Seb Rose Matt Wynne Aslak Hellesoy.pdf"
+  },
+  {
+   "id": 1286,
+   "path": "Get Your Hands Dirty on Clean Architecture by Tom Hombergs.pdf"
+  },
+  {
+   "id": 1482,
+   "path": "polymultiply_2.pdf"
+  },
+  {
+   "id": 1389,
+   "path": "Learn TensorFlow 2.0 Implement Machine Learning And Deep Learning Models With Python by Pramod Singh, Avinash Manure.pdf"
+  },
+  {
+   "id": 1160,
+   "path": "Contemporary Society An Introduction to Social Science by John A Perry, Erna K Perry.pdf"
+  },
+  {
+   "id": 1127,
+   "path": "C++ Concurrency in Action by Anthony Williams_2.pdf"
+  },
+  {
+   "id": 1593,
+   "path": "silo.tips_a-survey-on-distributed-hash-table-dht-theory-platforms-and-applications-hao-zhang-yonggang-wen-haiyong-xie-and-nenghai-yu.pdf"
+  },
+  {
+   "id": 1745,
+   "path": "Understanding the Linux Kernel, Third Edition.pdf"
+  },
+  {
+   "id": 1821,
+   "path": "把妹达人之谜男方法 by 迷男.pdf"
+  },
+  {
+   "id": 1001,
+   "path": "2010.02803.pdf"
+  },
+  {
+   "id": 1377,
+   "path": "Kotlin in Action by Dmitry Jemerov, Svetlana Isakova.pdf"
+  },
+  {
+   "id": 1164,
+   "path": "Convict Conditioning_ How to Bust Free of All Weakness Using the Lost Secrets of Supreme Survival Strength.mobi"
+  },
+  {
+   "id": 1446,
+   "path": "Modern Tkinter for Busy Python Developers Quickly learn to create great looking user interfaces for Windows, Mac and Linux using Pythons standard GUI toolkit by Mark Roseman.pdf"
+  },
+  {
+   "id": 1746,
+   "path": "Unified Modelling Language User Guide by Grady Booch, James Rumbaugh, Ivar Jacobson.pdf"
+  },
+  {
+   "id": 1359,
+   "path": "Java EE Web Application Primer Building Bullhorn A Messaging App with JSP, Servlets, JavaScript, Bootstrap and Oracle by Dave Wolf,A.J. Henley (auth.).pdf"
+  },
+  {
+   "id": 1842,
+   "path": "理解WebKit和Chromium by 朱永盛.epub"
+  },
+  {
+   "id": 1428,
+   "path": "Mastering Vim Quickly by Jovica Ilic.pdf"
+  },
+  {
+   "id": 1425,
+   "path": "Mastering Kotlin Learn Advanced Kotlin Programming Techniques to Build Apps for Android, IOS, and the Web by Nate Ebel.epub"
+  },
+  {
+   "id": 1336,
+   "path": "HTML and CSS.  Learn The Fundamentals In 7 days by Micheal Knapp.pdf"
+  },
+  {
+   "id": 1374,
+   "path": "Kotlin Apprentice (Second Edition) Beginning Programming with Kotlin by Irina Galata, Joe Howard, Ellen Shapiro.pdf"
+  },
+  {
+   "id": 1655,
+   "path": "The blind watchmaker by Richard Dawkins.pdf"
+  },
+  {
+   "id": 1301,
+   "path": "Guide to Web Development with Java - Understanding Website Creation by Tim Downey.pdf"
+  },
+  {
+   "id": 1751,
+   "path": "UNSCRIPTED - the Great Rat Race Escape From Wage Slavery to Wealth How to Start a Purpose Driven Business and Win Financial Freedom for a Lifetime by Mj Demarco.epub"
+  },
+  {
+   "id": 1699,
+   "path": "The Righteous Mind Why Good People Are Divided by Politics and Religion by Jonathan Haidt.pdf"
+  },
+  {
+   "id": 1213,
+   "path": "Django 3 By Example Build powerful and reliable Python web applications from scratch by Antonio Melé_2.pdf"
+  },
+  {
+   "id": 1379,
+   "path": "KUBERNETES A Simple Guide to Master Kubernetes for Beginners and Advanced Users (2020 Edition) by Brian Docker.epub"
+  },
+  {
+   "id": 1433,
+   "path": "MATLAB数学建模经典案例实战 by 余胜威.pdf"
+  },
+  {
+   "id": 1775,
+   "path": "Why Talking Is Not Enough Eight Loving Actions That Will Transform Your Marriage by Susan Page.pdf"
+  },
+  {
+   "id": 1646,
+   "path": "The Art of Computer Programming Volume 3 Sorting and Searching by Donald E. Knuth.pdf"
+  },
+  {
+   "id": 1805,
+   "path": "基于Web大数据挖掘的证券价格波动实时影响研究_杨莎.pdf"
+  },
+  {
+   "id": 1642,
+   "path": "The 5 AM Club by Robin Sharma.epub"
+  },
+  {
+   "id": 1132,
+   "path": "Clean Architecture A Craftsman’s Guide to Software Structure and Design by Robert C. Martin.pdf"
+  },
+  {
+   "id": 1671,
+   "path": "The Good in Bed Guide to Female Orgasms by Emily Nagoski PhD.pdf"
+  },
+  {
+   "id": 1018,
+   "path": "24722-ArticleText-37662-1-10-20200617.pdf"
+  },
+  {
+   "id": 1725,
+   "path": "Thinking, Fast and Slow by Daniel Kahneman.pdf"
+  },
+  {
+   "id": 1662,
+   "path": "The Demon-Haunted World Science as a Candle in the Dark by Carl Sagan, Ann Druyan.epub"
+  },
+  {
+   "id": 1000,
+   "path": "201 Relationship Questions The Couples Guide to Building Trust and Emotional Intimacy by Barrie Davenport.epub"
+  },
+  {
+   "id": 1268,
+   "path": "Forecasting stock price movements with multiple data.pdf"
+  },
+  {
+   "id": 1754,
+   "path": "UNSCRIPTED Life, Liberty, and the Pursuit of Entrepreneurship by MJ DeMarco.epub"
+  },
+  {
+   "id": 1630,
+   "path": "Systems Analysis and Design An Object-Oriented Approach with UML by Alan Dennis, Barbara Haley Wixom, David Tegarden.pdf"
+  },
+  {
+   "id": 1353,
+   "path": "Introduction to Software Design with Java.pdf"
+  },
+  {
+   "id": 1375,
+   "path": "Kotlin Cookbook A Problem-Focused Approach by Ken Kousen.epub"
+  },
+  {
+   "id": 1475,
+   "path": "Operating Systems Three Easy Pieces by Remzi H. Arpaci-Dusseau Andrea C Arpaci-Dusseau.pdf"
+  },
+  {
+   "id": 1092,
+   "path": "Bayesian Statistics The Fun Way Understanding Statistics And Probability With Star Wars, LEGO, And Rubber Ducks by Will Kurt.pdf"
+  },
+  {
+   "id": 1121,
+   "path": "Building Web Applications with Flask Use Python and Flask to build amazing web applications, just the way you want them by Italo Maia.pdf"
+  },
+  {
+   "id": 1550,
+   "path": "ReactJS An Open Source JavaScript Library.pdf"
+  },
+  {
+   "id": 1337,
+   "path": "HTTP The Definitive Guide by David Gourley, Brian Totty, Marjorie Sayer, Sailu Reddy, Anshu Aggarwal.pdf"
+  },
+  {
+   "id": 1148,
+   "path": "Computer Networks, 5th Edition by ANDREW S.TANENBAUM , DAVID J.WETHERALL.pdf"
+  },
+  {
+   "id": 1137,
+   "path": "Code Complete, Second Edition by Safari, an OReilly Media Company. McConnell, Steve.pdf"
+  },
+  {
+   "id": 1125,
+   "path": "C++ coding standards 101 rules, guidelines, and best practices by Sutter, HerbAlexandrescu, Andrei.pdf"
+  },
+  {
+   "id": 1118,
+   "path": "Building Microservices, 2nd Edition by Sam Newman.epub"
+  },
+  {
+   "id": 1007,
+   "path": "2020.coling-main.482.pdf"
+  },
+  {
+   "id": 1033,
+   "path": "A Passion for Mathematics - Numbers, Puzzles, Madness, Religion, and the Quest for Reality by Clifford A. Pickover.pdf"
+  },
+  {
+   "id": 1556,
+   "path": "Realistic ray tracing by Peter Shirley.djvu"
+  },
+  {
+   "id": 996,
+   "path": "1542353511831-499266722.pdf"
+  },
+  {
+   "id": 1418,
+   "path": "Make a 2D Arcade Game in a Weekend With Unity by Jodessiah Sumpter (auth.).pdf"
+  },
+  {
+   "id": 1021,
+   "path": "30天自制操作系统 (图灵程序设计丛书).pdf"
+  },
+  {
+   "id": 1264,
+   "path": "Fluent Python, 2nd Edition by Luciano Ramalho.pdf"
+  },
+  {
+   "id": 1648,
+   "path": "The art of computer programming. Vol.2. Seminumerical algorithms by Knuth, Donald E.pdf"
+  },
+  {
+   "id": 1445,
+   "path": "Modern Multithreading Implementing, Testing, and Debugging Multithreaded Java and C++PthreadsWin32 by Richard H. Carver, Kuo-Chung Tai.pdf"
+  },
+  {
+   "id": 1140,
+   "path": "COMPARISON OF FRONT-END FRAMEWORKS FOR.pdf"
+  },
+  {
+   "id": 1650,
+   "path": "The Art of Linux Kernel Design Illustrating the Operating System Design Principle and Implementation by Lixiang Yang.pdf"
+  },
+  {
+   "id": 1372,
+   "path": "Kevin Bales - New Slavery, 2nd Edition (Contemporary World Issues) (2005, ABC-CLIO) - libgen.lc.pdf"
+  },
+  {
+   "id": 1221,
+   "path": "Docker Complete Guide To Docker For Beginners And Intermediates (Code tutorials Book 6) by Berg, Craig.epub"
+  },
+  {
+   "id": 1388,
+   "path": "Learn SQL in One Day and Learn It Well. SQL for Beginners with Hands-on Project by Chan Jamie.pdf"
+  },
+  {
+   "id": 1208,
+   "path": "Distributed Computing Principles, Algorithms, and Systems by Ajay D. Kshemkalyani, Mukesh Singhal.pdf"
+  },
+  {
+   "id": 1490,
+   "path": "Practical Bootstrap Learn to Develop Responsively with One of the Most Popular CSS Frameworks by Panos Matsinopoulos.pdf"
+  },
+  {
+   "id": 1157,
+   "path": "Concurrency with Modern C++ by Rainer Grimm.pdf"
+  },
+  {
+   "id": 1844,
+   "path": "程序员实用算法 by 程序员实用算法.pdf"
+  },
+  {
+   "id": 1493,
+   "path": "Practical Deep Learning by Ron Kneusel [Ron Kneusel].epub"
+  },
+  {
+   "id": 1220,
+   "path": "Docker  The Complete Beginners Guide to Starting with Docker by Austin Spencer.pdf"
+  },
+  {
+   "id": 1627,
+   "path": "Svelte A Beginners Guide by Simon Holthausen.epub"
+  },
+  {
+   "id": 1040,
+   "path": "A Tour of C++ (C++ In-Depth Series) by Bjarne Stroustrup.pdf"
+  },
+  {
+   "id": 1347,
+   "path": "Introducing Go Build Reliable, Scalable Programs by Caleb Doxsey.pdf"
+  },
+  {
+   "id": 1342,
+   "path": "Implementing Domain-Driven Design by Vaughn Vernon_2.pdf"
+  },
+  {
+   "id": 1076,
+   "path": "Anxiety  Depression Workbook for Dummies by Charles H. Elliott, Laura L. Smith.pdf"
+  },
+  {
+   "id": 1847,
+   "path": "网络是怎样连接的 by 户根勤.pdf"
+  },
+  {
+   "id": 1516,
+   "path": "Problem Solving, Algorithms, Data Structures, and More by Thomas Mailund.epub"
+  },
+  {
+   "id": 1222,
+   "path": "Docker in Action by Jeff Nickoloff, Stephen Kuenzli.pdf"
+  },
+  {
+   "id": 1502,
+   "path": "Practical Time Series Analysis Prediction with Statistics and Machine Learning by Aileen Nielsen.epub"
+  },
+  {
+   "id": 1735,
+   "path": "tutorial3-adv-writeup.pdf"
+  },
+  {
+   "id": 1141,
+   "path": "Competitive Programming 3 The New Lower Bound of Programming Contests by Steven Halim.pdf"
+  },
+  {
+   "id": 1686,
+   "path": "The Missing README A Guide for the New Software Engineer by Riccomini, Chris, Ryaboy, Dmitriy.epub"
+  }
+ ]
+}
