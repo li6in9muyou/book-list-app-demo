@@ -6,30 +6,14 @@
 </style>
 <script>
     import TextDisplay from "../lib/TextDisplay.svelte";
+    import {fetchBookDetail} from "../lib/BookDetailService.js";
+    import {fetchBookList} from "../lib/BookListService";
 
     export let subject;
-    import {repeat} from 'lodash'
-
-    let cachedDetail = ''
-    let shouldShowDetail = false
-
-    async function fetch_detail(sub) {
-        if (cachedDetail !== '') {
-            return cachedDetail
-        }
-        const dd = `关于这本书（id: ${sub}） 的简要介绍，但是有点${repeat('长', 999)}。`
-        await new Promise((resolve => setTimeout(resolve, 500)))
-        cachedDetail = dd
-        return dd
-    }
-
-    async function fetch_bookList(sub) {
-        return await (await fetch(`http://localhost:8081/api/${sub}/book-lists`)).json()
-    }
 
     let current_user = 'li6q'
     let shouldShowBookList = false;
-
+    let shouldShowDetail = false
 </script>
 <div>
     <main class="">
@@ -52,7 +36,7 @@
     </main>
     <comment>
         {#if shouldShowBookList}
-            {#await fetch_bookList(current_user)}
+            {#await fetchBookList(current_user)}
                 <h2>书单加载中……</h2>
             {:then bookLists}
                 {#each bookLists as list}
@@ -61,7 +45,7 @@
             {/await}
         {/if}
         {#if shouldShowDetail}
-            {#await fetch_detail(subject)}
+            {#await fetchBookDetail(subject)}
                 <h2>详情加载中……</h2>
             {:then detail}
                 <TextDisplay text="{detail}"/>
