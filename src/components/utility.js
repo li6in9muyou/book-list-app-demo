@@ -15,3 +15,7 @@ export const fileNameWithoutExtension = (pp) => {
         return parts[1]
     }
 }
+
+export async function sleep(duration) {
+    await new Promise((resolve => setTimeout(resolve, duration)))
+}
