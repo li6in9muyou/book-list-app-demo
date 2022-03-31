@@ -38,7 +38,7 @@
             加入箩筐
         </button>
         <button class="actionButton"
-                on:click={()=>{() => shouldShowBookList = !shouldShowBookList}}>
+                on:click={() => shouldShowBookList = !shouldShowBookList}>
             加入书单
         </button>
         <button class="actionButton"
