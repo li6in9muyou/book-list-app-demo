@@ -1,6 +1,8 @@
 <script>
     export let text = ''
 </script>
-<h2 class="m-4 p-4 bg-base-200 rounded-md text-lg font-sans">
+<article class="mt-4 p-4 bg-base-200 text-base-content
+                max-h-60 overflow-y-auto rounded-lg font-sans
+                shadow-lg">
     {text}
-</h2>
+</article>
