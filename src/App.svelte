@@ -5,5 +5,5 @@
 </script>
 
 <Notifications item={Alert}>
-    <ActionPanel/>
+    <ActionPanel subject="{1989}"/>
 </Notifications>

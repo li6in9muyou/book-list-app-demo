@@ -5,15 +5,15 @@
     }
 </style>
 <script>
+    import {setContext} from 'svelte'
     import TextDisplay from '../lib/TextDisplay.svelte'
     import {fetchBookDetail} from '../lib/BookDetailService.js'
-    import {fetchBookList} from '../lib/BookListService'
-    import {CurrentUser} from '../lib/UserService.js'
+    import AddToBookListModal from './AddToBookListModal.svelte'
 
-    export let subject
+    export let subject = -1
+    setContext('thisBook', subject)
 
-    let current_user = $CurrentUser
-    let shouldShowBookList = false
+    let shouldShowAddToBookListModal = false
     let shouldShowDetail = false
 </script>
 <div>
@@ -22,9 +22,8 @@
                 on:click={()=>{}}>
             加入箩筐
         </button>
-        <button class="actionButton"
-                on:click={() => shouldShowBookList = !shouldShowBookList}>
-            加入书单
+        <button class="btn modal-button"
+                on:click={() => shouldShowAddToBookListModal = true}>加入书单
         </button>
         <button class="actionButton"
                 on:click={() => shouldShowDetail = !shouldShowDetail}>
@@ -36,15 +35,7 @@
         </button>
     </main>
     <comment>
-        {#if shouldShowBookList}
-            {#await fetchBookList(current_user)}
-                <h2>书单加载中……</h2>
-            {:then bookLists}
-                {#each bookLists as list}
-                    <h2>{list.title}</h2>
-                {/each}
-            {/await}
-        {/if}
+        <AddToBookListModal bind:shouldShow="{shouldShowAddToBookListModal}"/>
         {#if shouldShowDetail}
             {#await fetchBookDetail(subject)}
                 <h2>详情加载中……</h2>
