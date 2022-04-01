@@ -9,11 +9,11 @@
     let new_bookList_title = ''
     const thisBook = getContext('thisBook')
     const pleaseCloseModal = getContext('pleaseCloseModal')
-    let shouldShow = true
+    let shouldShow = false
 
     const {success} = getNotify(getNotificationsContext().addNotification)
 </script>
-<div class="collapse collapse-open" tabindex="0">
+<div class="collapse" tabindex="0">
     <input bind:checked={shouldShow} type="checkbox">
     <div class="collapse-title flex">
         <svg class="w-6 h-6 inline fill-accent mr-2" stroke="currentColor" viewBox="0 0 24 24"
