@@ -1,84 +1,17 @@
-<style>
-    h1 {
-        border: solid red .1em;
-        text-align: center;
-        color: blue;
-        font-family: fangsong;
-        font-size: 4em;
-        margin: 0 0 .05em;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        padding: .1em .1em;
-        height: 100%;
-        overflow-y: hidden;
-    }
-
-    section {
-        margin-top: .2em;
-        border: solid firebrick .3em;
-        padding: .2em .2em;
-        height: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    section::-webkit-scrollbar {
-        width: 1.2em;
-        max-height: 3em;
-    }
-
-    section::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 0 12px crimson;
-    }
-
-    section::-webkit-scrollbar-thumb {
-        background-color: darkred;
-    }
-
-    header {
-        display: flex;
-        align-items: center;
-        padding: .4em .2em;
-        border: solid indianred .3em;
-    }
-
-    header > input {
-        margin: 0 0;
-        width: 100%;
-        outline: none;
-        border: 0 solid crimson;
-        transition: 1000ms;
-
-        color: dodgerblue;
-        font-size: 2em;
-        font-weight: bold;
-    }
-
-    header > input:focus,
-    header > input:hover {
-        border-width: 2rem;
-        transition: 200ms;
-    }
-
-    section > h1 {
-        margin: .1em 0;
-        color: mediumvioletred;
-    }
-</style>
 <svelte:head>
     <title>盗版图书馆</title>
     <link href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>"
           rel="icon">
 </svelte:head>
 <script>
-    import DocumentCard from './DocumentCard.svelte'
-    import {VirtualScroll} from 'svelte-virtual-scroll-list'
+    import MdExitToApp from 'svelte-icons/md/MdExitToApp.svelte'
     import SearchTip from './SearchTip.svelte'
     import {fileNameWithoutExtension} from './utility.js'
     import {search} from './searchEengine.js'
+    import {CurrentUser} from '../lib/UserService.js'
+    import DocumentCard from './DocumentCard.svelte'
+    import VirtualScroll from '@sveltejs/svelte-virtual-list'
+    import PleaseWait from '../lib/PleaseWait.svelte'
 
     let all_fucking_ebooks = []
 
@@ -102,25 +35,40 @@
         books_to_show = results
     }
 </script>
-<main>
-    <h1>
-        盗版图书的图书馆
-    </h1>
-    <header>
-        <input bind:value={query} placeholder="使用正则表达式搜索" type="text">
-        <aside>
-            <SearchTip {good} {showing_count}/>
-        </aside>
-    </header>
-    <section>
+<main class="flex flex-col h-screen">
+    <div class="navbar bg-base-200">
+        <div class="flex">
+            <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
+        </div>
+        <div class="form-control ml-10">
+            <input autocapitalize="off"
+                   autocomplete="off" bind:value={query} class="input input-accent input-bordered"
+                   placeholder="使用正则表达式搜索" spellcheck="false"
+                   type="text">
+        </div>
+        <SearchTip {good} {showing_count}/>
+        <div class="dropdown dropdown-end ml-auto">
+            <label class="btn btn-ghost avatar justify-center" tabindex="0">
+                {$CurrentUser}
+            </label>
+            <ul class="mt-3 p-2 shadow menu menu-compact
+                dropdown-content bg-base-100 rounded-box w-52"
+                tabindex="0">
+                <li><a class="text-red-500 font-bold text-2xl text-warn font-mono">
+                    <div class="w-8 h-8">
+                        <MdExitToApp/>
+                    </div>
+                    Logout
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="overflow-y-auto flex-1">
         {#await populate_books()}
-            <h1>图书正在加载……</h1>
+            <PleaseWait msg="图书正在加载"/>
         {:then books}
-            <VirtualScroll
-                    data="{books_to_show}"
-                    key="id"
-                    let:data>
-                <DocumentCard book={data}/>
+            <VirtualScroll items={books_to_show} let:item>
+                <DocumentCard book={item}/>
             </VirtualScroll>
         {:catch error}
             <h1>加载失败了，原因是：{error.message.toLowerCase()}</h1>
