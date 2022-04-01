@@ -14,7 +14,7 @@
 </script>
 <div>
     <main class="space-x-6">
-        <label class="btn btn-secondary btn-outline btn-sm">
+        <label class="btn btn-secondary btn-outline btn-sm content-center items-end">
             <input bind:checked={shouldShowAddToBookListModal} class="hidden" type="checkbox">
             <span class="h-4 w-4">
                 <FaArchive/>
@@ -23,7 +23,7 @@
                 加入书单
             </span>
         </label>
-        <label class="btn btn-secondary btn-outline btn-sm">
+        <label class="btn btn-secondary btn-outline btn-sm content-center items-end">
             <input bind:checked={shouldShowDetail} class="hidden" type="checkbox">
             {#if shouldShowDetail}
                 <span class="h-4 w-4">
