@@ -7,7 +7,7 @@
     setContext('pleaseCloseModal', () => shouldShow = false)
 </script>
 
-<div class="modal z-0" class:modal-open={shouldShow}>
+<div class="modal" class:modal-open={shouldShow}>
     <div class="modal-box relative max-w-sm">
         <label class="btn btn-sm btn-circle absolute right-2 top-2"
                on:click="{() => shouldShow = false}">✕</label>
