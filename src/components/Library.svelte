@@ -74,11 +74,11 @@
           rel="icon">
 </svelte:head>
 <script>
-    import DocumentCard from './components/DocumentCard.svelte'
+    import DocumentCard from './DocumentCard.svelte'
     import {VirtualScroll} from 'svelte-virtual-scroll-list'
-    import SearchTip from './components/SearchTip.svelte'
-    import {fileNameWithoutExtension} from './components/utility.js'
-    import {search} from './components/searchEengine.js'
+    import SearchTip from './SearchTip.svelte'
+    import {fileNameWithoutExtension} from './utility.js'
+    import {search} from './searchEengine.js'
 
     let all_fucking_ebooks = []
 

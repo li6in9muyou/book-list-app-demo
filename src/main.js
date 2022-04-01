@@ -1,7 +1,7 @@
 import './assets/app.css'
-import ActionPanel from './components/ActionPanel.svelte'
+import App from './App.svelte'
 
-const app = new ActionPanel({
+const app = new App({
     target: document.body,
     props: {
         book: {
