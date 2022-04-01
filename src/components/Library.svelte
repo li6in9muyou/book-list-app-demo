@@ -40,13 +40,42 @@
         <div class="flex">
             <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
         </div>
-        <div class="form-control ml-10">
+        <div class="ml-10 mr-8 flex-1 gap-6">
+            <div class="w-1/4">
+                <SearchTip {good} {showing_count}/>
+            </div>
             <input autocapitalize="off"
-                   autocomplete="off" bind:value={query} class="input input-accent input-bordered"
-                   placeholder="使用正则表达式搜索" spellcheck="false"
+                   autocomplete="off" bind:value={query}
+                   class="text-4xl font-mono input input-accent input-bordered"
+                   placeholder="搜索书本……" spellcheck="false"
                    type="text">
+            <label class="swap swap-flip">
+                <input checked type="checkbox"/>
+                <span class="swap-on">
+                    <span class="badge py-4">
+                        正则表达式
+                    </span>
+                </span>
+                <span class="swap-off">
+                    <span class="badge py-4 badge-outline">
+                        普通匹配
+                    </span>
+                </span>
+            </label>
+            <label class="swap swap-flip">
+                <input type="checkbox"/>
+                <span class="swap-on">
+                    <span class="badge py-4">
+                        区分大小写
+                    </span>
+                </span>
+                <span class="swap-off">
+                    <span class="badge py-4 badge-outline">
+                        不区分
+                    </span>
+                </span>
+            </label>
         </div>
-        <SearchTip {good} {showing_count}/>
         <div class="dropdown dropdown-end ml-auto">
             <label class="btn btn-ghost avatar justify-center" tabindex="0">
                 {$CurrentUser}

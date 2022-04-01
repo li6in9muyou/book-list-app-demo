@@ -1,23 +1,18 @@
-<style>
-    h2 {
-        color: tomato;
-        margin: 0 1em;
-        flex: 1 0 auto;
-
-        min-width: 10em;
-        text-align: center;
-    }
-</style>
 <script>
+    import FaCheck from 'svelte-icons/fa/FaCheck.svelte'
+    import FaTimes from 'svelte-icons/fa/FaTimes.svelte'
+    import FaQuestion from 'svelte-icons/fa/FaQuestion.svelte'
+    import EmbeddedAlert from '../lib/EmbeddedAlert.svelte'
+
     export let showing_count
     export let good
 </script>
 {#if good}
     {#if showing_count > 0}
-        <h2>共有{showing_count}条记录</h2>
+        <EmbeddedAlert icon="{FaCheck}" color="success" text="展示了{showing_count}条记录"/>
     {:else}
-        <h2>没有记录</h2>
+        <EmbeddedAlert icon="{FaQuestion}" color='info' text="没有记录"/>
     {/if}
 {:else }
-    <h2>搜索词错误</h2>
+    <EmbeddedAlert icon="{FaTimes}" color='error' text="搜索词错误"/>
 {/if}
