@@ -1,8 +1,6 @@
-import {memoize} from 'lodash'
-
-export const fetchAllBookListOfUser = memoize(
-    async user => await (await fetch(`http://localhost:8081/api/${user}/book-lists`)).json()
-)
+export async function fetchAllBookListOfUser(user) {
+    return await (await fetch(`http://localhost:8081/api/${user}/book-lists`)).json()
+}
 
 export async function createBookList(user, title, books = []) {
     return await fetch(`http://localhost:8081/api/${user}/book-lists`, {
@@ -24,10 +22,27 @@ export async function deleteBookList(user, title) {
     })
 }
 
-export async function addBooksToBookList(user, title, newBooks) {
-    const existingBooks = await fetchAllBookListOfUser(user).filter(
+export async function updateBooksInBookList(user, title, newBooks) {
+    return await fetch(`http://localhost:8081/api/${user}/book-lists/${title}`, {
+        method: 'PATCH',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }, body: JSON.stringify({
+            books: newBooks
+        })
+    })
+}
+
+async function booksInBookList(user, title) {
+    const bookListsOfUser = await fetchAllBookListOfUser(user)
+    return bookListsOfUser.find(
         list => list.id === title
-    )
+    ).books
+}
+
+export async function addBooksToBookList(user, title, newBooks) {
+    const existingBooks = await booksInBookList(user, title)
     return await fetch(`http://localhost:8081/api/${user}/book-lists/${title}`, {
         method: 'PATCH',
         headers: {
