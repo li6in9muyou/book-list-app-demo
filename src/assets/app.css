@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    /*sans*/
+    font-family: "poppins";
+    src: url("/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    /*serif*/
+    font-family: "biz_udpmincho";
+    src: url("/fonts/BIZ_UDPMincho/BIZUDPMincho-Regular.ttf");
+}
+
+@font-face {
+    /*mono*/
+    font-family: "ubuntu_mono";
+    src: url("/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf");
+}
+
+@font-face {
+    font-family: "noto_sans_sc";
+    src: url("/fonts/Noto_Sans_SC/NotoSansSC-Regular.otf");
+}
+
+@font-face {
+    font-family: "noto_serif_sc";
+    src: url("/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf");
+}
