@@ -7,6 +7,7 @@
   import SearchBar from "./searchPage/SearchBar.svelte";
   import { fileNameWithoutExtension } from "./utility.js";
   import SearchTip from "./SearchTip.svelte";
+  import EmbeddedAlert from "../lib/EmbeddedAlert.svelte";
 
   let all_fucking_ebooks = [];
 
@@ -55,7 +56,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-2 p-4 justify-between">
+  <div class="flex flex-col gap-4 p-4 justify-between">
     <SearchTip {showing_count} good={error.detail === ""} />
     <SearchBar
       bind:error
@@ -73,7 +74,12 @@
         <DocumentCard book={item} />
       </VirtualScroll>
     {:catch error}
-      <h1>加载失败了，原因是：{error.message.toLowerCase()}</h1>
+      <div class="p-4 pt-0">
+        <EmbeddedAlert
+          text="加载失败了，原因是：{error.message.toLowerCase()}"
+          color="error"
+        />
+      </div>
     {/await}
   </section>
 </main>
