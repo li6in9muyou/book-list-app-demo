@@ -6,6 +6,7 @@
   import PleaseWait from "../lib/PleaseWait.svelte";
   import SearchBar from "./searchPage/SearchBar.svelte";
   import { fileNameWithoutExtension } from "./utility.js";
+  import SearchTip from "./SearchTip.svelte";
 
   let all_fucking_ebooks = [];
 
@@ -32,12 +33,7 @@
     <div class="flex">
       <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
     </div>
-    <SearchBar
-      bind:error
-      bind:hay={all_fucking_ebooks}
-      bind:results={books_to_show}
-      getKey={(e) => fileNameWithoutExtension(e.path)}
-    />
+
     <div class="dropdown dropdown-end ml-auto">
       <label class="btn btn-ghost avatar justify-center" tabindex="0">
         {$CurrentUser}
@@ -58,6 +54,17 @@
       </ul>
     </div>
   </div>
+
+  <div class="flex flex-col gap-2 p-4 justify-between">
+    <SearchTip {showing_count} good={error.detail === ""} />
+    <SearchBar
+      bind:error
+      bind:hay={all_fucking_ebooks}
+      bind:results={books_to_show}
+      getKey={(e) => fileNameWithoutExtension(e.path)}
+    />
+  </div>
+
   <section class="overflow-y-auto flex-1">
     {#await populate_books()}
       <PleaseWait msg="图书正在加载" />
