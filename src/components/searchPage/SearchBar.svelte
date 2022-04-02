@@ -1,9 +1,11 @@
 <script>
     import {textSearch} from '../searchEengine.js'
+    import {identity} from 'lodash'
 
     export let hay = []
     export let results
     export let error
+    export let getKey = identity
     let query = ''
 
     let success
@@ -14,7 +16,7 @@
 
     $: {
         ({results, success, error} = textSearch(
-                query, hay, e => e,
+                query, hay, getKey,
                 {
                     useRegex: useRegex,
                     ignoreCase: ignoreCase
