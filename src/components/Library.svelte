@@ -5,13 +5,12 @@
 </svelte:head>
 <script>
     import MdExitToApp from 'svelte-icons/md/MdExitToApp.svelte'
-    import SearchTip from './SearchTip.svelte'
-    import {fileNameWithoutExtension} from './utility.js'
-    import {textSearch} from './searchEengine.js'
     import {CurrentUser} from '../lib/UserService.js'
     import DocumentCard from './DocumentCard.svelte'
     import VirtualScroll from '@sveltejs/svelte-virtual-list'
     import PleaseWait from '../lib/PleaseWait.svelte'
+    import SearchBar from './searchPage/SearchBar.svelte'
+    import {fileNameWithoutExtension} from './utility.js'
 
     let all_fucking_ebooks = []
 
@@ -20,62 +19,20 @@
         all_fucking_ebooks = await (await fetch(url)).json()
     }
 
-    let query = ''
-    let good
-    let books_to_show
+    let error = {}
+    let books_to_show = []
     let showing_count
-
-    $: {
-        const {results, success} = textSearch(
-            query, all_fucking_ebooks,
-            (bk) => fileNameWithoutExtension(bk.path)
-        )
-        showing_count = results.length
-        good = success
-        books_to_show = results
-    }
+    $: showing_count = books_to_show.length
 </script>
 <main class="flex flex-col h-screen">
-    <div class="navbar bg-base-200">
+    <div class="navbar bg-base-200 gap-4">
         <div class="flex">
             <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
         </div>
-        <div class="ml-10 mr-8 flex-1 gap-6">
-            <div class="w-1/4">
-                <SearchTip {good} {showing_count}/>
-            </div>
-            <input autocapitalize="off"
-                   autocomplete="off" bind:value={query}
-                   class="text-4xl font-mono input input-accent input-bordered"
-                   placeholder="搜索书本……" spellcheck="false"
-                   type="text">
-            <label class="swap swap-flip">
-                <input checked type="checkbox"/>
-                <span class="swap-on">
-                    <span class="badge py-4">
-                        正则表达式
-                    </span>
-                </span>
-                <span class="swap-off">
-                    <span class="badge py-4 badge-outline">
-                        普通匹配
-                    </span>
-                </span>
-            </label>
-            <label class="swap swap-flip">
-                <input type="checkbox"/>
-                <span class="swap-on">
-                    <span class="badge py-4">
-                        区分大小写
-                    </span>
-                </span>
-                <span class="swap-off">
-                    <span class="badge py-4 badge-outline">
-                        不区分
-                    </span>
-                </span>
-            </label>
-        </div>
+        <SearchBar bind:error
+                   bind:hay={all_fucking_ebooks}
+                   bind:results={books_to_show}
+                   getKey={e=>fileNameWithoutExtension(e.path)}/>
         <div class="dropdown dropdown-end ml-auto">
             <label class="btn btn-ghost avatar justify-center" tabindex="0">
                 {$CurrentUser}
