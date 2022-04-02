@@ -7,7 +7,7 @@
     import MdExitToApp from 'svelte-icons/md/MdExitToApp.svelte'
     import SearchTip from './SearchTip.svelte'
     import {fileNameWithoutExtension} from './utility.js'
-    import {search} from './searchEengine.js'
+    import {textSearch} from './searchEengine.js'
     import {CurrentUser} from '../lib/UserService.js'
     import DocumentCard from './DocumentCard.svelte'
     import VirtualScroll from '@sveltejs/svelte-virtual-list'
@@ -26,7 +26,7 @@
     let showing_count
 
     $: {
-        const {results, success} = search(
+        const {results, success} = textSearch(
             query, all_fucking_ebooks,
             (bk) => fileNameWithoutExtension(bk.path)
         )
