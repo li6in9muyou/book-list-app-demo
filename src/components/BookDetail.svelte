@@ -7,12 +7,14 @@
   export let shouldShow = false;
 </script>
 
-{#if thisBook !== -1}
-  {#if shouldShow}
+<div class="mt-4">
+  {#if thisBook !== -1 && shouldShow}
     {#await fetchBookDetail(thisBook)}
-      <PleaseWait msg="详情加载中" />
+      <div class="border-info border rounded pr-2">
+        <PleaseWait msg="详情加载中" />
+      </div>
     {:then detail}
       <TextDisplay text={detail} />
     {/await}
   {/if}
-{/if}
+</div>
