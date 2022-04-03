@@ -12,7 +12,7 @@
   let all_fucking_ebooks = [];
 
   const populate_books = async () => {
-    const url = "http://localhost:8081/api/books";
+    const url = import.meta.env.VITE_DEV_DB_URL + `/api/books`;
     all_fucking_ebooks = await (await fetch(url)).json();
   };
 
