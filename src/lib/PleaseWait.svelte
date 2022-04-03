@@ -7,19 +7,17 @@
   export let err = "行动失败，尝试刷新页面";
 </script>
 
-{#await sleep(timeout)}
-  <div class="flex items-center space-x-4 p-2">
+<div class="flex items-center space-x-4 p-2">
+  {#await sleep(timeout)}
     <div
       class="ml-4 w-6 h-6 text-info animate-spin radial-progress"
       style="--value:80;--size:1.5rem"
     />
     <span>{msg}</span>
-  </div>
-{:then _}
-  <div class="flex items-center space-x-4 p-2">
+  {:then _}
     <div class="ml-4 w-6 h-6 text-error">
       <FaExclamation />
     </div>
     <span>{err}</span>
-  </div>
-{/await}
+  {/await}
+</div>
