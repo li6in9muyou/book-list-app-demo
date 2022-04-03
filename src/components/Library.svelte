@@ -8,13 +8,12 @@
   import { fileNameWithoutExtension } from "./utility.js";
   import SearchTip from "./SearchTip.svelte";
   import EmbeddedAlert from "../lib/EmbeddedAlert.svelte";
+  import { fetchAllBooks } from "../lib/BookService.js";
 
   let all_fucking_ebooks = [];
 
-  const populate_books = async () => {
-    const url = import.meta.env.VITE_DEV_DB_URL + `/api/books`;
-    all_fucking_ebooks = await (await fetch(url)).json();
-  };
+  const populate_books = async () =>
+    (all_fucking_ebooks = await fetchAllBooks());
 
   let error = {};
   let books_to_show = [];
