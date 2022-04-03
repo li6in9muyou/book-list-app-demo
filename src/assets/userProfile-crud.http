@@ -1,0 +1,3 @@
+### checkEmailExists
+GET http://localhost:8081/api/users?email=dev9@dev.dev
+###
