@@ -1,9 +1,9 @@
 <script>
   import Notifications from "svelte-notifications";
   import Alert from "./lib/Alert.svelte";
-  import Library from "./components/Library.svelte";
+  import OnBoard from "./components/userProfile/OnBoard.svelte";
 </script>
 
 <Notifications item={Alert}>
-  <Library />
+  <OnBoard />
 </Notifications>
