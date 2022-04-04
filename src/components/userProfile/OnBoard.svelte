@@ -1,18 +1,23 @@
 <script>
   import { field, form } from "svelte-forms";
-  import { min, required } from "svelte-forms/validators";
+  import { email as checkEmail, min, required } from "svelte-forms/validators";
   import PleaseCorrectMe from "../../lib/PleaseCorrectMe.svelte";
-  import { startsWith } from "lodash/string.js";
+  import { checkEmailExists, createUser } from "../../lib/UserService.js";
 
-  const alreadyExists = () => (value) => ({
-    valid: !startsWith(value, "a"),
+  const alreadyExists = () => async (value) => ({
+    valid: value.length === 0 || (await checkEmailExists(value)),
     name: "alreadyExists",
   });
-  const email = field("email", "", [required(), alreadyExists()], {
-    checkOnInit: true,
-  });
-  const password = field("password", "", [required(), min(2)], {
-    checkOnInit: true,
+  const email = field(
+    "email",
+    "",
+    [required(), checkEmail(), alreadyExists()],
+    {
+      stopAtFirstError: true,
+    }
+  );
+  const password = field("password", "", [required(), min(4)], {
+    stopAtFirstError: true,
   });
   const newUserInfo = form(email, password);
 </script>
@@ -32,13 +37,17 @@
     <input
       bind:value={$email.value}
       type="text"
-      placeholder="Type here"
+      placeholder="此处输入邮箱"
       class="input input-bordered w-full"
     />
     <label class="label">
       <PleaseCorrectMe
         prompt="一定要填写邮箱"
         predicate={() => $newUserInfo.hasError("email.required")}
+      />
+      <PleaseCorrectMe
+        prompt="不是正确的邮箱地址"
+        predicate={() => $newUserInfo.hasError("email.not_an_email")}
       />
       <PleaseCorrectMe
         prompt="此邮箱已经注册过了"
@@ -53,13 +62,13 @@
     </label>
     <input
       bind:value={$password.value}
-      type="text"
-      placeholder="Type here"
+      type="password"
+      placeholder="此处输入密码"
       class="input input-bordered w-full max-w-xs"
     />
     <label class="label">
       <PleaseCorrectMe
-        prompt="密码至少两个字符"
+        prompt="密码至少四个字符"
         predicate={() => $newUserInfo.hasError("password.min")}
       />
     </label>
@@ -67,6 +76,7 @@
 
   <button
     class="btn btn-accent mr-auto mt-8 w-full flex-stretch md:max-w-fit"
-    class:btn-disabled={!$newUserInfo.valid}>注册</button
+    class:btn-disabled={!$newUserInfo.valid}
+    on:click={() => createUser($email.value, $password.value)}>注册</button
   >
 </div>
