@@ -1,6 +1,11 @@
 <script>
   import { field, form } from "svelte-forms";
-  import { email as checkEmail, min, required } from "svelte-forms/validators";
+  import {
+    email as checkEmail,
+    matchField,
+    min,
+    required,
+  } from "svelte-forms/validators";
   import PleaseCorrectMe from "../../lib/PleaseCorrectMe.svelte";
   import { checkEmailExists, createUser } from "../../lib/UserService.js";
 
@@ -14,12 +19,18 @@
     [required(), checkEmail(), alreadyExists()],
     {
       stopAtFirstError: true,
+      valid: false,
     }
   );
   const password = field("password", "", [required(), min(4)], {
     stopAtFirstError: true,
+    valid: false,
   });
-  const newUserInfo = form(email, password);
+  const passwordAgain = field("passwordAgain", "", [matchField(password)], {
+    stopAtFirstError: true,
+    valid: false,
+  });
+  const newUserInfo = form(email, password, passwordAgain);
 </script>
 
 <div class="navbar bg-base-200">
@@ -70,6 +81,24 @@
       <PleaseCorrectMe
         prompt="密码至少四个字符"
         predicate={() => $newUserInfo.hasError("password.min")}
+      />
+    </label>
+  </div>
+
+  <div class="form-control w-full">
+    <label class="label">
+      <span class="label-text text-lg">确认密码</span>
+    </label>
+    <input
+      bind:value={$passwordAgain.value}
+      type="password"
+      placeholder="此处重复密码"
+      class="input input-bordered w-full max-w-xs"
+    />
+    <label class="label">
+      <PleaseCorrectMe
+        prompt="两次输入不一致"
+        predicate={() => $newUserInfo.hasError("passwordAgain.match_field")}
       />
     </label>
   </div>
