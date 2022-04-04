@@ -1,9 +1,9 @@
 <script>
   import { getContext } from "svelte";
-  import { createBookList } from "../lib/BookListService.js";
-  import { CurrentUser } from "../lib/UserService.js";
+  import { createBookList } from "../../lib/backendService/BookListService.js";
+  import { CurrentUser } from "../../lib/backendService/UserService.js";
   import { getNotificationsContext } from "svelte-notifications";
-  import { getNotify } from "./utility.js";
+  import { getNotify } from "../../lib/utility.js";
 
   export let max_length = 150;
   let new_bookList_title = "";

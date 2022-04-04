@@ -2,7 +2,7 @@
   import FaCheck from "svelte-icons/fa/FaCheck.svelte";
   import FaTimes from "svelte-icons/fa/FaTimes.svelte";
   import FaQuestion from "svelte-icons/fa/FaQuestion.svelte";
-  import EmbeddedAlert from "../lib/EmbeddedAlert.svelte";
+  import EmbeddedAlert from "../../lib/uiComponent/EmbeddedAlert.svelte";
 
   export let showing_count;
   export let good;

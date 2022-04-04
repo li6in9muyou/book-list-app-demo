@@ -6,8 +6,11 @@
     min,
     required,
   } from "svelte-forms/validators";
-  import PleaseCorrectMe from "../../lib/PleaseCorrectMe.svelte";
-  import { checkEmailExists, createUser } from "../../lib/UserService.js";
+  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
+  import {
+    checkEmailExists,
+    createUser,
+  } from "../../lib/backendService/UserService.js";
 
   const alreadyExists = () => async (value) => ({
     valid: value.length === 0 || (await checkEmailExists(value)),

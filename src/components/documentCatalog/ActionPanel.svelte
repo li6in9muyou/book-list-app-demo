@@ -3,7 +3,7 @@
   import FaArchive from "svelte-icons/fa/FaArchive.svelte";
   import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
   import FaArrowUp from "svelte-icons/fa/FaArrowUp.svelte";
-  import AddToBookListModal from "./AddToBookListModal.svelte";
+  import AddToBookListModal from "../bookListModal/AddToBookListModal.svelte";
   import BookDetail from "./BookDetail.svelte";
 
   export let subject = -1;

@@ -1,7 +1,7 @@
 <script>
-  import { fetchBookDetail } from "../lib/BookDetailService.js";
-  import TextDisplay from "../lib/TextDisplay.svelte";
-  import PleaseWait from "../lib/PleaseWait.svelte";
+  import { fetchBookDetail } from "../../lib/backendService/BookDetailService.js";
+  import TextDisplay from "../../lib/uiComponent/TextDisplay.svelte";
+  import PleaseWait from "../../lib/uiComponent/PleaseWait.svelte";
 
   export let thisBook = -1;
   export let shouldShow = false;

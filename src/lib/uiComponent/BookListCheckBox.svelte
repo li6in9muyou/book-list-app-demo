@@ -1,11 +1,11 @@
 <script>
-  import { CurrentUser } from "./UserService.js";
+  import { CurrentUser } from "../backendService/UserService.js";
   import {
     addBooksToBookList,
     updateBooksInBookList,
-  } from "./BookListService.js";
+  } from "../backendService/BookListService.js";
   import { getNotificationsContext } from "svelte-notifications";
-  import { getNotify } from "../components/utility.js";
+  import { getNotify } from "../utility.js";
 
   const { success, info } = getNotify(
     getNotificationsContext().addNotification

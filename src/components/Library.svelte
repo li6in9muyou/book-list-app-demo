@@ -1,14 +1,14 @@
 <script>
   import MdExitToApp from "svelte-icons/md/MdExitToApp.svelte";
-  import { CurrentUser } from "../lib/UserService.js";
-  import DocumentCard from "./DocumentCard.svelte";
+  import { CurrentUser } from "../lib/backendService/UserService.js";
+  import DocumentCard from "./documentCatalog/DocumentCard.svelte";
   import VirtualScroll from "@sveltejs/svelte-virtual-list";
-  import PleaseWait from "../lib/PleaseWait.svelte";
+  import PleaseWait from "../lib/uiComponent/PleaseWait.svelte";
   import SearchBar from "./searchPage/SearchBar.svelte";
-  import { fileNameWithoutExtension } from "./utility.js";
-  import SearchTip from "./SearchTip.svelte";
-  import EmbeddedAlert from "../lib/EmbeddedAlert.svelte";
-  import { fetchAllBooks } from "../lib/BookService.js";
+  import { fileNameWithoutExtension } from "../lib/utility.js";
+  import SearchTip from "./searchPage/SearchTip.svelte";
+  import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
+  import { fetchAllBooks } from "../lib/backendService/BookService.js";
 
   let all_fucking_ebooks = [];
 
