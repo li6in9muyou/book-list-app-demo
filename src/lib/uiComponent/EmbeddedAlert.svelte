@@ -3,11 +3,11 @@
 
   export let icon = FaInfo;
   export let text = "重要信息";
-  export let color = "info";
+  export let color = "";
 </script>
 
 <div
-  class="alert shadow-lg w-fit p-2 rounded-md"
+  class="alert shadow-lg w-fit p-2 rounded-md min-w-full"
   class:alert-error={"error" === color}
   class:alert-info={"info" === color}
   class:alert-success={"success" === color}

@@ -32,9 +32,7 @@
     bind:value={query}
     class="font-mono input input-secondary input-bordered shadow
                   md:text-xl
-                  sm:flex-1
-                  md:flex-1 md:w-1/3
-                  max-w-lg"
+                  sm:flex-1"
     placeholder="搜索……"
     spellcheck="false"
     type="text"

@@ -28,7 +28,7 @@
     rel="icon"
   />
 </svelte:head>
-<main class="flex flex-col h-screen">
+<main class="flex flex-col h-screen max-w-4xl mx-auto">
   <div class="navbar bg-base-200 gap-4">
     <div class="flex">
       <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
@@ -56,13 +56,13 @@
   </div>
 
   <div class="flex flex-col gap-4 p-4 justify-between">
-    <SearchTip {showing_count} good={error.detail === ""} />
     <SearchBar
       bind:error
       bind:hay={all_fucking_ebooks}
       bind:results={books_to_show}
       getKey={(e) => fileNameWithoutExtension(e.path)}
     />
+    <SearchTip {showing_count} good={error.detail === ""} />
   </div>
 
   <section class="overflow-y-auto flex-1">

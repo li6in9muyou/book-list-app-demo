@@ -3,6 +3,7 @@
   import FaTimes from "svelte-icons/fa/FaTimes.svelte";
   import FaQuestion from "svelte-icons/fa/FaQuestion.svelte";
   import EmbeddedAlert from "../../lib/uiComponent/EmbeddedAlert.svelte";
+  import { fade } from "svelte/transition";
 
   export let showing_count;
   export let good;
@@ -10,14 +11,16 @@
 
 {#if good}
   {#if showing_count > 0}
-    <EmbeddedAlert
-      icon={FaCheck}
-      color="success"
-      text="展示了{showing_count}条记录"
-    />
+    <div in:fade>
+      <EmbeddedAlert icon={FaCheck} text="展示了{showing_count}条记录" />
+    </div>
   {:else}
-    <EmbeddedAlert icon={FaQuestion} color="info" text="没有记录" />
+    <div in:fade>
+      <EmbeddedAlert icon={FaQuestion} color="info" text="没有记录" />
+    </div>
   {/if}
 {:else}
-  <EmbeddedAlert icon={FaTimes} color="error" text="搜索词错误" />
+  <div in:fade>
+    <EmbeddedAlert icon={FaTimes} color="error" text="搜索词错误" />
+  </div>
 {/if}
