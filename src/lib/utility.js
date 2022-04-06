@@ -21,46 +21,17 @@ export async function sleep(duration) {
 }
 
 export function getNotify(addNotification) {
+  const buildOptions = (color, msg) => ({
+    text: msg,
+    removeAfter: 5000,
+    position: "bottom-right",
+    color: color,
+  });
   return {
-    notify: (msg) => {
-      addNotification({
-        text: msg,
-        removeAfter: 5000,
-        position: "bottom-right",
-        color: "",
-      });
-    },
-    info: (msg) => {
-      addNotification({
-        text: msg,
-        removeAfter: 5000,
-        position: "bottom-right",
-        color: "info",
-      });
-    },
-    success: (msg) => {
-      addNotification({
-        text: msg,
-        removeAfter: 5000,
-        position: "bottom-right",
-        color: "success",
-      });
-    },
-    warning: (msg) => {
-      addNotification({
-        text: msg,
-        removeAfter: 5000,
-        position: "bottom-right",
-        color: "warning",
-      });
-    },
-    error: (msg) => {
-      addNotification({
-        text: msg,
-        removeAfter: 5000,
-        position: "bottom-right",
-        color: "error",
-      });
-    },
+    notify: (msg) => addNotification(buildOptions("", msg)),
+    info: (msg) => addNotification(buildOptions("info", msg)),
+    success: (msg) => addNotification(buildOptions("success", msg)),
+    warning: (msg) => addNotification(buildOptions("warning", msg)),
+    error: (msg) => addNotification(buildOptions("error", msg)),
   };
 }

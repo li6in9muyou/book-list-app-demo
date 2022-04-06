@@ -1,27 +1,25 @@
 <script>
+  import { get } from "lodash/object.js";
+  import { FaInfo } from "svelte-icons/fa";
+  import { fly, scale } from "svelte/transition";
+
   export let notification = {};
-  export let color = "";
+  export let color = get(notification, "color", "");
 </script>
 
 <div
-  class="fit-content alert z-40 m-4 w-fit shadow-lg"
+  in:fly={{ x: -400, duration: 1000 }}
+  out:scale
+  class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center
+   justify-between rounded-lg rounded p-2 px-4 shadow shadow-lg
+   md:relative md:right-1/3 xl:relative xl:right-96"
   class:alert-error={"error" === color}
   class:alert-info={"info" === color}
   class:alert-success={"success" === color}
   class:alert-warning={"warning" === color}
 >
-  <svg
-    class="h-6 w-6 flex-shrink-0 stroke-current"
-    fill="none"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-    />
-  </svg>
-  <span>{notification.text}</span>
+  <span class="h-6 w-6">
+    <FaInfo />
+  </span>
+  <span class="flex-1 break-all">{notification.text}</span>
 </div>
