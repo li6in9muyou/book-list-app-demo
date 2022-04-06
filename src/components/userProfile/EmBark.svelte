@@ -4,11 +4,11 @@
   import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
   import {
     checkEmailExists,
-    createUser,
+    loginUser,
   } from "../../lib/backendService/UserService.js";
 
   const mustExists = () => async (value) => ({
-    valid: value.length > 0 && (await checkEmailExists(value)),
+    valid: value.length > 0 && !(await checkEmailExists(value)),
     name: "mustExists",
   });
   const email = field("email", "", [required(), checkEmail(), mustExists()], {
@@ -77,6 +77,6 @@
   <button
     class="flex-stretch btn btn-accent mr-auto mt-8 w-full md:max-w-fit"
     class:btn-disabled={!$newUserInfo.valid}
-    on:click={() => createUser($email.value, $password.value)}>注册</button
+    on:click={() => loginUser($email.value, $password.value)}>登陆</button
   >
 </div>
