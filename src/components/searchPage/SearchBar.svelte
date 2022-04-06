@@ -39,26 +39,28 @@
     spellcheck="false"
     type="text"
   />
-  <label
-    class="label cursor-pointer border rounded shadow
+  <div class="flex gap-2">
+    <label
+      class="label cursor-pointer border rounded shadow flex-1 px-4
                   sm:gap-2"
-  >
-    <span class="label-text">用正则表达</span>
-    <input
-      bind:checked={useRegex}
-      class="toggle toggle-primary"
-      type="checkbox"
-    />
-  </label>
-  <label
-    class="label cursor-pointer border rounded shadow
+    >
+      <span class="label-text">用正则表达</span>
+      <input
+        bind:checked={useRegex}
+        class="toggle toggle-primary"
+        type="checkbox"
+      />
+    </label>
+    <label
+      class="label cursor-pointer border rounded shadow flex-1 px-4
                   sm:gap-2"
-  >
-    <span class="label-text">忽略大小写</span>
-    <input
-      bind:checked={ignoreCase}
-      class="toggle toggle-primary"
-      type="checkbox"
-    />
-  </label>
+    >
+      <span class="label-text">忽略大小写</span>
+      <input
+        bind:checked={ignoreCase}
+        class="toggle toggle-primary"
+        type="checkbox"
+      />
+    </label>
+  </div>
 </div>
