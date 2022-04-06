@@ -77,3 +77,8 @@ export const CurrentUser = derived(CurrentUserInfo, (cu) => {
 });
 
 export const isAuthenticated = derived(CurrentUserInfo, (cu) => cu !== null);
+
+export const logout = async () => {
+  CurrentUserInfo.set({});
+  CurrentAccessToken.set("");
+};
