@@ -37,11 +37,11 @@
 </script>
 
 <div class="navbar bg-base-200">
-  <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
+  <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
 </div>
 
-<div class="flex flex-col gap-4 p-4 m-auto items-center max-w-xs">
-  <div class="text-serif text-2xl text-primary border p-2 w-full rounded">
+<div class="m-auto flex max-w-xs flex-col items-center gap-4 p-4">
+  <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
     注册新账号
   </div>
   <div class="form-control w-full">
@@ -107,7 +107,7 @@
   </div>
 
   <button
-    class="btn btn-accent mr-auto mt-8 w-full flex-stretch md:max-w-fit"
+    class="flex-stretch btn btn-accent mr-auto mt-8 w-full md:max-w-fit"
     class:btn-disabled={!$newUserInfo.valid}
     on:click={() => createUser($email.value, $password.value)}>注册</button
   >

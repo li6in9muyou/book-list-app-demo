@@ -3,8 +3,8 @@
 </script>
 
 <article
-  class="p-4 bg-base-200 text-base-content
-                max-h-60 overflow-y-auto rounded-lg font-sans
+  class="max-h-60 overflow-y-auto rounded-lg
+                bg-base-200 p-4 font-sans text-base-content
                 shadow-lg"
 >
   {text}

@@ -13,22 +13,22 @@
   ];
 </script>
 
-<div class="grid gap-y-4 py-6 mx-6">
+<div class="mx-6 grid gap-y-4 py-6">
   <div class="md:grid md:grid-cols-5">
     <div class="md:col-span-4">
       <SearchBar {hay} bind:results bind:error />
     </div>
-    <div class="md:flex md:col-span-1 md:col-start-5 md:flex-start">
-      <div class="divider md:col-auto md:m-0 md:divider-horizontal" />
+    <div class="md:flex-start md:col-span-1 md:col-start-5 md:flex">
+      <div class="divider md:divider-horizontal md:col-auto md:m-0" />
       <div
         class="flex flex-1 gap-2
-                        md:text-lg md:items-center md:items-stretch"
+                        md:items-center md:items-stretch md:text-lg"
       >
-        <div class="border border-info flex-1 rounded p-2 md:min-w-fit">
+        <div class="flex-1 rounded border border-info p-2 md:min-w-fit">
           数量：{get(results, "length", 0)}
         </div>
         <div
-          class="border rounded p-2 flex-1"
+          class="flex-1 rounded border p-2"
           class:border-error={get(error, "detail", "") !== ""}
           class:border-success={get(error, "detail", "") === ""}
         >
@@ -38,10 +38,10 @@
     </div>
   </div>
   <ul
-    class="py-4 px-2 border-4 border-accent border-red-600 text-lg font-mono
-               grid gap-4
-               grid-cols-3
-               justify-items-start
+    class="grid grid-cols-3 justify-items-start gap-4 border-4 border-accent border-red-600
+               py-4 px-2
+               font-mono
+               text-lg
                sm:grid-cols-5
                md:grid-cols-6"
   >

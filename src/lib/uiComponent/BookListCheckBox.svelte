@@ -33,9 +33,9 @@
 <label class="label cursor-pointer justify-start">
   <input
     bind:checked={bookInBookList}
-    class="checkbox checkbox-md checkbox-secondary"
+    class="checkbox checkbox-secondary checkbox-md"
     on:change={handleChange}
     type="checkbox"
   />
-  <span class="label-text truncate ml-2">{list.id}</span>
+  <span class="label-text ml-2 truncate">{list.id}</span>
 </label>

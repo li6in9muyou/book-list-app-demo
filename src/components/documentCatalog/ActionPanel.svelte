@@ -16,7 +16,7 @@
 <div>
   <main class="space-x-6">
     <label
-      class="btn btn-secondary btn-outline btn-sm content-center items-end"
+      class="btn btn-outline btn-secondary btn-sm content-center items-end"
     >
       <input
         bind:checked={shouldShowAddToBookListModal}
@@ -29,7 +29,7 @@
       <span class="ml-2"> 加入书单 </span>
     </label>
     <label
-      class="btn btn-secondary btn-outline btn-sm content-center items-end"
+      class="btn btn-outline btn-secondary btn-sm content-center items-end"
     >
       <input bind:checked={shouldShowDetail} class="hidden" type="checkbox" />
       {#if shouldShowDetail}

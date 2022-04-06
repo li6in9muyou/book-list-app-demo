@@ -8,10 +8,10 @@
   export let book;
 </script>
 
-<main class="card bg-base-100 shadow-lg mx-4 my-3">
+<main class="card mx-4 my-3 bg-base-100 shadow-lg">
   <section class="card-body">
     <header class="card-title">
-      <div class="badge badge-lg badge-outline badge-primary p-4 font-mono">
+      <div class="badge badge-outline badge-lg badge-primary p-4 font-mono">
         {takeExtension(book.path)}
       </div>
       <div class="mx-6 max-w-2xl">

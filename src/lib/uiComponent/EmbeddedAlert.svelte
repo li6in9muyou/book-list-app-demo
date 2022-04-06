@@ -7,14 +7,14 @@
 </script>
 
 <div
-  class="alert shadow-lg w-fit p-2 rounded-md min-w-full"
+  class="alert w-fit min-w-full rounded-md p-2 shadow-lg"
   class:alert-error={"error" === color}
   class:alert-info={"info" === color}
   class:alert-success={"success" === color}
   class:alert-warning={"warning" === color}
 >
   <div>
-    <span class="w-6 h-6">
+    <span class="h-6 w-6">
       <svelte:component this={icon} />
     </span>
     <span>{text}</span>

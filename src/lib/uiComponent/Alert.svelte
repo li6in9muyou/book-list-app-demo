@@ -4,14 +4,14 @@
 </script>
 
 <div
-  class="alert shadow-lg fit-content w-fit m-4 z-40"
+  class="fit-content alert z-40 m-4 w-fit shadow-lg"
   class:alert-error={"error" === color}
   class:alert-info={"info" === color}
   class:alert-success={"success" === color}
   class:alert-warning={"warning" === color}
 >
   <svg
-    class="stroke-current flex-shrink-0 h-6 w-6"
+    class="h-6 w-6 flex-shrink-0 stroke-current"
     fill="none"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

@@ -12,10 +12,10 @@
   <div class="modal modal-open">
     <div class="modal-box relative max-w-sm">
       <label
-        class="btn btn-xs btn-circle btn-accent absolute right-2 top-2"
+        class="btn btn-accent btn-circle btn-xs absolute right-2 top-2"
         on:click={() => (shouldShow = false)}
       >
-        <span class="w-6 h-6">
+        <span class="h-6 w-6">
           <MdClose />
         </span>
       </label>

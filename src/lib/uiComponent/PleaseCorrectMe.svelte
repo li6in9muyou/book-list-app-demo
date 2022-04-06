@@ -7,7 +7,7 @@
 {#if predicate()}
   <span class="label-text-alt px-2" transition:fade>
     <span
-      class="text-error underline underline-offset-2 font-bold decoration-2"
+      class="font-bold text-error underline decoration-2 underline-offset-2"
     >
       {prompt}
     </span>

@@ -18,7 +18,7 @@
   <input bind:checked={shouldShow} type="checkbox" />
   <div class="collapse-title flex">
     <svg
-      class="w-6 h-6 inline fill-accent mr-2"
+      class="mr-2 inline h-6 w-6 fill-accent"
       stroke="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -40,12 +40,12 @@
       </label>
       <input
         bind:value={new_bookList_title}
-        class="input input-secondary input-sm input-bordered"
+        class="input input-bordered input-secondary input-sm"
         placeholder="书单的名称"
         type="text"
       />
       <button
-        class="ml-auto btn btn-accent btn-sm mt-2"
+        class="btn btn-accent btn-sm ml-auto mt-2"
         on:click={() => {
           createBookList($CurrentUser, new_bookList_title, [thisBook]);
           success("成功加入书单");

@@ -28,24 +28,24 @@
     rel="icon"
   />
 </svelte:head>
-<main class="flex flex-col h-screen max-w-4xl mx-auto">
-  <div class="navbar bg-base-200 gap-4">
+<main class="mx-auto flex h-screen max-w-4xl flex-col">
+  <div class="navbar gap-4 bg-base-200">
     <div class="flex">
-      <a class="btn btn-ghost normal-case text-2xl font-serif">盗版图书馆</a>
+      <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
     </div>
 
     <div class="dropdown dropdown-end ml-auto">
-      <label class="btn btn-ghost avatar justify-center" tabindex="0">
+      <label class="avatar btn btn-ghost justify-center" tabindex="0">
         {$CurrentUser}
       </label>
       <ul
-        class="mt-3 p-2 shadow menu menu-compact
-                dropdown-content bg-base-100 rounded-box w-52"
+        class="dropdown-content menu rounded-box menu-compact mt-3
+                w-52 bg-base-100 p-2 shadow"
         tabindex="0"
       >
         <li>
-          <a class="text-red-500 font-bold text-2xl text-warn font-mono">
-            <div class="w-8 h-8">
+          <a class="text-warn font-mono text-2xl font-bold text-red-500">
+            <div class="h-8 w-8">
               <MdExitToApp />
             </div>
             Logout
@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-4 p-4 justify-between">
+  <div class="flex flex-col justify-between gap-4 p-4">
     <SearchBar
       bind:error
       bind:hay={all_fucking_ebooks}
@@ -65,7 +65,7 @@
     <SearchTip {showing_count} good={error.detail === ""} />
   </div>
 
-  <section class="overflow-y-auto flex-1">
+  <section class="flex-1 overflow-y-auto">
     {#await populate_books()}
       <PleaseWait msg="图书正在加载" />
     {:then books}

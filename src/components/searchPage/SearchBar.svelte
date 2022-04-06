@@ -23,23 +23,23 @@
 </script>
 
 <div
-  class="grid gap-4 items-center items-stretch
+  class="grid items-center items-stretch gap-4
             sm:flex"
 >
   <input
     autocapitalize="off"
     autocomplete="off"
     bind:value={query}
-    class="font-mono input input-secondary input-bordered shadow
-                  md:text-xl
-                  sm:flex-1"
+    class="input input-bordered input-secondary font-mono shadow
+                  sm:flex-1
+                  md:text-xl"
     placeholder="搜索……"
     spellcheck="false"
     type="text"
   />
   <div class="flex gap-2">
     <label
-      class="label cursor-pointer border rounded shadow flex-1 px-4
+      class="label flex-1 cursor-pointer rounded border px-4 shadow
                   sm:gap-2"
     >
       <span class="label-text">用正则表达</span>
@@ -50,7 +50,7 @@
       />
     </label>
     <label
-      class="label cursor-pointer border rounded shadow flex-1 px-4
+      class="label flex-1 cursor-pointer rounded border px-4 shadow
                   sm:gap-2"
     >
       <span class="label-text">忽略大小写</span>
