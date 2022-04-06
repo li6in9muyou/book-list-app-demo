@@ -19,7 +19,7 @@ export function persistUser(obj) {
   if (userInfo === undefined || accessToken === undefined) {
   }
   CurrentAccessToken.set(accessToken);
-  CurrentUser.set(userInfo);
+  CurrentUserInfo.set(userInfo);
 }
 
 export async function createUser(eml, pwd) {
@@ -50,7 +50,7 @@ export async function loginUser(eml, pwd) {
   return await q.json();
 }
 
-export const CurrentUser = writable({}, (set) => {
+export const CurrentUserInfo = writable({}, (set) => {
   set(JSON.parse(localStorage.getItem("userInfo")));
 });
 
@@ -60,7 +60,7 @@ export const CurrentAccessToken = writable("", (set) => {
 
 export const redirectUrl = writable("/");
 
-subscribe(CurrentUser, (value) => {
+subscribe(CurrentUserInfo, (value) => {
   localStorage.setItem("userInfo", JSON.stringify(value));
 });
 
@@ -68,7 +68,7 @@ subscribe(CurrentAccessToken, (value) => {
   localStorage.setItem("accessToken", JSON.stringify(value));
 });
 
-export const CurrentUserDisplayName = derived(CurrentUser, (cu) => {
+export const CurrentUser = derived(CurrentUserInfo, (cu) => {
   if (cu == null) {
     return "";
   } else {
@@ -76,4 +76,4 @@ export const CurrentUserDisplayName = derived(CurrentUser, (cu) => {
   }
 });
 
-export const isAuthenticated = derived(CurrentUser, (cu) => cu !== null);
+export const isAuthenticated = derived(CurrentUserInfo, (cu) => cu !== null);
