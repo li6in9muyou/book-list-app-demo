@@ -4,8 +4,12 @@ import { debounce } from "lodash/function.js";
 import { subscribe } from "svelte/internal";
 import { split } from "lodash";
 
-export const checkEmailExists = debounce(async (email) => {
-  const query = import.meta.env.VITE_DEV_DB_URL + `/api/users?email=${email}`;
+export const displayNameToEmail = (name) => `${name}@dev.dev`;
+
+export const checkDisplayNameDoNotExists = debounce(async (displayName) => {
+  const query =
+    import.meta.env.VITE_DEV_DB_URL +
+    `/api/users?email=${displayNameToEmail(displayName)}`;
   const querySet = await (await fetch(query)).json();
   return isEmpty(querySet);
 }, 500);
@@ -32,11 +36,11 @@ export async function createUser(eml, pwd) {
   return await q.json();
 }
 
-export async function loginUser(eml, pwd) {
+export async function loginUser(dpm, pwd) {
   const q = await fetch(import.meta.env.VITE_DEV_DB_URL + "/login", {
     method: "POST",
     body: JSON.stringify({
-      email: eml,
+      email: displayNameToEmail(dpm),
       password: pwd,
     }),
     headers: {
@@ -58,9 +62,10 @@ subscribe(CurrentAccessToken, (value) => {
   localStorage.setItem("accessToken", JSON.stringify(value));
 });
 
-export const CurrentUser = derived(
-  CurrentUserInfo,
-  (cu) => split(cu.email, "@")[0]
+export const emailToDisplayName = (email) => split(email, "@")[0];
+
+export const CurrentUser = derived(CurrentUserInfo, (cu) =>
+  emailToDisplayName(cu.email)
 );
 
 export function successToken(obj) {

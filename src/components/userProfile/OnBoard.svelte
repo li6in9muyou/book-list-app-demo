@@ -1,114 +1,71 @@
 <script>
-  import { field, form } from "svelte-forms";
+  import { scale } from "svelte/transition";
   import {
-    email as checkEmail,
-    matchField,
-    min,
-    required,
-  } from "svelte-forms/validators";
-  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
-  import {
-    checkEmailExists,
+    checkDisplayNameDoNotExists,
     createUser,
+    persistUser,
+    successToken,
   } from "../../lib/backendService/UserService.js";
+  import { getNotify } from "../../lib/utility.js";
+  import { getNotificationsContext } from "svelte-notifications";
+  import AskDisplayName from "./AskDisplayName.svelte";
+  import AskPassword from "./AskPassword.svelte";
 
-  const alreadyExists = () => async (value) => ({
-    valid: value.length === 0 || (await checkEmailExists(value)),
-    name: "alreadyExists",
-  });
-  const email = field(
-    "email",
-    "",
-    [required(), checkEmail(), alreadyExists()],
-    {
-      stopAtFirstError: true,
-      valid: false,
-    }
+  const { warning, success, notify, error, info } = getNotify(
+    getNotificationsContext().addNotification
   );
-  const password = field("password", "", [required(), min(4)], {
-    stopAtFirstError: true,
-    valid: false,
-  });
-  const passwordAgain = field("passwordAgain", "", [matchField(password)], {
-    stopAtFirstError: true,
-    valid: false,
-  });
-  const newUserInfo = form(email, password, passwordAgain);
+  let displayName, password;
+  let pending = false;
+
+  async function handleSignup() {
+    pending = true;
+    notify("正在注册");
+    const dmp = $displayName.value;
+    const pwd = $password.value;
+
+    if (!(await checkDisplayNameDoNotExists(dmp))) {
+      error(`"${dmp}" 已经注册过了`);
+    } else {
+      const q = await createUser(pwd, pwd);
+      if (successToken(q)) {
+        persistUser(q);
+      } else {
+        error("失败了");
+      }
+    }
+    pending = false;
+  }
 </script>
 
-<div class="navbar bg-base-200">
-  <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
-</div>
-
-<div class="m-auto flex max-w-xs flex-col items-center gap-4 p-4">
-  <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-    注册新账号
-  </div>
-  <div class="form-control w-full">
-    <label class="label">
-      <span class="label-text text-lg">邮箱地址</span>
-    </label>
-    <input
-      bind:value={$email.value}
-      type="text"
-      placeholder="此处输入邮箱"
-      class="input input-bordered w-full"
-    />
-    <label class="label">
-      <PleaseCorrectMe
-        prompt="一定要填写邮箱"
-        predicate={() => $newUserInfo.hasError("email.required")}
-      />
-      <PleaseCorrectMe
-        prompt="不是正确的邮箱地址"
-        predicate={() => $newUserInfo.hasError("email.not_an_email")}
-      />
-      <PleaseCorrectMe
-        prompt="此邮箱已经注册过了"
-        predicate={() => $newUserInfo.hasError("email.alreadyExists")}
-      />
-    </label>
+<div class="flex h-screen flex-col">
+  <div class="flex-start navbar bg-base-200">
+    <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
   </div>
 
-  <div class="form-control w-full">
-    <label class="label">
-      <span class="label-text text-lg">密码</span>
-    </label>
-    <input
-      bind:value={$password.value}
-      type="password"
-      placeholder="此处输入密码"
-      class="input input-bordered w-full max-w-xs"
-    />
-    <label class="label">
-      <PleaseCorrectMe
-        prompt="密码至少四个字符"
-        predicate={() => $newUserInfo.hasError("password.min")}
-      />
-    </label>
-  </div>
+  <div class="m-auto flex w-full max-w-sm flex-1 flex-col p-4">
+    <div class="flex h-3/4 w-full flex-col gap-6">
+      <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
+        注册新账号
+      </div>
 
-  <div class="form-control w-full">
-    <label class="label">
-      <span class="label-text text-lg">确认密码</span>
-    </label>
-    <input
-      bind:value={$passwordAgain.value}
-      type="password"
-      placeholder="此处重复密码"
-      class="input input-bordered w-full max-w-xs"
-    />
-    <label class="label">
-      <PleaseCorrectMe
-        prompt="两次输入不一致"
-        predicate={() => $newUserInfo.hasError("passwordAgain.match_field")}
-      />
-    </label>
-  </div>
+      <div class="w-full">
+        <AskDisplayName bind:displayName />
+      </div>
 
-  <button
-    class="flex-stretch btn btn-accent mr-auto mt-8 w-full md:max-w-fit"
-    class:btn-disabled={!$newUserInfo.valid}
-    on:click={() => createUser($email.value, $password.value)}>注册</button
-  >
+      <div class="w-full">
+        <AskPassword bind:password repeatPassword={true} />
+      </div>
+    </div>
+
+    <div class="flex w-full flex-1 flex-col md:max-w-fit">
+      <button
+        out:scale
+        class="btn btn-accent mr-auto w-full"
+        class:btn-disabled={pending}
+        on:click={handleSignup}
+      >
+        注册
+      </button>
+    </div>
+  </div>
 </div>
