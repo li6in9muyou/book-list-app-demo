@@ -46,13 +46,9 @@ export async function loginUser(eml, pwd) {
   return await q.json();
 }
 
-export const CurrentUserInfo = writable({}, (set) => {
-  set(JSON.parse(localStorage.getItem("userInfo")));
-});
+export const CurrentUserInfo = writable({});
 
-export const CurrentAccessToken = writable("", (set) => {
-  set(JSON.parse(localStorage.getItem("accessToken")));
-});
+export const CurrentAccessToken = writable("");
 
 subscribe(CurrentUserInfo, (value) => {
   localStorage.setItem("userInfo", JSON.stringify(value));
