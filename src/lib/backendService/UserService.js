@@ -10,10 +10,6 @@ export const checkEmailExists = debounce(async (email) => {
   return isEmpty(querySet);
 }, 500);
 
-export function successToken(obj) {
-  return obj.user !== undefined && obj.accessToken !== undefined;
-}
-
 export function persistUser(obj) {
   const { user: userInfo, accessToken } = obj;
   if (userInfo === undefined || accessToken === undefined) {
@@ -58,8 +54,6 @@ export const CurrentAccessToken = writable("", (set) => {
   set(JSON.parse(localStorage.getItem("accessToken")));
 });
 
-export const redirectUrl = writable("/");
-
 subscribe(CurrentUserInfo, (value) => {
   localStorage.setItem("userInfo", JSON.stringify(value));
 });
@@ -68,15 +62,18 @@ subscribe(CurrentAccessToken, (value) => {
   localStorage.setItem("accessToken", JSON.stringify(value));
 });
 
-export const CurrentUser = derived(CurrentUserInfo, (cu) => {
-  if (cu == null) {
-    return "";
-  } else {
-    return split(cu.email, "@")[0];
-  }
-});
+export const CurrentUser = derived(
+  CurrentUserInfo,
+  (cu) => split(cu.email, "@")[0]
+);
 
-export const isAuthenticated = derived(CurrentUserInfo, (cu) => cu !== null);
+export function successToken(obj) {
+  return obj.user !== undefined && obj.accessToken !== undefined;
+}
+
+export const isAuthenticated = derived(CurrentUserInfo, (cu) =>
+  successToken(cu)
+);
 
 export const logout = async () => {
   CurrentUserInfo.set({});
