@@ -1,82 +1,71 @@
 <script>
-  import { field, form } from "svelte-forms";
-  import { email as checkEmail, min, required } from "svelte-forms/validators";
-  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
+  import { scale } from "svelte/transition";
   import {
-    checkEmailExists,
+    checkDisplayNameDoNotExists,
     loginUser,
+    persistUser,
+    successToken,
   } from "../../lib/backendService/UserService.js";
+  import { getNotify } from "../../lib/utility.js";
+  import { getNotificationsContext } from "svelte-notifications";
+  import AskDisplayName from "./AskDisplayName.svelte";
+  import AskPassword from "./AskPassword.svelte";
 
-  const mustExists = () => async (value) => ({
-    valid: value.length > 0 && !(await checkEmailExists(value)),
-    name: "mustExists",
-  });
-  const email = field("email", "", [required(), checkEmail(), mustExists()], {
-    stopAtFirstError: true,
-    valid: false,
-  });
-  const password = field("password", "", [required(), min(4)], {
-    stopAtFirstError: true,
-    valid: false,
-  });
-  const newUserInfo = form(email, password);
+  const { warning, success, notify, error, info } = getNotify(
+    getNotificationsContext().addNotification
+  );
+  let displayName, password;
+  let pending = false;
+
+  async function handleLogin() {
+    pending = true;
+    notify("正在登录");
+    const dmp = $displayName.value;
+    const pwd = $password.value;
+
+    if (await checkDisplayNameDoNotExists(dmp)) {
+      error(`"${dmp}" 还没有注册`);
+    } else {
+      const q = await loginUser(pwd, pwd);
+      if (successToken(q)) {
+        persistUser(q);
+      } else {
+        error("密码错误");
+      }
+    }
+    pending = false;
+  }
 </script>
 
-<div class="navbar bg-base-200">
-  <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
-</div>
-
-<div class="m-auto flex max-w-xs flex-col items-center gap-4 p-4">
-  <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-    登录你的账号
-  </div>
-  <div class="form-control w-full">
-    <label class="label">
-      <span class="label-text text-lg">邮箱地址</span>
-    </label>
-    <input
-      bind:value={$email.value}
-      type="text"
-      placeholder="此处输入邮箱"
-      class="input input-bordered w-full"
-    />
-    <label class="label">
-      <PleaseCorrectMe
-        prompt="一定要填写邮箱"
-        predicate={() => $newUserInfo.hasError("email.required")}
-      />
-      <PleaseCorrectMe
-        prompt="不是正确的邮箱地址"
-        predicate={() => $newUserInfo.hasError("email.not_an_email")}
-      />
-      <PleaseCorrectMe
-        prompt="此邮箱没有注册"
-        predicate={() => $newUserInfo.hasError("email.mustExists")}
-      />
-    </label>
+<div class="flex h-screen flex-col">
+  <div class="flex-start navbar bg-base-200">
+    <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
   </div>
 
-  <div class="form-control w-full">
-    <label class="label">
-      <span class="label-text text-lg">密码</span>
-    </label>
-    <input
-      bind:value={$password.value}
-      type="password"
-      placeholder="此处输入密码"
-      class="input input-bordered w-full max-w-xs"
-    />
-    <label class="label">
-      <PleaseCorrectMe
-        prompt="密码至少四个字符"
-        predicate={() => $newUserInfo.hasError("password.min")}
-      />
-    </label>
-  </div>
+  <div class="m-auto flex w-full max-w-sm flex-1 flex-col p-4">
+    <div class="flex w-full flex-1 flex-col items-stretch gap-4">
+      <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
+        登录你的账号
+      </div>
 
-  <button
-    class="flex-stretch btn btn-accent mr-auto mt-8 w-full md:max-w-fit"
-    class:btn-disabled={!$newUserInfo.valid}
-    on:click={() => loginUser($email.value, $password.value)}>登陆</button
-  >
+      <div class="w-full flex-1">
+        <AskDisplayName bind:displayName />
+      </div>
+
+      <div class="mb-10 w-full flex-1">
+        <AskPassword bind:password repeatPassword={false} />
+      </div>
+    </div>
+
+    <div class="w-full flex-1 md:max-w-fit">
+      <div class="w-full">
+        <button
+          out:scale
+          class="btn btn-accent mr-auto w-full"
+          class:btn-disabled={pending}
+          on:click={handleLogin}>登录</button
+        >
+      </div>
+    </div>
+  </div>
 </div>
