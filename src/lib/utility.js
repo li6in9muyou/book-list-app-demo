@@ -1,3 +1,5 @@
+import { readable } from "svelte/store";
+
 export const takeExtension = (pp) => {
   try {
     return pp.match(/\.([0-9a-z]+)$/i)[1];
@@ -35,3 +37,16 @@ export function getNotify(addNotification) {
     error: (msg) => addNotification(buildOptions("error", msg)),
   };
 }
+
+export const md = readable(true, (set) => {
+  let stop = () => {};
+
+  if (typeof window !== undefined) {
+    let mediaQuery = window.matchMedia("(min-width: 768px)");
+    const setMatches = () => set(mediaQuery.matches);
+    setMatches();
+    mediaQuery.addEventListener("change", setMatches);
+    stop = () => mediaQuery.removeEventListener("change", setMatches);
+  }
+  return stop;
+});
