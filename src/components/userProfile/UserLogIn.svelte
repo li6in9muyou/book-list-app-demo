@@ -12,6 +12,7 @@
   import AskPassword from "./AskPassword.svelte";
   import { debounce } from "lodash/function.js";
   import { createEventDispatcher } from "svelte";
+  import { links } from "../../routes.js";
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
@@ -33,7 +34,10 @@
         if (successToken(q)) {
           persistUser(q);
           success("注册成功了");
-          dispatch("userLifeCycle:afterSignUp");
+          dispatch("routeEvent", {
+            afterSignUp: true,
+            redirect: links.myBookLists,
+          });
         } else {
           error(`失败了，原因是：${q}`);
         }

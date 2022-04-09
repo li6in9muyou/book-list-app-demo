@@ -2,8 +2,25 @@
   import Notifications from "svelte-notifications";
   import Alert from "./lib/uiComponent/Alert.svelte";
   import NavBar from "./components/NavBar/NavBar.svelte";
-  import Router from "svelte-spa-router";
-  import { routes } from "./routes.js";
+  import Router, { push } from "svelte-spa-router";
+  import { links, routes } from "./routes.js";
+  import { get } from "lodash/object.js";
+
+  async function routeEvent(event) {
+    function isEvent(e) {
+      return get(event, `detail.${e}`, false);
+    }
+
+    if (isEvent("afterLogIn")) {
+      if (!event.detail.redirect) {
+        console.warn("did not specify redirect link", event);
+      }
+      await push(get(event, "detail.redirect", links.landing));
+      return;
+    }
+
+    console.info("did not catch this event", event);
+  }
 </script>
 
 <svelte:head>
@@ -17,6 +34,6 @@
 <Notifications item={Alert}>
   <div class="flex h-screen flex-col">
     <NavBar />
-    <Router {routes} />
+    <Router {routes} on:routeEvent={routeEvent} />
   </div>
 </Notifications>

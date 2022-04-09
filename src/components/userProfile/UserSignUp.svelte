@@ -11,6 +11,7 @@
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
   import { createEventDispatcher } from "svelte";
+  import { links } from "../../routes.js";
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
@@ -32,7 +33,10 @@
         if (successToken(q)) {
           persistUser(q);
           success("登录成功了");
-          dispatch("userLifeCycle:afterLogIn");
+          dispatch("routeEvent", {
+            afterLogIn: true,
+            redirect: links.myBookLists,
+          });
         } else {
           error(`密码错误，详情是：${q}`);
         }
