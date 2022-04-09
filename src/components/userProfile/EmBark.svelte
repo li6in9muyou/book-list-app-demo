@@ -6,7 +6,7 @@
     persistUser,
     successToken,
   } from "../../lib/backendService/UserService.js";
-  import { getNotify } from "../../lib/utility.js";
+  import { getNotify, sleep } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
@@ -22,16 +22,22 @@
     notify("正在登录");
     const dmp = $displayName.value;
     const pwd = $password.value;
-
-    if (await checkDisplayNameDoNotExists(dmp)) {
-      error(`"${dmp}" 还没有注册`);
-    } else {
-      const q = await loginUser(pwd, pwd);
-      if (successToken(q)) {
-        persistUser(q);
+    try {
+      if (await checkDisplayNameDoNotExists(dmp)) {
+        error(`"${dmp}" 还没有注册`);
       } else {
-        error("密码错误");
+        const q = await loginUser(dmp, pwd);
+        if (successToken(q)) {
+          persistUser(q);
+          success("登录成功了");
+          await sleep(300);
+          info("将自动跳转到个人主页");
+        } else {
+          error(`密码错误，详情是：${q}`);
+        }
       }
+    } catch (e) {
+      error(`失败了，原因是：${e.message}`);
     }
     pending = false;
   }

@@ -2,9 +2,9 @@ import { derived, writable } from "svelte/store";
 import { isEmpty } from "lodash/lang.js";
 import { debounce } from "lodash/function.js";
 import { subscribe } from "svelte/internal";
-import { split } from "lodash";
+import { split, trim } from "lodash/string.js";
 
-export const displayNameToEmail = (name) => `${name}@dev.dev`;
+export const displayNameToEmail = (name) => `${trim(name)}@dev.dev`;
 
 export const checkDisplayNameDoNotExists = debounce(async (displayName) => {
   const query =
@@ -22,11 +22,11 @@ export function persistUser(obj) {
   CurrentUserInfo.set(userInfo);
 }
 
-export async function createUser(eml, pwd) {
+export async function createUser(dpm, pwd) {
   const q = await fetch(import.meta.env.VITE_DEV_DB_URL + `/api/users/`, {
     method: "POST",
     body: JSON.stringify({
-      email: eml,
+      email: displayNameToEmail(dpm),
       password: pwd,
     }),
     headers: {
@@ -72,8 +72,9 @@ export function successToken(obj) {
   return obj.user !== undefined && obj.accessToken !== undefined;
 }
 
-export const isAuthenticated = derived(CurrentUserInfo, (cu) =>
-  successToken(cu)
+export const isAuthenticated = derived(
+  CurrentAccessToken,
+  (token) => !isEmpty(token)
 );
 
 export const logout = async () => {
