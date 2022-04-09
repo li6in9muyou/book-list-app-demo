@@ -1,10 +1,9 @@
 <script>
   import Notifications from "svelte-notifications";
   import Alert from "./lib/uiComponent/Alert.svelte";
-  import Library from "./components/Library.svelte";
   import NavBar from "./components/NavBar/NavBar.svelte";
-  import EmBark from "./components/userProfile/EmBark.svelte";
-  import OnBoard from "./components/userProfile/OnBoard.svelte";
+  import Router from "svelte-spa-router";
+  import { routes } from "./routes.js";
 </script>
 
 <svelte:head>
@@ -17,8 +16,7 @@
 
 <Notifications item={Alert}>
   <div class="flex h-screen flex-col">
-    <NavBar>
-      <OnBoard />
-    </NavBar>
+    <NavBar />
+    <Router {routes} />
   </div>
 </Notifications>

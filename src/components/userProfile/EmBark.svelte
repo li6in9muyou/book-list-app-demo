@@ -1,5 +1,5 @@
 <script>
-  import { scale } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import {
     checkDisplayNameDoNotExists,
     loginUser,
@@ -37,7 +37,11 @@
   }
 </script>
 
-<div class="m-auto flex w-full max-w-sm flex-1 flex-col p-4">
+<div
+  class="m-auto flex w-full max-w-sm flex-1 flex-col p-4"
+  in:fly={{ y: 400 }}
+  out:fly={{ x: -200 }}
+>
   <div class="flex w-full flex-1 flex-col items-stretch gap-4">
     <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
       登录你的账号
@@ -55,7 +59,6 @@
   <div class="w-full flex-1 md:max-w-fit">
     <div class="w-full">
       <button
-        out:scale
         class="btn btn-accent mr-auto w-full"
         class:btn-disabled={pending}
         on:click={handleLogin}>登录</button

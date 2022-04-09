@@ -2,15 +2,22 @@
   import { FaSignInAlt } from "svelte-icons/fa";
   import { MdEdit } from "svelte-icons/md";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
+  import { links } from "../../routes.js";
+
+  const { onBoard, emBark } = links;
 </script>
 
 <li>
   <div class="text-secondary">
-    <MenuItem Icon={FaSignInAlt} text="登录" />
+    <a href={emBark}>
+      <MenuItem Icon={FaSignInAlt} text="登录" />
+    </a>
   </div>
 </li>
 <li>
   <div class="text-error">
-    <MenuItem Icon={MdEdit} text="注册" />
+    <a href={onBoard}>
+      <MenuItem Icon={MdEdit} text="注册" />
+    </a>
   </div>
 </li>
