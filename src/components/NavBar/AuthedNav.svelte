@@ -1,22 +1,32 @@
 <script>
-  import { CurrentUser, logout } from "../../lib/backendService/UserService.js";
+  import { logout } from "../../lib/backendService/UserService.js";
   import { MdBook, MdPerson } from "svelte-icons/md";
   import { FaSignOutAlt } from "svelte-icons/fa";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
+  import { links } from "../../routes.js";
+  import { debounce } from "lodash/function.js";
+
+  const { landing, myBookLists, myInfo } = links;
 </script>
 
 <li>
   <div class="text-secondary">
-    <MenuItem Icon={MdBook} text="我的书单" />
+    <a href={myBookLists}>
+      <MenuItem Icon={MdBook} text="我的书单" />
+    </a>
   </div>
 </li>
 <li>
   <div class="text-secondary">
-    <MenuItem Icon={MdPerson} text="个人信息" />
+    <a href={myInfo}>
+      <MenuItem Icon={MdPerson} text="个人信息" />
+    </a>
   </div>
 </li>
 <li>
   <div class="text-error">
-    <MenuItem Icon={FaSignOutAlt} text="注销" />
+    <a href={landing} on:click={debounce(logout, 1000)}>
+      <MenuItem Icon={FaSignOutAlt} text="注销" />
+    </a>
   </div>
 </li>
