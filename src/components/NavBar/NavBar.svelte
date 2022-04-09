@@ -5,10 +5,13 @@
 </script>
 
 <div class="navbar w-full justify-between gap-4 bg-base-200">
-  <div class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</div>
+  <div class="btn btn-ghost font-serif text-2xl normal-case">
+    all new 盗版图书馆
+  </div>
   {#if $md}
     <ExpandedNav />
   {:else}
     <Nav />
   {/if}
 </div>
+<slot />

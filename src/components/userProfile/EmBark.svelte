@@ -37,35 +37,29 @@
   }
 </script>
 
-<div class="flex h-screen flex-col">
-  <div class="flex-start navbar bg-base-200">
-    <a class="btn btn-ghost font-serif text-2xl normal-case">盗版图书馆</a>
-  </div>
-
-  <div class="m-auto flex w-full max-w-sm flex-1 flex-col p-4">
-    <div class="flex w-full flex-1 flex-col items-stretch gap-4">
-      <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-        登录你的账号
-      </div>
-
-      <div class="w-full flex-1">
-        <AskDisplayName bind:displayName />
-      </div>
-
-      <div class="mb-10 w-full flex-1">
-        <AskPassword bind:password repeatPassword={false} />
-      </div>
+<div class="m-auto flex w-full max-w-sm flex-1 flex-col p-4">
+  <div class="flex w-full flex-1 flex-col items-stretch gap-4">
+    <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
+      登录你的账号
     </div>
 
-    <div class="w-full flex-1 md:max-w-fit">
-      <div class="w-full">
-        <button
-          out:scale
-          class="btn btn-accent mr-auto w-full"
-          class:btn-disabled={pending}
-          on:click={handleLogin}>登录</button
-        >
-      </div>
+    <div class="w-full flex-1">
+      <AskDisplayName bind:displayName />
+    </div>
+
+    <div class="mb-10 w-full flex-1">
+      <AskPassword bind:password repeatPassword={false} />
+    </div>
+  </div>
+
+  <div class="w-full flex-1 md:max-w-fit">
+    <div class="w-full">
+      <button
+        out:scale
+        class="btn btn-accent mr-auto w-full"
+        class:btn-disabled={pending}
+        on:click={handleLogin}>登录</button
+      >
     </div>
   </div>
 </div>
