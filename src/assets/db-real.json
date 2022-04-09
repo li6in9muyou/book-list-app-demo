@@ -52,6 +52,16 @@
       "password": "$2a$10$3mYE7KVc9L2uNlRWqStMmunuBpFRynBQBdsS1pr5n6vavoOIjmy5G",
       "displayName": "li6q",
       "id": 1009
+    },
+    {
+      "email": "devdev@dev.dev",
+      "password": "$2a$10$wfOaSRk9FJj1of2zFPaKgeHBKAhIUBprJQwDADApvGubAVz3eeBxK",
+      "id": 1010
+    },
+    {
+      "email": "dev32@dev.dev",
+      "password": "$2a$10$MXYV9NUkYMgmS7fM0p4amOvip7.JpHx.7cn6CjzpzNIk8ehuhH3uC",
+      "id": 1011
     }
   ],
   "book-lists": [
