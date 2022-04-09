@@ -3,7 +3,7 @@
   import { required } from "svelte-forms/validators";
   import { field } from "svelte-forms";
 
-  let s = field("displayName", " ", [required()], {
+  let s = field("displayName", "", [required()], {
     checkOnInit: true,
     stopAtFirstError: true,
   });
