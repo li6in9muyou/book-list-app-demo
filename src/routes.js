@@ -6,11 +6,13 @@ export const routes = {
   "/": Library,
   "/userLogin": UserLogIn,
   "/userSignUp": UserSignUp,
+  "/myInfo": MyInfo,
 };
 
 export const links = {
   userSignUp: "#/userSignUp",
   userLogIn: "#/userLogIn",
   myBookLists: "#/myBookLists",
+  myInfo: "#/myInfo",
   landing: "#/",
 };
