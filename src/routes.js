@@ -1,18 +1,16 @@
 import Library from "./components/Library.svelte";
-import MyBookLists from "./pages/MyBookLists.svelte";
-import OnBoard from "./components/userProfile/OnBoard.svelte";
-import EmBark from "./components/userProfile/EmBark.svelte";
+import UserLogIn from "./components/userProfile/UserLogIn.svelte";
+import UserSignUp from "./components/userProfile/UserSignUp.svelte";
 
 export const routes = {
   "/": Library,
-  "/myBookLists": MyBookLists,
-  "/onBoard": OnBoard,
-  "/emBark": EmBark,
+  "/userLogin": UserLogIn,
+  "/userSignUp": UserSignUp,
 };
 
 export const links = {
-  onBoard: "#/onBoard",
-  emBark: "#/emBark",
+  userSignUp: "#/userSignUp",
+  userLogIn: "#/userLogIn",
   myBookLists: "#/myBookLists",
   landing: "#/",
 };

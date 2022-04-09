@@ -4,19 +4,19 @@
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
 
-  const { onBoard, emBark } = links;
+  const { userSignUp, userLogIn } = links;
 </script>
 
 <li>
   <div class="text-secondary">
-    <a href={emBark}>
+    <a href={userLogIn}>
       <MenuItem Icon={FaSignInAlt} text="登录" />
     </a>
   </div>
 </li>
 <li>
   <div class="text-error">
-    <a href={onBoard}>
+    <a href={userSignUp}>
       <MenuItem Icon={MdEdit} text="注册" />
     </a>
   </div>
