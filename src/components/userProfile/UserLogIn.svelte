@@ -6,10 +6,11 @@
     persistUser,
     successToken,
   } from "../../lib/backendService/UserService.js";
-  import { getNotify } from "../../lib/utility.js";
+  import { getNotify, sleep } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
+  import { debounce } from "lodash/function.js";
 
   const { warning, success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
@@ -22,16 +23,22 @@
     notify("正在注册");
     const dmp = $displayName.value;
     const pwd = $password.value;
-
-    if (!(await checkDisplayNameDoNotExists(dmp))) {
-      error(`"${dmp}" 已经注册过了`);
-    } else {
-      const q = await createUser(pwd, pwd);
-      if (successToken(q)) {
-        persistUser(q);
+    try {
+      if (!(await checkDisplayNameDoNotExists(dmp))) {
+        error(`"${dmp}" 已经注册过了`);
       } else {
-        error("失败了");
+        const q = await createUser(dmp, pwd);
+        if (successToken(q)) {
+          persistUser(q);
+          success("注册成功了");
+          await sleep(300);
+          info("将自动跳转到个人主页");
+        } else {
+          error(`失败了，原因是：${q}`);
+        }
       }
+    } catch (e) {
+      error(`失败了，原因是：${e.message}`);
     }
     pending = false;
   }
@@ -60,7 +67,7 @@
     <button
       class="btn btn-accent mr-auto w-full"
       class:btn-disabled={pending}
-      on:click={handleSignup}
+      on:click={debounce(handleSignup, 800)}
     >
       注册
     </button>
