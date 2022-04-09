@@ -6,12 +6,14 @@
     persistUser,
     successToken,
   } from "../../lib/backendService/UserService.js";
-  import { getNotify, sleep } from "../../lib/utility.js";
+  import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
   import { debounce } from "lodash/function.js";
+  import { createEventDispatcher } from "svelte";
 
+  const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
   );
@@ -31,14 +33,14 @@
         if (successToken(q)) {
           persistUser(q);
           success("注册成功了");
-          await sleep(300);
-          info("将自动跳转到个人主页");
+          dispatch("userLifeCycle:afterSignUp");
         } else {
           error(`失败了，原因是：${q}`);
         }
       }
     } catch (e) {
       error(`失败了，原因是：${e.message}`);
+      throw e;
     }
     pending = false;
   }
