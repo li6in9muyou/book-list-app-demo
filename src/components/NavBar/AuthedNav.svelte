@@ -1,5 +1,4 @@
 <script>
-  import { CurrentUser, logout } from "../../lib/backendService/UserService.js";
   import { MdBook, MdPerson } from "svelte-icons/md";
   import { FaSignOutAlt } from "svelte-icons/fa";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
