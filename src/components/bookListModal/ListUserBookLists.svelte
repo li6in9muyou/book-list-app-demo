@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { CurrentUser } from "../../lib/backendService/user.service";
-  import { fetchAllBookListOfUser } from "../../lib/backendService/BookList.service.ts";
+  import { fetchBookListsByUserId } from "../../lib/backendService/BookList.service.ts";
   import BookListCheckBox from "../../lib/uiComponent/BookListCheckBox.svelte";
   import PleaseWait from "../../lib/uiComponent/PleaseWait.svelte";
+  import { CurrentUserInfo } from "../../lib/backendService/user.service";
 </script>
 
 <div class="overflow-y-auto">
-  {#await fetchAllBookListOfUser($CurrentUser)}
+  {#await fetchBookListsByUserId($CurrentUserInfo.id)}
     <PleaseWait msg="书单加载中" />
   {:then bookLists}
     {#each bookLists as thisList}

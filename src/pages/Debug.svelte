@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { fetchAllBookListOfUser } from "../lib/backendService/BookList.service";
+  import { fetchBookListsByUserId } from "../lib/backendService/BookList.service";
   import { get } from "lodash/object.js";
   import AddToBookListModal from "../components/bookListModal/AddToBookListModal.svelte";
-  import { CurrentUser } from "../lib/backendService/user.service";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
+  import { CurrentUserInfo } from "../lib/backendService/user.service";
 
   let shouldShow = false;
   let thisBook = 1111;
@@ -20,7 +20,7 @@
     加入书单
     <input bind:checked={shouldShow} class="hidden" type="checkbox" />
   </label>
-  {#await fetchAllBookListOfUser($CurrentUser) then bookLists}
+  {#await fetchBookListsByUserId($CurrentUserInfo.id) then bookLists}
     <div class="flex flex-col gap-4">
       <table class="table w-full table-fixed">
         <thead>

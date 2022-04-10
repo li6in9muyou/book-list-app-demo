@@ -24,15 +24,14 @@ export async function BookList_create(title, books: number[] = []) {
   });
 }
 
-export async function fetchAllBookListOfUser(
-  user: string
+export async function fetchBookListsByUserId(
+  userId: number
 ): Promise<BookList[]> {
-  if (user.length > 0) {
-    return await (
-      await fetch(import.meta.env.VITE_DEV_DB_URL + `/api/${user}/book-lists`)
-    ).json();
-  }
-  throw `bad user name [${user}], length: ${user.length}`;
+  return await (
+    await fetch(
+      import.meta.env.VITE_DEV_DB_URL + `/api/user/${userId}/book-lists`
+    )
+  ).json();
 }
 
 async function getBookListById(id: string): Promise<BookList> {
@@ -100,7 +99,7 @@ export async function BookList_addBooks(
 // }
 //
 // export async function fetchBookListsContainOneBook(user, book) {
-//   return await fetchAllBookListOfUser(user).filter(
+//   return await fetchBookListsByUserId(user).filter(
 //     (thisList) => thisList.books.indexOf(book) !== -1
 //   );
 // }
