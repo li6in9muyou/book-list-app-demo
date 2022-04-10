@@ -1,11 +1,5 @@
 <script>
-  import {
-    isAuthenticated,
-    logout,
-  } from "../../lib/backendService/UserService.js";
-  import { MdBook, MdEdit, MdPerson } from "svelte-icons/md";
-  import { FaSignInAlt, FaSignOutAlt } from "svelte-icons/fa";
-  import { readable } from "svelte/store";
+  import { isAuthenticated } from "../../lib/backendService/UserService.js";
   import AuthedNav from "./AuthedNav.svelte";
   import GuestNav from "./GuestNav.svelte";
   import UserAvatar from "./UserAvatar.svelte";

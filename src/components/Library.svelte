@@ -7,7 +7,6 @@
   import SearchTip from "./searchPage/SearchTip.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
   import { fetchAllBooks } from "../lib/backendService/BookService.js";
-  import NavBar from "./NavBar/NavBar.svelte";
 
   let all_fucking_ebooks = [];
 

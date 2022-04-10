@@ -1,5 +1,6 @@
 <script>
   import FaChevronCircleRight from "svelte-icons/fa/FaChevronCircleRight.svelte";
+
   export let Icon = FaChevronCircleRight;
   export let text = "菜单项";
 </script>
