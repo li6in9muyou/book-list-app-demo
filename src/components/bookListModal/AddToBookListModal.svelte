@@ -1,11 +1,21 @@
-<script>
+<script lang="ts">
   import CreateBookList from "./CreateBookList.svelte";
   import ListUserBookLists from "./ListUserBookLists.svelte";
   import MdClose from "svelte-icons/md/MdClose.svelte";
   import { setContext } from "svelte";
 
   export let shouldShow = false;
-  setContext("pleaseCloseModal", () => (shouldShow = false));
+  export let thisBook: number;
+
+  if (thisBook === undefined) {
+    console.error("AddToBookListModal was created without an attached bookId");
+    console.debug("attach one with: setContext('thisBook', <number>)");
+    console.debug("defaults to -1");
+    thisBook = -1;
+  }
+
+  setContext<() => void>("pleaseCloseModal", () => (shouldShow = false));
+  setContext<number>("thisBook", thisBook);
 </script>
 
 {#if shouldShow}
