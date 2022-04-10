@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import AuthedNav from "./AuthedNav.svelte";
   import GuestNav from "./GuestNav.svelte";
   import UserAvatar from "./UserAvatar.svelte";
-  import { isAuthenticated } from "../../lib/backendService/UserService.js";
+  import { isAuthenticated } from "../../lib/backendService/user.service";
 </script>
 
 <div class="dropdown-end dropdown w-1/2">

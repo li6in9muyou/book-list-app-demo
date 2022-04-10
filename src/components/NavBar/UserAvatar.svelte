@@ -2,7 +2,7 @@
   import {
     CurrentUser,
     isAuthenticated,
-  } from "../../lib/backendService/UserService.js";
+  } from "../../lib/backendService/user.service";
 </script>
 
 {#if $isAuthenticated}

@@ -1,5 +1,5 @@
 <script>
-  import { isAuthenticated } from "../../lib/backendService/UserService.js";
+  import { isAuthenticated } from "../../lib/backendService/user.service";
   import AuthedNav from "./AuthedNav.svelte";
   import GuestNav from "./GuestNav.svelte";
   import UserAvatar from "./UserAvatar.svelte";

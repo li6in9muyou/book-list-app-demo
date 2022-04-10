@@ -5,7 +5,7 @@
     createUser,
     persistUser,
     successToken,
-  } from "../../lib/backendService/UserService.js";
+  } from "../../lib/backendService/user.service";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";

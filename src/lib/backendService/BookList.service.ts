@@ -1,3 +1,6 @@
+import { CurrentUserInfo } from "./user.service";
+import { get } from "svelte/store";
+
 export class BookList {
   userId: number;
   title: string;
@@ -5,22 +8,20 @@ export class BookList {
   books: number[];
 }
 
-export async function BookList_create(user, title, books: number[] = []) {
-  return await fetch(
-    import.meta.env.VITE_DEV_DB_URL + `/api/${user}/book-lists`,
-    {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: title,
-        books: books,
-        creator: user,
-      }),
-    }
-  );
+export async function BookList_create(title, books: number[] = []) {
+  const user = get(CurrentUserInfo);
+  return await fetch(import.meta.env.VITE_DEV_DB_URL + `/api/book-lists`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title: title,
+      books: books,
+      userId: user.id,
+    }),
+  });
 }
 
 export async function fetchAllBookListOfUser(
@@ -100,6 +101,6 @@ export async function BookList_addBooks(
 //
 // export async function fetchBookListsContainOneBook(user, book) {
 //   return await fetchAllBookListOfUser(user).filter(
-//     (list) => list.books.indexOf(book) !== -1
+//     (thisList) => thisList.books.indexOf(book) !== -1
 //   );
 // }

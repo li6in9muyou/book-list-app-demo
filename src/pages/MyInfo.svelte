@@ -2,7 +2,7 @@
   import {
     CurrentAccessToken,
     CurrentUser,
-  } from "../lib/backendService/UserService.js";
+  } from "../lib/backendService/user.service";
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();

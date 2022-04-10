@@ -1,8 +1,49 @@
-import { derived, writable } from "svelte/store";
-import { isEmpty } from "lodash/lang.js";
-import { debounce } from "lodash/function.js";
+import { derived, Readable, Writable, writable } from "svelte/store";
+import { split, trim } from "lodash/string";
+import { isEmpty } from "lodash";
 import { subscribe } from "svelte/internal";
-import { split, trim } from "lodash/string.js";
+import { debounce } from "lodash/function.js";
+
+class UserInfo {
+  id: number;
+  email: string;
+
+  get displayName() {
+    return split(this.email, "@")[0];
+  }
+
+  static displayNameToEmail = (name) => `${trim(name)}@dev.dev`;
+
+  constructor(id = 2000, displayName = "") {
+    this.id = id;
+    this.email = `${displayName}@dev.dev`;
+  }
+}
+
+class EmptyUserInfo extends UserInfo {
+  id = 0;
+  email = "";
+}
+
+export let CurrentUserInfo: Writable<UserInfo>;
+export let CurrentAccessToken: Writable<string>;
+export let CurrentUser: Readable<string>;
+
+if (import.meta.env.DEV) {
+  CurrentUserInfo = writable(new UserInfo(1000, "li6q"));
+} else {
+  CurrentUserInfo = writable(new UserInfo());
+}
+
+CurrentUser = derived<Writable<UserInfo>, string>(
+  CurrentUserInfo,
+  (cu) => cu.displayName
+);
+CurrentAccessToken = writable("");
+export const isAuthenticated = derived<Readable<string>, boolean>(
+  CurrentUser,
+  (user) => user.length > 0
+);
 
 export const displayNameToEmail = (name) => `${trim(name)}@dev.dev`;
 
@@ -50,10 +91,6 @@ export async function loginUser(dpm, pwd) {
   return await q.json();
 }
 
-export const CurrentUserInfo = writable({});
-
-export const CurrentAccessToken = writable("");
-
 subscribe(CurrentUserInfo, (value) => {
   localStorage.setItem("userInfo", JSON.stringify(value));
 });
@@ -62,22 +99,11 @@ subscribe(CurrentAccessToken, (value) => {
   localStorage.setItem("accessToken", JSON.stringify(value));
 });
 
-export const emailToDisplayName = (email) => split(email, "@")[0];
-
-export const CurrentUser = derived(CurrentUserInfo, (cu) =>
-  emailToDisplayName(cu.email)
-);
-
 export function successToken(obj) {
   return obj.user !== undefined && obj.accessToken !== undefined;
 }
 
-export const isAuthenticated = derived(
-  CurrentAccessToken,
-  (token) => !isEmpty(token)
-);
-
 export const logout = async () => {
-  CurrentUserInfo.set({});
+  CurrentUserInfo.set(new EmptyUserInfo());
   CurrentAccessToken.set("");
 };
