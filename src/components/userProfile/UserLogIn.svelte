@@ -1,8 +1,8 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import {
     checkDisplayNameDoNotExists,
-    createUser,
+    loginUser,
     persistUser,
     successToken,
   } from "../../lib/backendService/UserService.js";
@@ -10,9 +10,9 @@
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
-  import { debounce } from "lodash/function.js";
   import { createEventDispatcher } from "svelte";
   import { links } from "../../routes.js";
+  import { debounce } from "lodash/function.js";
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
@@ -21,25 +21,25 @@
   let displayName, password;
   let pending = false;
 
-  async function handleSignup() {
+  async function handleLogin() {
     pending = true;
-    notify("正在注册");
+    notify("正在登录");
     const dmp = $displayName.value;
     const pwd = $password.value;
     try {
-      if (!(await checkDisplayNameDoNotExists(dmp))) {
-        error(`"${dmp}" 已经注册过了`);
+      if (await checkDisplayNameDoNotExists(dmp)) {
+        error(`"${dmp}" 还没有注册`);
       } else {
-        const q = await createUser(dmp, pwd);
+        const q = await loginUser(dmp, pwd);
         if (successToken(q)) {
           persistUser(q);
-          success("注册成功了");
+          success("登录成功了");
           dispatch("routeEvent", {
-            afterSignUp: true,
+            afterLogIn: true,
             redirect: links.myBookLists,
           });
         } else {
-          error(`失败了，原因是：${q}`);
+          error(`密码错误，详情是：${q}`);
         }
       }
     } catch (e) {
@@ -52,30 +52,31 @@
 
 <div
   class="m-auto flex w-full max-w-sm flex-1 flex-col p-4"
-  in:fly={{ y: 400 }}
-  out:fly={{ x: -200 }}
+  in:fade={{ delay: 350 }}
 >
-  <div class="flex h-3/4 w-full flex-col gap-6">
+  <div class="flex w-full flex-1 flex-col items-stretch gap-4">
     <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-      注册新账号
+      登录你的账号
     </div>
 
-    <div class="w-full">
+    <div class="w-full flex-1">
       <AskDisplayName bind:displayName />
     </div>
 
-    <div class="w-full">
-      <AskPassword bind:password repeatPassword={true} />
+    <div class="mb-10 w-full flex-1">
+      <AskPassword bind:password repeatPassword={false} />
     </div>
   </div>
 
-  <div class="flex w-full flex-1 flex-col md:max-w-fit">
-    <button
-      class="btn btn-accent mr-auto w-full"
-      class:btn-disabled={pending}
-      on:click={debounce(handleSignup, 800)}
-    >
-      注册
-    </button>
+  <div class="w-full flex-1 md:max-w-fit">
+    <div class="w-full">
+      <button
+        class="btn btn-accent mr-auto w-full"
+        class:btn-disabled={pending}
+        on:click={debounce(handleLogin, 1000)}
+      >
+        登录
+      </button>
+    </div>
   </div>
 </div>
