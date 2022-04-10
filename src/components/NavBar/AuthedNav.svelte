@@ -31,3 +31,12 @@
     </a>
   </div>
 </li>
+{#if import.meta.env.DEV}
+  <li>
+    <div class="text-error">
+      <a href={links.debugPage}>
+        <MenuItem text="排错" />
+      </a>
+    </div>
+  </li>
+{/if}
