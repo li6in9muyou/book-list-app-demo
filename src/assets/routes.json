@@ -1,6 +1,5 @@
 {
   "/api/disk": "/status_ok",
-  "/api/:user/book-lists/": "/book-lists?userId=:user",
-  "/api/:user/book-lists/:id": "/book-lists/:id",
+  "/api/user/:userId/book-lists/": "/book-lists?userId=:userId",
   "/api/*": "/$1"
 }
