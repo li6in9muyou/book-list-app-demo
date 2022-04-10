@@ -1,6 +1,6 @@
 <script>
   import { get } from "lodash/object.js";
-  import { FaInfo } from "svelte-icons/fa";
+  import FaInfo from "svelte-icons/fa/FaInfo.svelte";
   import { fly, scale } from "svelte/transition";
 
   export let notification = {};

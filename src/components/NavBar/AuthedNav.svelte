@@ -1,6 +1,7 @@
 <script>
   import { logout } from "../../lib/backendService/UserService.js";
-  import { MdBook, MdPerson } from "svelte-icons/md";
+  import MdPerson from "svelte-icons/md/MdPerson.svelte";
+  import MdBook from "svelte-icons/md/MdBook.svelte";
   import { FaSignOutAlt } from "svelte-icons/fa";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";

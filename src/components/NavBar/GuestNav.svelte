@@ -1,6 +1,6 @@
 <script>
-  import { FaSignInAlt } from "svelte-icons/fa";
-  import { MdEdit } from "svelte-icons/md";
+  import FaSignInAlt from "svelte-icons/fa/FaSignInAlt.svelte";
+  import MdEdit from "svelte-icons/md/MdEdit.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
 
