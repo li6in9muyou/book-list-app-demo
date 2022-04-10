@@ -1,9 +1,9 @@
-<script>
-  import { CurrentUser } from "../backendService/UserService.js";
+<script lang="ts">
   import {
-    addBooksToBookList,
-    updateBooksInBookList,
-  } from "../backendService/BookListService.js";
+    BookList,
+    BookList_addBooks,
+    BookList_removeBooks,
+  } from "../backendService/BookList.service";
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../utility.js";
 
@@ -17,14 +17,10 @@
 
   async function handleChange() {
     if (bookInBookList) {
-      await addBooksToBookList($CurrentUser, list.id, [thisBook]);
+      await BookList_addBooks(list.id, [thisBook]);
       success(`已加入书单"${list.id}"`);
     } else {
-      await updateBooksInBookList(
-        $CurrentUser,
-        list.id,
-        list.books.filter((id) => id !== thisBook)
-      );
+      await BookList_removeBooks(list.id, [thisBook]);
       info(`已从书单"${list.id}"中移除`);
     }
   }
