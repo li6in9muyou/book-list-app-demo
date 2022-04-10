@@ -19,31 +19,34 @@
   $: showing_count = books_to_show.length;
 </script>
 
-<main class="mx-auto flex h-screen max-w-4xl flex-col">
-  <div class="flex flex-col justify-between gap-4 p-4">
-    <SearchBar
-      bind:error
-      bind:hay={all_fucking_ebooks}
-      bind:results={books_to_show}
-      getKey={(e) => fileNameWithoutExtension(e.path)}
-    />
-    <SearchTip {showing_count} good={error.detail === ""} />
-  </div>
-
-  <section class="flex-1 overflow-y-auto">
-    {#await populate_books()}
-      <PleaseWait msg="图书正在加载" />
-    {:then books}
-      <VirtualScroll items={books_to_show} let:item>
-        <DocumentCard book={item} />
-      </VirtualScroll>
-    {:catch error}
-      <div class="p-4 pt-0">
-        <EmbeddedAlert
-          text="加载失败了，原因是：{error.message.toLowerCase()}"
-          color="error"
-        />
-      </div>
-    {/await}
-  </section>
-</main>
+<div class="h-full w-full">
+  <main class="mx-auto flex h-full max-w-4xl flex-col">
+    <div class="flex flex-col justify-between gap-4 p-4">
+      <SearchBar
+        bind:error
+        bind:hay={all_fucking_ebooks}
+        bind:results={books_to_show}
+        getKey={(e) => fileNameWithoutExtension(e.path)}
+      />
+      <SearchTip {showing_count} good={error.detail === ""} />
+    </div>
+    <div class="flex-1">
+      <section class="h-px min-h-full overflow-y-auto overflow-x-hidden">
+        {#await populate_books()}
+          <PleaseWait msg="图书正在加载" />
+        {:then books}
+          <VirtualScroll items={books_to_show} let:item>
+            <DocumentCard book={item} />
+          </VirtualScroll>
+        {:catch error}
+          <div class="p-4 pt-0">
+            <EmbeddedAlert
+              text="加载失败了，原因是：{error.message.toLowerCase()}"
+              color="error"
+            />
+          </div>
+        {/await}
+      </section>
+    </div>
+  </main>
+</div>

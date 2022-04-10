@@ -5,7 +5,7 @@
   import { links } from "../../routes.js";
 </script>
 
-<div class="navbar w-full justify-between gap-4 bg-base-200">
+<div class="navbar sticky top-0 w-full justify-between gap-4 bg-base-200">
   <div class="btn btn-ghost font-serif text-2xl normal-case">
     <a href={links.landing}>盗版图书馆</a>
   </div>
