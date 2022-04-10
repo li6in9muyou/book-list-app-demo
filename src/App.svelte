@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import Notifications from "svelte-notifications";
   import Alert from "./lib/uiComponent/Alert.svelte";
   import NavBar from "./components/NavBar/NavBar.svelte";
-  import Router, { push } from "svelte-spa-router";
-  import { links, routes } from "./routes.js";
+  import { push } from "svelte-spa-router";
+  import { links } from "./routes.js";
   import { get } from "lodash/object.js";
+  import Debug from "./pages/Debug.svelte";
 
   async function routeEvent(event) {
     function isEvent(e) {
@@ -34,6 +35,7 @@
 <Notifications item={Alert}>
   <div class="flex h-screen flex-col">
     <NavBar />
-    <Router {routes} on:routeEvent={routeEvent} />
+    <Debug />
+    <!--    <Router {routes} on:routeEvent={routeEvent} />-->
   </div>
 </Notifications>
