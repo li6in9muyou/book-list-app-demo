@@ -1,5 +1,5 @@
 <script>
-  import { logout } from "../../lib/backendService/UserService.js";
+  import { logout } from "../../lib/backendService/user.service";
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
   import MdBook from "svelte-icons/md/MdBook.svelte";
   import { FaSignOutAlt } from "svelte-icons/fa";
