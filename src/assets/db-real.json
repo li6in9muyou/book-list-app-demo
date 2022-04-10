@@ -4,7 +4,7 @@
       "email": "li6q@example.com",
       "password": "$2a$10$vSKw5jIA36dSspbWLh6xY.9topvWdNsrb1oK67VqVgzHLzAcU6qGy",
       "displayName": "li6q",
-      "id": 1
+      "id": 1000
     },
     {
       "email": "dev10@dev.dev",
@@ -66,7 +66,7 @@
   ],
   "book-lists": [
     {
-      "userId": 1,
+      "userId": 1000,
       "id": "eeeefff",
       "title": "没别的，就是名字很长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长",
       "books": [
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "userId": 1,
+      "userId": 1000,
       "title": "programming",
       "id": "ccccddd",
       "books": [
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "userId": 1,
+      "userId": 1000,
       "title": "人生感悟",
       "id": "aaaabbb",
       "books": [
@@ -163,7 +163,7 @@
       "id": "lNIEwsq"
     },
     {
-      "userId": "1001",
+      "userId": 1001,
       "id": "Ok1bXkS",
       "title": "",
       "books": []
