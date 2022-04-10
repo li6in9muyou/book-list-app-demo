@@ -14,7 +14,7 @@
       <div class="badge badge-lg badge-outline badge-primary p-4 font-mono">
         {takeExtension(book.path)}
       </div>
-      <div class="mx-6 max-w-2xl break-all">
+      <div class="mx-6 max-w-2xl break-words">
         {fileNameWithoutExtension(book.path)}
       </div>
     </header>
