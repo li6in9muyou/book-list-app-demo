@@ -6,7 +6,7 @@
   import { fileNameWithoutExtension } from "../lib/utility.js";
   import SearchTip from "./searchPage/SearchTip.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { fetchAllBooks } from "../lib/backendService/BookService.js";
+  import { fetchAllBooks } from "../lib/backendService/book.service.ts";
 
   let all_fucking_ebooks = [];
 

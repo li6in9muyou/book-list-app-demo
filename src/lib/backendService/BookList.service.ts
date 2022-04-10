@@ -8,8 +8,8 @@ export class BookList {
   books: number[];
 }
 
-export async function BookList_create(title, books: number[] = []) {
-  const user = get(CurrentUserInfo);
+export async function BookList_create(title: string, books: number[] = []) {
+  const userId = get(CurrentUserInfo).id;
   return await fetch(import.meta.env.VITE_DEV_DB_URL + `/api/book-lists`, {
     method: "POST",
     headers: {
@@ -19,7 +19,7 @@ export async function BookList_create(title, books: number[] = []) {
     body: JSON.stringify({
       title: title,
       books: books,
-      userId: user.id,
+      userId: userId,
     }),
   });
 }

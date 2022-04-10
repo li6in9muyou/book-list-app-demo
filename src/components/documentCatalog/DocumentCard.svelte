@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import ActionPanel from "./ActionPanel.svelte";
   import {
     fileNameWithoutExtension,
     takeExtension,
   } from "../../lib/utility.js";
+  import { Book } from "../../lib/backendService/book.service";
 
-  export let book;
+  export let book: Book;
 </script>
 
 <main class="card mx-4 my-3 bg-base-100 shadow-lg">
@@ -19,7 +20,7 @@
       </div>
     </header>
     <footer class="card-actions">
-      <ActionPanel subject={book.id} />
+      <ActionPanel thisBook={book.id} />
     </footer>
   </section>
 </main>

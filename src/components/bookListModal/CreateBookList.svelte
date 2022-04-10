@@ -1,7 +1,6 @@
 <script lang="ts">
   import { getContext } from "svelte";
   import { BookList_create } from "../../lib/backendService/BookList.service";
-  import { CurrentUser } from "../../lib/backendService/user.service";
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../../lib/utility.js";
 
@@ -47,7 +46,7 @@
       <button
         class="btn btn-accent btn-sm ml-auto mt-2"
         on:click={() => {
-          BookList_create($CurrentUser, new_bookList_title, [thisBook]);
+          BookList_create(new_bookList_title, [thisBook]);
           success("成功加入书单");
           pleaseCloseModal();
         }}

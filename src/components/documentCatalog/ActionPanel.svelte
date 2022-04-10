@@ -6,8 +6,8 @@
   import AddToBookListModal from "../bookListModal/AddToBookListModal.svelte";
   import BookDetail from "./BookDetail.svelte";
 
-  export let subject = -1;
-  setContext("thisBook", subject);
+  export let thisBook = -1;
+  setContext("thisBook", thisBook);
 
   let shouldShowAddToBookListModal = false;
   let shouldShowDetail = false;
@@ -46,7 +46,10 @@
     </label>
   </main>
   <comment>
-    <AddToBookListModal bind:shouldShow={shouldShowAddToBookListModal} />
-    <BookDetail bind:shouldShow={shouldShowDetail} thisBook={subject} />
+    <AddToBookListModal
+      bind:shouldShow={shouldShowAddToBookListModal}
+      {thisBook}
+    />
+    <BookDetail bind:shouldShow={shouldShowDetail} {thisBook} />
   </comment>
 </div>
