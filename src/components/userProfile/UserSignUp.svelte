@@ -1,10 +1,8 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import {
-    AuthPayloadFromServer,
     checkDisplayNameDoNotExists,
     createUser,
-    persistUser,
   } from "../../lib/backendService/user.service";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
@@ -33,10 +31,7 @@
         displayName.reset();
         password.reset();
       } else {
-        const q = new AuthPayloadFromServer(
-          await createUser({ displayName: dmp, password: pwd })
-        );
-        persistUser(q);
+        await createUser(dmp, pwd);
         success("注册成功了");
         dispatch("routeEvent", {
           afterSignUp: true,

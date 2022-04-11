@@ -1,60 +1,6 @@
-import { derived, Writable, writable } from "svelte/store";
-import { split, trim } from "lodash/string";
-import { isEmpty } from "lodash";
-import { subscribe } from "svelte/internal";
-import { debounce } from "lodash/function.js";
-
-interface UserInfo {
-  id: number;
-  email: string;
-  readonly displayName: string;
-}
-
-class ImplUserInfo implements UserInfo {
-  email: string;
-  id: number;
-
-  get displayName() {
-    return split(this.email, "@")[0];
-  }
-
-  constructor({ id, email }: { id: number; email: string }) {
-    if (id && email) {
-      this.id = id;
-      this.email = email;
-    } else {
-      throw TypeError("bad type at UserInfo ctor");
-    }
-  }
-}
-
-class EmptyUserInfo implements UserInfo {
-  id = 0;
-  email = "";
-  readonly displayName = "";
-}
-
-export let CurrentUserInfo = writable<UserInfo>(new EmptyUserInfo());
-
-CurrentUserInfo.subscribe((value) =>
-  console.log("CurrentUserInfo modified:", value)
-);
-
-export let CurrentAccessToken = writable("");
-
-export let CurrentUser = derived<Writable<UserInfo>, string>(
-  CurrentUserInfo,
-  (user) => {
-    return user.displayName;
-  }
-);
-
-export const isAuthenticated = derived<Writable<UserInfo>, boolean>(
-  CurrentUserInfo,
-  (user) => {
-    return user.displayName.length > 0;
-  }
-);
+import { derived, writable } from "svelte/store";
+import { debounce, isEmpty, trim } from "lodash";
+import { localStorage, persist } from "@macfja/svelte-persistent-store";
 
 const displayNameToEmail = (name) => `${trim(name)}@dev.dev`;
 
@@ -70,58 +16,77 @@ export const checkDisplayNameDoNotExists = debounce(
   { trailing: false }
 );
 
-export interface UserInfoAndToken {
-  accessToken: string;
-  user: UserInfo;
-  readonly successToken: boolean;
+interface IAuthRequest {
+  email: string;
+  password: string;
 }
 
-export class AuthPayloadFromServer implements UserInfoAndToken {
-  accessToken: string;
-  user: UserInfo;
+interface IUserInfo {
+  readonly displayName: string;
+  readonly id: number;
+}
 
-  get successToken() {
-    return !isEmpty(this.user) && this.accessToken !== "";
+export class UserAuthInput implements IAuthRequest {
+  readonly displayName: string;
+  readonly password: string;
+
+  constructor({
+    displayName,
+    password,
+  }: {
+    displayName: string;
+    password: string;
+  }) {
+    this.displayName = displayName;
+    this.password = password;
   }
 
-  constructor({ user, accessToken }: { user: Object; accessToken: string }) {
-    this.accessToken = accessToken;
-    this.user = new ImplUserInfo(user as UserInfo);
+  get email() {
+    return displayNameToEmail(this.displayName);
   }
 }
 
-export function persistUser(u: UserInfoAndToken) {
-  CurrentAccessToken.set(u.accessToken);
-  CurrentUserInfo.set(u.user);
-  console.log(u);
+class ServerAuthResponse implements IUserInfo {
+  readonly displayName: string;
+  readonly id: number;
+  readonly accessToken: string;
+
+  constructor(resp: {
+    user: { email: string; id: number };
+    accessToken: string;
+  }) {
+    this.displayName = resp.user.email.split("@")[0];
+    this.id = resp.user.id;
+    this.accessToken = resp.accessToken;
+  }
 }
 
-subscribe(CurrentUserInfo, (value) => {
-  localStorage.setItem("userInfo", JSON.stringify(value));
+export const CurrentUser = persist(writable(""), localStorage(), "CurrentUser");
+
+export const CurrentUserId = persist(
+  writable(0),
+  localStorage(),
+  "CurrentUserId"
+);
+
+export const CurrentAccessToken = persist(
+  writable(""),
+  localStorage(),
+  "CurrentUserAccessToken"
+);
+
+export const isAuthenticated = derived(CurrentUser, (user) => {
+  return user.length > 0;
 });
 
-subscribe(CurrentAccessToken, (value) => {
-  localStorage.setItem("accessToken", JSON.stringify(value));
-});
-
-export function restoreUser() {
-  const u: UserInfo = JSON.parse(localStorage.getItem("userInfo"));
-  const t: string = JSON.parse(localStorage.getItem("accessToken"));
-  if (!isEmpty(u) && !isEmpty(t)) {
-    CurrentAccessToken.set(t);
-    CurrentUserInfo.set(u);
-  }
-}
-
-interface UserLogInChallenge {
-  displayName: any;
-  password: any;
-}
+export const CurrentUserInfo = derived(CurrentUserId, (id) => ({
+  id: id,
+}));
 
 async function authUser(
   endpoint: string,
-  chg: UserLogInChallenge
-): Promise<UserInfoAndToken> {
+  chg: UserAuthInput
+): Promise<ServerAuthResponse> {
   const q = await fetch(import.meta.env.VITE_DEV_DB_URL + endpoint, {
     method: "POST",
     body: JSON.stringify({
@@ -133,19 +98,31 @@ async function authUser(
     },
   });
   if (q.ok) {
-    return new AuthPayloadFromServer(await q.json());
+    return new ServerAuthResponse(await q.json());
   } else {
     throw await q.json();
   }
 }
 
-export const createUser = async (chg: UserLogInChallenge) =>
-  await authUser("/api/users/", chg);
+export const createUser = async (dmp: string, pwd: string) => {
+  return await authUser(
+    "/api/users/",
+    new UserAuthInput({ displayName: dmp, password: pwd })
+  );
+};
 
-export const loginUser = async (chg: UserLogInChallenge) =>
-  await authUser("/login", chg);
+export const loginUser = async (dmp: string, pwd: string) => {
+  const auth = await authUser(
+    "/login",
+    new UserAuthInput({ displayName: dmp, password: pwd })
+  );
+  CurrentUser.set(auth.displayName);
+  CurrentUserId.set(auth.id);
+  CurrentAccessToken.set(auth.accessToken);
+};
 
 export const logout = async () => {
-  CurrentUserInfo.set(new EmptyUserInfo());
+  CurrentUser.set("");
+  CurrentUserId.set(0);
   CurrentAccessToken.set("");
 };

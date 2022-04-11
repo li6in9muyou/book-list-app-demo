@@ -1,3 +1,11 @@
 ### checkEmailExists
 GET http://localhost:8081/api/users?email=dev9@dev.dev
+
+### user plain forms to post data
+POST http://localhost:8081/login
+Content-Type: application/x-www-form-urlencoded
+Accept: application/xml
+
+email=devdev@dev.dev&password=aaaa
+
 ###

@@ -2,7 +2,7 @@
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
   import { fetchBookListsByUserId } from "../lib/backendService/bookList.service";
   import { CurrentUserInfo } from "../lib/backendService/user.service";
-  import { get } from "lodash";
+  import { get, isEmpty } from "lodash";
 </script>
 
 <div class="p-4">
@@ -17,37 +17,47 @@
           </tr>
         </thead>
         <tbody>
-          {#each bookLists as bookList}
+          {#if true || isEmpty(bookLists)}
             <tr>
-              <td colspan="2" class="truncate">
-                "{bookList.title || "未命名的书单-" + bookList.id}"
-              </td>
-              <td colspan="1">
-                <div class="btn-group">
-                  <div class="btn">分享</div>
-                </div>
+              <td colspan="3" class="p-2">
+                <EmbeddedAlert color="info" text="您还没有书单" />
               </td>
             </tr>
-            <tr>
-              <td colspan="3" class="border-b border-b-2 border-b-accent">
-                <div class="flex items-center">
-                  书
-                  <div class="divider divider-horizontal" />
-                  <div class="flex gap-4 flex-wrap">
-                    {#each get(bookList, "books", []) as book}
-                      <div class="badge badge-primary badge-outline font-mono">
-                        {book}
-                      </div>
-                    {/each}
+          {:else}
+            {#each bookLists as bookList}
+              <tr>
+                <td colspan="2" class="truncate">
+                  "{bookList.title || "未命名的书单-" + bookList.id}"
+                </td>
+                <td colspan="1">
+                  <div class="btn-group">
+                    <div class="btn">分享</div>
                   </div>
-                </div>
-              </td>
-            </tr>
-          {/each}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" class="border-b border-b-2 border-b-accent">
+                  <div class="flex items-center">
+                    书
+                    <div class="divider divider-horizontal" />
+                    <div class="flex gap-4 flex-wrap">
+                      {#each get(bookList, "books", []) as book}
+                        <div
+                          class="badge badge-primary badge-outline font-mono"
+                        >
+                          {book}
+                        </div>
+                      {/each}
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            {/each}
+          {/if}
         </tbody>
       </table>
     </div>
   {:catch e}
-    <EmbeddedAlert text={`出错了：${e}}`} />
+    <EmbeddedAlert text={`出错了：${e}`} />
   {/await}
 </div>
