@@ -3,11 +3,11 @@
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
   import MdBook from "svelte-icons/md/MdBook.svelte";
   import FaSignOutAlt from "svelte-icons/fa/FaSignOutAlt.svelte";
-  import FaBug from "svelte-icons/fa/FaBug.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
+  import DebugNav from "../../lib/uiComponent/DebugNav.svelte";
 
   const { notify } = getNotify(getNotificationsContext().addNotification);
 
@@ -40,11 +40,5 @@
   </div>
 </li>
 {#if import.meta.env.DEV}
-  <li>
-    <div class="text-error">
-      <a href={links.debugPage}>
-        <MenuItem text="排错" Icon={FaBug} />
-      </a>
-    </div>
-  </li>
+  <DebugNav />
 {/if}
