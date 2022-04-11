@@ -1,10 +1,9 @@
-<script>
+<script lang="ts">
   import { fade } from "svelte/transition";
   import {
     checkDisplayNameDoNotExists,
     loginUser,
     persistUser,
-    successToken,
   } from "../../lib/backendService/user.service";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
@@ -15,7 +14,7 @@
   import { debounce } from "lodash/function.js";
 
   const dispatch = createEventDispatcher();
-  const { warning, success, notify, error, info } = getNotify(
+  const { success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
   );
   let displayName, password;
@@ -24,29 +23,28 @@
   async function handleLogin() {
     pending = true;
     notify("正在登录");
-    const dmp = $displayName.value;
-    const pwd = $password.value;
+    // const dmp = $displayName.value;
+    // const pwd = $password.value;
+    const dmp = "dev13";
+    const pwd = "aaaa";
     try {
       if (await checkDisplayNameDoNotExists(dmp)) {
         error(`"${dmp}" 还没有注册`);
       } else {
         const q = await loginUser(dmp, pwd);
-        if (successToken(q)) {
-          persistUser(q);
-          success("登录成功了");
-          dispatch("routeEvent", {
-            afterLogIn: true,
-            redirect: links.myBookLists,
-          });
-        } else {
-          error(`密码错误，详情是：${q}`);
-        }
+        persistUser(q);
+        success("登录成功了");
+        dispatch("routeEvent", {
+          afterLogIn: true,
+          redirect: links.myBookLists,
+        });
       }
     } catch (e) {
       error(`失败了，原因是：${e.message}`);
       throw e;
+    } finally {
+      pending = false;
     }
-    pending = false;
   }
 </script>
 
