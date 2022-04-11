@@ -7,7 +7,7 @@
 
 <div class="flex justify-center p-4">
   <div
-    class="btn btn-sm"
+    class="btn btn-outline btn-sm w-full"
     on:click={() => {
       authDebugUser();
       dispatch("afterLogIn");
