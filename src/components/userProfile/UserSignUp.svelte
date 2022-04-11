@@ -68,7 +68,7 @@
     <button
       class="btn btn-accent mr-auto w-full"
       class:btn-disabled={pending}
-      on:click={debounce(handleSignup, 1000)}
+      on:click={handleSignup}}
     >
       注册
     </button>

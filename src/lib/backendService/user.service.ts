@@ -13,7 +13,7 @@ export const checkDisplayNameDoNotExists = debounce(
     return isEmpty(querySet);
   },
   1000,
-  { trailing: false }
+  { leading: true }
 );
 
 interface IAuthRequest {
@@ -104,31 +104,47 @@ async function authUser(
   }
 }
 
-export const createUser = async (dmp: string, pwd: string) => {
-  return await authUser(
-    "/api/users/",
-    new UserAuthInput({ displayName: dmp, password: pwd })
-  );
-};
+export const createUser = debounce(
+  async (dmp: string, pwd: string) => {
+    return await authUser(
+      "/api/users/",
+      new UserAuthInput({ displayName: dmp, password: pwd })
+    );
+  },
+  1000,
+  { trailing: true }
+);
 
-export function authDebugUser() {
-  CurrentUser.set("debugUser");
-  CurrentUserId.set(1000);
-  CurrentAccessToken.set("");
-}
+export const authDebugUser = debounce(
+  () => {
+    CurrentUser.set("debugUser");
+    CurrentUserId.set(1000);
+    CurrentAccessToken.set("");
+  },
+  1000,
+  { leading: true }
+);
 
-export const loginUser = async (dmp: string, pwd: string) => {
-  const auth = await authUser(
-    "/login",
-    new UserAuthInput({ displayName: dmp, password: pwd })
-  );
-  CurrentUser.set(auth.displayName);
-  CurrentUserId.set(auth.id);
-  CurrentAccessToken.set(auth.accessToken);
-};
+export const loginUser = debounce(
+  async (dmp: string, pwd: string) => {
+    const auth = await authUser(
+      "/login",
+      new UserAuthInput({ displayName: dmp, password: pwd })
+    );
+    CurrentUser.set(auth.displayName);
+    CurrentUserId.set(auth.id);
+    CurrentAccessToken.set(auth.accessToken);
+  },
+  1000,
+  { leading: true }
+);
 
-export const logout = async () => {
-  CurrentUser.set("");
-  CurrentUserId.set(0);
-  CurrentAccessToken.set("");
-};
+export const logout = debounce(
+  async () => {
+    CurrentUser.set("");
+    CurrentUserId.set(0);
+    CurrentAccessToken.set("");
+  },
+  1000,
+  { leading: true }
+);
