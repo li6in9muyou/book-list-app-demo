@@ -9,16 +9,20 @@
   let thisBook = 1111;
 </script>
 
+<label class="btn btn-ghost mb-4 text-xl text-secondary">
+  加入书单
+  <input bind:checked={shouldShow} class="hidden" type="checkbox" />
+</label>
+
 <AddToBookListModal bind:shouldShow {thisBook} />
 <div class="p-4">
-  <input
-    type="number"
-    class="input-outline input w-1/2 border font-mono text-xl shadow"
-    bind:value={thisBook}
-  />
-  <label class="btn btn-ghost mb-4 text-xl text-secondary">
-    加入书单
-    <input bind:checked={shouldShow} class="hidden" type="checkbox" />
+  <label class="flex items-center gap-4">
+    <div class="btn btn-ghost btn-sm">thisBook</div>
+    <input
+      type="number"
+      class="input-outline input w-1/2 border font-mono text-xl shadow"
+      bind:value={thisBook}
+    />
   </label>
   {#await fetchBookListsByUserId($CurrentUserInfo.id) then bookLists}
     <div class="flex flex-col gap-4">

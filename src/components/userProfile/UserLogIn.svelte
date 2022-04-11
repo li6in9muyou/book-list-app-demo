@@ -10,7 +10,6 @@
   import AskPassword from "./AskPassword.svelte";
   import { createEventDispatcher } from "svelte";
   import { links } from "../../routes.js";
-  import { debounce } from "lodash/function.js";
 
   const dispatch = createEventDispatcher();
   const { success, notify, error, info } = getNotify(
@@ -67,7 +66,7 @@
       <button
         class="btn btn-accent mr-auto w-full"
         class:btn-disabled={pending}
-        on:click={debounce(handleLogin, 1000)}
+        on:click={handleLogin}
       >
         登录
       </button>

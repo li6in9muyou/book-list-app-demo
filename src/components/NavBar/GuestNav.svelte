@@ -3,30 +3,25 @@
   import MdEdit from "svelte-icons/md/MdEdit.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
+  import DebugNav from "../../lib/uiComponent/DebugNav.svelte";
 
   const { userSignUp, userLogIn } = links;
 </script>
 
 <li>
-  <div class="text-secondary">
+  <div class="text-primary">
     <a href={userLogIn}>
       <MenuItem Icon={FaSignInAlt} text="登录" />
     </a>
   </div>
 </li>
 <li>
-  <div class="text-error">
+  <div class="text-accent">
     <a href={userSignUp}>
       <MenuItem Icon={MdEdit} text="注册" />
     </a>
   </div>
 </li>
 {#if import.meta.env.DEV}
-  <li>
-    <div class="text-error">
-      <a href={links.debugPage}>
-        <MenuItem text="排错" />
-      </a>
-    </div>
-  </li>
+  <DebugNav />
 {/if}

@@ -2,12 +2,20 @@
   import { logout } from "../../lib/backendService/user.service";
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
   import MdBook from "svelte-icons/md/MdBook.svelte";
-  import { FaSignOutAlt } from "svelte-icons/fa";
+  import FaSignOutAlt from "svelte-icons/fa/FaSignOutAlt.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
-  import { debounce } from "lodash/function.js";
+  import { getNotify } from "../../lib/utility.js";
+  import { getNotificationsContext } from "svelte-notifications";
+  import DebugNav from "../../lib/uiComponent/DebugNav.svelte";
+
+  const { notify } = getNotify(getNotificationsContext().addNotification);
 
   const { landing, myBookLists, myInfo } = links;
+  const handleLogOut = async () => {
+    logout();
+    notify("您已注销");
+  };
 </script>
 
 <li>
@@ -26,17 +34,11 @@
 </li>
 <li>
   <div class="text-error">
-    <a href={landing} on:click={debounce(logout, 1000)}>
+    <a href={landing} on:click={handleLogOut}>
       <MenuItem Icon={FaSignOutAlt} text="注销" />
     </a>
   </div>
 </li>
 {#if import.meta.env.DEV}
-  <li>
-    <div class="text-error">
-      <a href={links.debugPage}>
-        <MenuItem text="排错" />
-      </a>
-    </div>
-  </li>
+  <DebugNav />
 {/if}

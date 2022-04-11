@@ -8,7 +8,6 @@
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
-  import { debounce } from "lodash/function.js";
   import { createEventDispatcher } from "svelte";
   import { links } from "../../routes.js";
   import form from "svelte-forms";
@@ -68,7 +67,7 @@
     <button
       class="btn btn-accent mr-auto w-full"
       class:btn-disabled={pending}
-      on:click={debounce(handleSignup, 1000)}
+      on:click={handleSignup}
     >
       注册
     </button>

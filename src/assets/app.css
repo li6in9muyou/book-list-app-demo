@@ -10,8 +10,8 @@
 
 @font-face {
   /*serif*/
-  font-family: 'BIZ UDPMincho';
-  src: url('/fonts/BIZ_UDPMincho/BIZUDPMincho-Regular.woff2') format('woff2');
+  font-family: "BIZ UDPMincho";
+  src: url("/fonts/BIZ_UDPMincho/BIZUDPMincho-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
