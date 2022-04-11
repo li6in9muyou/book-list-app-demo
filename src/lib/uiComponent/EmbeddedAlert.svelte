@@ -9,9 +9,13 @@
 <div
   class="alert w-fit min-w-full rounded-md p-2 shadow-lg"
   class:alert-error={"error" === color}
+  class:text-error-content={"error" === color}
   class:alert-info={"info" === color}
+  class:text-info-content={"info" === color}
   class:alert-success={"success" === color}
+  class:text-success-content={"success" === color}
   class:alert-warning={"warning" === color}
+  class:text-warning-content={"warning" === color}
 >
   <div>
     <span class="h-6 w-6">

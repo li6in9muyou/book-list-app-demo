@@ -29,7 +29,7 @@
         stroke-width="2"
       />
     </svg>
-    <span>新建播放列表</span>
+    <span>新建书单</span>
   </div>
   <div class="collapse-content">
     <div class="form-control w-full">
