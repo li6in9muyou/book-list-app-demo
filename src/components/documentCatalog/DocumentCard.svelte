@@ -9,16 +9,18 @@
   export let book: Book;
 </script>
 
-<main class="card mx-4 my-3 bg-base-100 shadow-lg">
-  <section class="card-body">
-    <header class="card-title">
-      <div class="badge badge-lg badge-outline badge-primary p-4 font-mono">
+<main class="card mx-4 my-1 border bg-base-100 shadow">
+  <section class="card-body pb-2">
+    <div class="indicator">
+      <div
+        class="badge indicator-item badge-outline badge-lg badge-accent -left-12 -top-2 uppercase"
+      >
         {takeExtension(book.path)}
       </div>
-      <div class="mx-6 max-w-2xl break-words">
+      <div class="mb-4 max-w-2xl break-words">
         {fileNameWithoutExtension(book.path)}
       </div>
-    </header>
+    </div>
     <footer class="card-actions">
       <ActionPanel thisBook={book.id} />
     </footer>

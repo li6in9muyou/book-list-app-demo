@@ -30,11 +30,11 @@
 <label class="label cursor-pointer justify-start">
   <input
     bind:checked={bookInBookList}
-    class="checkbox checkbox-secondary checkbox-md"
+    class="checkbox checkbox-secondary checkbox-xs"
     on:change={handleChange}
     type="checkbox"
   />
-  <span class="label-text ml-2 truncate">
+  <span class="label-text ml-2 truncate text-lg">
     {thisList.title || "未命名的书单-" + thisList.id}
   </span>
 </label>

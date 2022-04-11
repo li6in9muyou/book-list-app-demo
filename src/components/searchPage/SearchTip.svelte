@@ -9,18 +9,20 @@
   export let good;
 </script>
 
-{#if good}
-  {#if showing_count > 0}
-    <div in:fade>
-      <EmbeddedAlert icon={FaCheck} text="展示了{showing_count}条记录" />
-    </div>
+<div class="font-mono">
+  {#if good}
+    {#if showing_count > 0}
+      <div in:fade>
+        <EmbeddedAlert icon={FaCheck} text="展示了{showing_count}条记录" />
+      </div>
+    {:else}
+      <div in:fade>
+        <EmbeddedAlert icon={FaQuestion} color="info" text="没有记录" />
+      </div>
+    {/if}
   {:else}
     <div in:fade>
-      <EmbeddedAlert icon={FaQuestion} color="info" text="没有记录" />
+      <EmbeddedAlert icon={FaTimes} color="error" text="搜索词错误" />
     </div>
   {/if}
-{:else}
-  <div in:fade>
-    <EmbeddedAlert icon={FaTimes} color="error" text="搜索词错误" />
-  </div>
-{/if}
+</div>

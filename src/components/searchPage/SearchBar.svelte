@@ -30,7 +30,7 @@
     autocapitalize="off"
     autocomplete="off"
     bind:value={query}
-    class="input input-bordered input-secondary font-mono shadow
+    class="input input-bordered input-secondary font-mono text-lg shadow
                   sm:flex-1
                   md:text-xl"
     placeholder="搜索……"

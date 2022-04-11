@@ -50,7 +50,8 @@
           success("成功加入书单");
           pleaseCloseModal();
         }}
-        >创建
+      >
+        创建
       </button>
     </div>
   </div>
