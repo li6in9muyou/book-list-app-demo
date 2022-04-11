@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import DocumentCard from "./documentCatalog/DocumentCard.svelte";
   import VirtualScroll from "@sveltejs/svelte-virtual-list";
   import PleaseWait from "../lib/uiComponent/PleaseWait.svelte";
@@ -6,17 +6,16 @@
   import { fileNameWithoutExtension } from "../lib/utility.js";
   import SearchTip from "./searchPage/SearchTip.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { fetchAllBooks } from "../lib/backendService/book.service.ts";
+  import { Book, fetchAllBooks } from "../lib/backendService/book.service.ts";
 
-  let all_fucking_ebooks = [];
+  let all_fucking_ebooks: Book[] = [];
 
   const populate_books = async () =>
     (all_fucking_ebooks = await fetchAllBooks());
 
   let error = {};
-  let books_to_show = [];
-  let showing_count;
-  $: showing_count = books_to_show.length;
+  let books_to_show: Book[] = [];
+  let showing_count = books_to_show.length;
 </script>
 
 <div class="h-full w-full">
