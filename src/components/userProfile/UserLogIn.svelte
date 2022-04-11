@@ -1,10 +1,8 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import {
-    AuthPayloadFromServer,
     checkDisplayNameDoNotExists,
     loginUser,
-    persistUser,
   } from "../../lib/backendService/user.service";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";

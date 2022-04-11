@@ -5,8 +5,6 @@
   import Router, { push } from "svelte-spa-router";
   import { links, routes } from "./routes.js";
   import { get } from "lodash/object.js";
-  import { onMount } from "svelte";
-  import { restoreUser } from "./lib/backendService/user.service";
 
   async function routeEvent(event) {
     function isEvent(e) {
