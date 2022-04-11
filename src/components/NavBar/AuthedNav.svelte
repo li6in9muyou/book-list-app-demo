@@ -12,6 +12,10 @@
   const { notify } = getNotify(getNotificationsContext().addNotification);
 
   const { landing, myBookLists, myInfo } = links;
+  const handleLogOut = async () => {
+    logout();
+    notify("您已注销");
+  };
 </script>
 
 <li>
