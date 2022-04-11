@@ -29,13 +29,13 @@ export function textSearch(
     };
   }
 
-  let predict = (key) => queryRgx.test(key);
+  let predicate = (key) => queryRgx.test(key);
   let success = true;
   const ans = hay.filter((item) => {
     const key = _getKey(item);
     try {
       success = true;
-      return predict(key, query);
+      return predicate(key);
     } catch (e) {
       success = false;
       return false;
