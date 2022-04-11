@@ -7,6 +7,9 @@
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
   import { debounce } from "lodash/function.js";
+  import { getNotify } from "../../lib/utility.js";
+  import { getNotificationsContext } from "svelte-notifications";
+  const { notify } = getNotify(getNotificationsContext().addNotification);
 
   const { landing, myBookLists, myInfo } = links;
 </script>
@@ -27,7 +30,7 @@
 </li>
 <li>
   <div class="text-error">
-    <a href={landing} on:click={debounce(logout, 1000)}>
+    <a href={landing} on:click={handleLogOut}>
       <MenuItem Icon={FaSignOutAlt} text="注销" />
     </a>
   </div>
