@@ -2,7 +2,8 @@
   import { logout } from "../../lib/backendService/user.service";
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
   import MdBook from "svelte-icons/md/MdBook.svelte";
-  import { FaSignOutAlt } from "svelte-icons/fa";
+  import FaSignOutAlt from "svelte-icons/fa/FaSignOutAlt.svelte";
+  import FaBug from "svelte-icons/fa/FaBug.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
   import { debounce } from "lodash/function.js";
@@ -35,7 +36,7 @@
   <li>
     <div class="text-error">
       <a href={links.debugPage}>
-        <MenuItem text="排错" />
+        <MenuItem text="排错" Icon={FaBug} />
       </a>
     </div>
   </li>
