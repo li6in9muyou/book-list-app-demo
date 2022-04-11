@@ -149,3 +149,9 @@ export const logout = async () => {
   CurrentUserInfo.set(new EmptyUserInfo());
   CurrentAccessToken.set("");
 };
+
+export const logout = async () => {
+  CurrentUser.set("");
+  CurrentUserId.set(0);
+  CurrentAccessToken.set("");
+};

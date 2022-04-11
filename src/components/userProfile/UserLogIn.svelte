@@ -24,18 +24,13 @@
   async function handleLogin() {
     pending = true;
     notify("正在登录");
-    // const dmp = $displayName.value;
-    // const pwd = $password.value;
-    const dmp = "dev3";
-    const pwd = "aaaa";
+    const dmp = $displayName.value;
+    const pwd = $password.value;
     try {
       if (await checkDisplayNameDoNotExists(dmp)) {
         error(`"${dmp}" 还没有注册`);
       } else {
-        const q = new AuthPayloadFromServer(
-          await loginUser({ displayName: dmp, password: pwd })
-        );
-        persistUser(q);
+        await loginUser(dmp, pwd);
         success("登录成功了");
         dispatch("routeEvent", {
           afterLogIn: true,

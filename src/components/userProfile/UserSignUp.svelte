@@ -33,10 +33,7 @@
         displayName.reset();
         password.reset();
       } else {
-        const q = new AuthPayloadFromServer(
-          await createUser({ displayName: dmp, password: pwd })
-        );
-        persistUser(q);
+        await createUser(dmp, pwd);
         success("注册成功了");
         dispatch("routeEvent", {
           afterSignUp: true,

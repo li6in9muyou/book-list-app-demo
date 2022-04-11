@@ -31,8 +31,6 @@
 
     console.info("did not catch this event", event);
   }
-
-  onMount(restoreUser);
 </script>
 
 <svelte:head>
