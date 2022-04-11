@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import {
+    AuthPayloadFromServer,
     checkDisplayNameDoNotExists,
     loginUser,
     persistUser,
@@ -25,13 +26,15 @@
     notify("正在登录");
     // const dmp = $displayName.value;
     // const pwd = $password.value;
-    const dmp = "dev13";
+    const dmp = "dev3";
     const pwd = "aaaa";
     try {
       if (await checkDisplayNameDoNotExists(dmp)) {
         error(`"${dmp}" 还没有注册`);
       } else {
-        const q = await loginUser(dmp, pwd);
+        const q = new AuthPayloadFromServer(
+          await loginUser({ displayName: dmp, password: pwd })
+        );
         persistUser(q);
         success("登录成功了");
         dispatch("routeEvent", {

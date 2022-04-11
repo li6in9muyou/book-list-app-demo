@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
   import {
+    AuthPayloadFromServer,
     checkDisplayNameDoNotExists,
     createUser,
     persistUser,
@@ -32,7 +33,9 @@
         displayName.reset();
         password.reset();
       } else {
-        const q = await createUser(dmp, pwd);
+        const q = new AuthPayloadFromServer(
+          await createUser({ displayName: dmp, password: pwd })
+        );
         persistUser(q);
         success("注册成功了");
         dispatch("routeEvent", {
