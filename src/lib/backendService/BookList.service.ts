@@ -89,17 +89,17 @@ export async function BookList_addBooks(
   );
 }
 
-// export async function deleteBookList(user, title) {
-//   return await fetch(
-//     import.meta.env.VITE_DEV_DB_URL + `/api/${user}/book-lists/${title}`,
-//     {
-//       method: "DELETE",
-//     }
-//   );
-// }
-//
-// export async function fetchBookListsContainOneBook(user, book) {
-//   return await fetchBookListsByUserId(user).filter(
-//     (thisList) => thisList.books.indexOf(book) !== -1
-//   );
-// }
+export async function deleteBookList(user, title) {
+  return await fetch(
+    import.meta.env.VITE_DEV_DB_URL + `/api/${user}/book-lists/${title}`,
+    {
+      method: "DELETE",
+    }
+  );
+}
+
+export async function fetchBookListsContainOneBook(user, book) {
+  return (await fetchBookListsByUserId(user)).filter(
+    (thisList) => thisList.books.indexOf(book) !== -1
+  );
+}

@@ -6,4 +6,8 @@ Accept: application/json
 GET http://localhost:8081/api/book-lists/ccccddd
 Accept: application/json
 
+### expect api to return 304 if unchanged
+HEAD http://localhost:8081/api/books/
+Accept: application/json
+
 ###
