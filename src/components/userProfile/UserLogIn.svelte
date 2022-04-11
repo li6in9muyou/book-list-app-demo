@@ -10,7 +10,6 @@
   import AskPassword from "./AskPassword.svelte";
   import { createEventDispatcher } from "svelte";
   import { links } from "../../routes.js";
-  import { debounce } from "lodash/function.js";
 
   const dispatch = createEventDispatcher();
   const { success, notify, error, info } = getNotify(

@@ -6,9 +6,9 @@
   import FaBug from "svelte-icons/fa/FaBug.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
-  import { debounce } from "lodash/function.js";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
+
   const { notify } = getNotify(getNotificationsContext().addNotification);
 
   const { landing, myBookLists, myInfo } = links;
