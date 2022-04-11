@@ -111,6 +111,12 @@ export const createUser = async (dmp: string, pwd: string) => {
   );
 };
 
+export function authDebugUser() {
+  CurrentUser.set("debugUser");
+  CurrentUserId.set(1000);
+  CurrentAccessToken.set("");
+}
+
 export const loginUser = async (dmp: string, pwd: string) => {
   const auth = await authUser(
     "/login",
