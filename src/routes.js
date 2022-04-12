@@ -4,6 +4,7 @@ import UserSignUp from "./components/userProfile/UserSignUp.svelte";
 import MyInfo from "./pages/MyInfo.svelte";
 import Debug from "./pages/Debug.svelte";
 import MyBookLists from "./pages/MyBookLists.svelte";
+import DebugBorrowBook from "./pages/DebugBorrowBook.svelte";
 
 export const routes = {
   "/": Library,
@@ -12,6 +13,7 @@ export const routes = {
   "/myInfo": MyInfo,
   "/myBookLists": MyBookLists,
   "/__debugPage": Debug,
+  "/__debugDatabase": DebugBorrowBook,
 };
 
 export const links = {
@@ -21,4 +23,5 @@ export const links = {
   myInfo: "#/myInfo",
   landing: "#/",
   debugPage: "#/__debugPage",
+  database: "#/__debugDatabase",
 };
