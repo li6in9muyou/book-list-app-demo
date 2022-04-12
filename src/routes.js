@@ -5,6 +5,7 @@ import MyInfo from "./pages/MyInfo.svelte";
 import Debug from "./pages/Debug.svelte";
 import MyBookLists from "./pages/MyBookLists.svelte";
 import DebugBorrowBook from "./pages/DebugBorrowBook.svelte";
+import DebugBookListsPouchDB from "./pages/DebugBookListsPouchDB.svelte";
 
 export const routes = {
   "/": Library,
@@ -14,6 +15,7 @@ export const routes = {
   "/myBookLists": MyBookLists,
   "/__debugPage": Debug,
   "/__debugDatabase": DebugBorrowBook,
+  "/__debugBookListPouchDB": DebugBookListsPouchDB,
 };
 
 export const links = {
@@ -24,4 +26,5 @@ export const links = {
   landing: "#/",
   debugPage: "#/__debugPage",
   database: "#/__debugDatabase",
+  debugBookList: "#/__debugBookListPouchDB",
 };

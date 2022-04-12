@@ -3,6 +3,7 @@
   import FaBug from "svelte-icons/fa/FaBug.svelte";
   import FaRunning from "svelte-icons/fa/FaRunning.svelte";
   import DiDatabase from "svelte-icons/di/DiDatabase.svelte";
+  import GiSoapExperiment from "svelte-icons/gi/GiSoapExperiment.svelte";
   import { links } from "../../routes.js";
   import { createEventDispatcher } from "svelte";
   import { authDebugUser } from "../backendService/user.service.js";
@@ -34,6 +35,13 @@
         <div class="w-full text-error">
           <a href={links.debugPage}>
             <MenuItem text="排错" Icon={FaBug} />
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="w-full text-warning">
+          <a href={links.debugBookList}>
+            <MenuItem text="新书单实现" Icon={GiSoapExperiment} />
           </a>
         </div>
       </li>
