@@ -1,5 +1,5 @@
 import { CurrentUserInfo } from "./user.service";
-import { get } from "svelte/store";
+import { get, Writable, writable } from "svelte/store";
 
 export class BookList {
   userId: number;
@@ -102,4 +102,22 @@ export async function fetchBookListsContainOneBook(user, book) {
   return (await fetchBookListsByUserId(user)).filter(
     (thisList) => thisList.books.indexOf(book) !== -1
   );
+}
+
+const cache = new Map<number, BookList[]>();
+export function fetchUserBookLists(
+  userId: number
+): Writable<Promise<BookList[]>> {
+  const store = writable(new Promise<BookList[]>(() => {}));
+
+  if (cache.has(userId)) {
+    store.set(Promise.resolve(cache.get(userId)));
+  }
+
+  fetchBookListsByUserId(userId).then((lists) => {
+    cache.set(userId, lists);
+    store.set(Promise.resolve(lists));
+  });
+
+  return store;
 }

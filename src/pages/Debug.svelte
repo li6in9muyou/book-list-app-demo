@@ -1,30 +1,32 @@
 <script lang="ts">
-  import { fetchBookListsByUserId } from "../lib/backendService/BookList.service";
+  import { fetchUserBookLists } from "../lib/backendService/BookList.service";
   import { get } from "lodash/object.js";
   import AddToBookListModal from "../components/bookListModal/AddToBookListModal.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { CurrentUserInfo } from "../lib/backendService/user.service";
+  import { CurrentUserId } from "../lib/backendService/user.service";
 
   let shouldShow = false;
   let thisBook = 1111;
+
+  const resp = fetchUserBookLists($CurrentUserId);
 </script>
 
-<label class="btn btn-ghost mb-4 text-xl text-secondary">
-  加入书单
-  <input bind:checked={shouldShow} class="hidden" type="checkbox" />
-</label>
-
 <AddToBookListModal bind:shouldShow {thisBook} />
-<div class="p-4">
-  <label class="flex items-center gap-4">
-    <div class="btn btn-ghost btn-sm">thisBook</div>
+<div class="flex flex-col gap-4 p-4">
+  <div class="input-group">
     <input
       type="number"
-      class="input-outline input w-1/2 border font-mono text-xl shadow"
+      class="input input-bordered w-1/4 font-mono text-2xl"
       bind:value={thisBook}
     />
-  </label>
-  {#await fetchBookListsByUserId($CurrentUserInfo.id) then bookLists}
+    <button class="btn btn-primary flex-1 text-xl md:flex-none">
+      <label>
+        <input bind:checked={shouldShow} class="hidden" type="checkbox" />
+        加入书单
+      </label>
+    </button>
+  </div>
+  {#await $resp then bookLists}
     <div class="flex flex-col gap-4">
       <table class="table w-full table-fixed">
         <thead>
