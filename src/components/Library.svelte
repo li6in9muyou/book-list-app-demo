@@ -20,7 +20,7 @@
 
 <div class="h-full w-full">
   <main class="mx-auto flex h-full max-w-4xl flex-col">
-    <div class="flex flex-col justify-between gap-2 p-4 pb-1">
+    <div class="flex flex-col justify-between gap-2 p-4 py-1">
       <SearchBar
         bind:error
         bind:hay={all_fucking_ebooks}
