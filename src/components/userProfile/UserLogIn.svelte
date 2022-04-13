@@ -26,26 +26,33 @@
 
   let pending = false;
   async function handleLogin() {
+    function onFailure() {
+      displayName.reset();
+      password.reset();
+      pending = false;
+    }
+
     pending = true;
     notify("正在登录");
     const dmp = $displayName.value;
     const pwd = $password.value;
-    try {
-      if (await checkDisplayNameDoNotExists(dmp)) {
-        error(`"${dmp}" 还没有注册`);
-      } else {
+    if (await checkDisplayNameDoNotExists(dmp)) {
+      error(`"${dmp}" 还没有注册`);
+      onFailure();
+    } else {
+      try {
         await loginUser(dmp, pwd);
         success("登录成功了");
         dispatch("routeEvent", {
           afterLogIn: true,
           redirect: links.myBookLists,
         });
+      } catch (e) {
+        error(`失败了，原因是：${e.message}`);
+        throw e;
+      } finally {
+        onFailure();
       }
-    } catch (e) {
-      error(`失败了，原因是：${e.message}`);
-      throw e;
-    } finally {
-      pending = false;
     }
   }
 </script>

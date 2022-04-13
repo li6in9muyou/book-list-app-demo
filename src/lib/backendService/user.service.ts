@@ -106,10 +106,13 @@ async function authUser(
 
 export const createUser = debounce(
   async (dmp: string, pwd: string) => {
-    return await authUser(
+    const auth = await authUser(
       "/api/users/",
       new UserAuthInput({ displayName: dmp, password: pwd })
     );
+    CurrentUser.set(auth.displayName);
+    CurrentUserId.set(auth.id);
+    CurrentAccessToken.set(auth.accessToken);
   },
   1000,
   { trailing: true }
