@@ -55,9 +55,18 @@
   class="m-auto flex w-full max-w-sm flex-1 flex-col p-4"
   in:fade={{ delay: 350 }}
 >
-  <div class="flex h-3/4 w-full flex-col gap-6">
-    <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-      注册新账号
+  <div class="flex w-full flex-1 flex-col gap-4">
+    <div
+      class="text-serif flex w-full items-center gap-6 rounded border py-2 px-4 text-2xl text-primary"
+    >
+      <span>注册新账号</span>
+      <button
+        class="btn btn-accent btn-sm ml-auto inline w-1/3"
+        class:btn-disabled={pending || (formValid && !$formValid)}
+        on:click={handleSignup}
+      >
+        注册
+      </button>
     </div>
 
     <div class="w-full">
@@ -67,15 +76,5 @@
     <div class="w-full">
       <AskPassword bind:password repeatPassword={true} />
     </div>
-  </div>
-
-  <div class="flex w-full flex-1 flex-col md:max-w-fit">
-    <button
-      class="btn btn-accent mr-auto w-full"
-      class:btn-disabled={pending || (formValid && !$formValid)}
-      on:click={handleSignup}
-    >
-      注册
-    </button>
   </div>
 </div>

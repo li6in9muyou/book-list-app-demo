@@ -54,29 +54,26 @@
   class="m-auto flex w-full max-w-sm flex-1 flex-col p-4"
   in:fade={{ delay: 350 }}
 >
-  <div class="flex w-full flex-1 flex-col items-stretch gap-4">
-    <div class="text-serif w-full rounded border p-2 text-2xl text-primary">
-      登录你的账号
-    </div>
-
-    <div class="w-full flex-1">
-      <AskDisplayName bind:displayName />
-    </div>
-
-    <div class="mb-10 w-full flex-1">
-      <AskPassword bind:password repeatPassword={false} />
-    </div>
-  </div>
-
-  <div class="w-full flex-1 md:max-w-fit">
-    <div class="w-full">
+  <div class="flex w-full flex-1 flex-col gap-4">
+    <div
+      class="text-serif flex w-full items-center gap-6 rounded border py-2 px-4 text-2xl text-primary"
+    >
+      <span>登录你的账号</span>
       <button
-        class="btn btn-accent mr-auto w-full"
+        class="btn btn-accent btn-sm ml-auto inline w-1/3"
         class:btn-disabled={pending || (formValid && !$formValid)}
         on:click={handleLogin}
       >
         登录
       </button>
+    </div>
+
+    <div class="w-full">
+      <AskDisplayName bind:displayName />
+    </div>
+
+    <div class="w-full">
+      <AskPassword bind:password repeatPassword={false} />
     </div>
   </div>
 </div>
