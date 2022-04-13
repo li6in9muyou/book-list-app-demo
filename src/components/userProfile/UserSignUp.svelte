@@ -10,19 +10,18 @@
   import AskPassword from "./AskPassword.svelte";
   import { createEventDispatcher, onMount } from "svelte";
   import { links } from "../../routes.js";
-  import { form } from "svelte-forms";
+  import { derived } from "svelte/store";
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
   );
-  let displayName, password;
-  let authInput;
-  let formInvalid = true;
 
+  let displayName, password, formValid;
   onMount(() => {
-    authInput = form(displayName, password);
-    authInput.subscribe((a) => (formInvalid = !a.valid));
+    formValid = derived([displayName, password], ([d, p]) => {
+      return d.valid && p.valid;
+    });
   });
 
   let pending = false;
@@ -73,7 +72,7 @@
   <div class="flex w-full flex-1 flex-col md:max-w-fit">
     <button
       class="btn btn-accent mr-auto w-full"
-      class:btn-disabled={pending || formInvalid}
+      class:btn-disabled={pending || (formValid && !$formValid)}
       on:click={handleSignup}
     >
       注册

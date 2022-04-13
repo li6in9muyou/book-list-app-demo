@@ -8,16 +8,23 @@
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
   import { links } from "../../routes.js";
+  import { derived } from "svelte/store";
 
   const dispatch = createEventDispatcher();
   const { success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
   );
-  let displayName, password;
-  let pending = false;
 
+  let displayName, password, formValid;
+  onMount(() => {
+    formValid = derived([displayName, password], ([d, p]) => {
+      return d.valid && p.valid;
+    });
+  });
+
+  let pending = false;
   async function handleLogin() {
     pending = true;
     notify("正在登录");
@@ -65,7 +72,7 @@
     <div class="w-full">
       <button
         class="btn btn-accent mr-auto w-full"
-        class:btn-disabled={pending}
+        class:btn-disabled={pending || (formValid && !$formValid)}
         on:click={handleLogin}
       >
         登录

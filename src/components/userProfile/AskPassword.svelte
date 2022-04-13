@@ -16,11 +16,9 @@
     pwdAgain.validate();
   });
 
-  export let password = combined(
-    "pwd",
-    [pwd, pwdAgain],
-    ([pwd, _]) => pwd.value
-  );
+  export let password = repeatPassword
+    ? combined("pwd", [pwd, pwdAgain], ([pwd, _]) => pwd.value)
+    : pwd;
 </script>
 
 <div class="form-control w-full">
