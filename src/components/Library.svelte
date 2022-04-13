@@ -7,15 +7,17 @@
   import SearchTip from "./searchPage/SearchTip.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
   import { Book, fetchAllBooks } from "../lib/backendService/book.service.ts";
+  import Catalog from "./documentCatalog/Catalog.svelte";
 
   let all_fucking_ebooks: Book[] = [];
-
-  const populate_books = async () =>
-    (all_fucking_ebooks = await fetchAllBooks());
 
   let error = {};
   let books_to_show: Book[] = [];
   $: showing_count = books_to_show.length;
+
+  const populate_books = async () => {
+    all_fucking_ebooks = await fetchAllBooks();
+  };
 </script>
 
 <div class="h-full w-full">
@@ -33,10 +35,8 @@
       <section class="h-px min-h-full overflow-y-auto overflow-x-hidden">
         {#await populate_books()}
           <PleaseWait msg="图书正在加载" />
-        {:then books}
-          <VirtualScroll items={books_to_show} let:item>
-            <DocumentCard book={item} />
-          </VirtualScroll>
+        {:then _}
+          <Catalog {books_to_show} />
         {:catch error}
           <div class="p-4 pt-0">
             <EmbeddedAlert
