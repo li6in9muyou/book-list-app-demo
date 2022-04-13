@@ -8,19 +8,26 @@
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
   import AskPassword from "./AskPassword.svelte";
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
   import { links } from "../../routes.js";
-  import form from "svelte-forms";
+  import { form } from "svelte-forms";
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
     getNotificationsContext().addNotification
   );
-  let displayName: form<string>, password: form<string>;
-  let pending = false;
+  let displayName, password;
+  let authInput;
+  let formInvalid = true;
 
+  onMount(() => {
+    authInput = form(displayName, password);
+    authInput.subscribe((a) => (formInvalid = !a.valid));
+  });
+
+  let pending = false;
   async function handleSignup() {
-    // pending = true;
+    pending = true;
     notify("正在注册");
     const dmp = $displayName.value;
     const pwd = $password.value;
@@ -66,7 +73,7 @@
   <div class="flex w-full flex-1 flex-col md:max-w-fit">
     <button
       class="btn btn-accent mr-auto w-full"
-      class:btn-disabled={pending}
+      class:btn-disabled={pending || formInvalid}
       on:click={handleSignup}
     >
       注册

@@ -10,9 +10,9 @@
   });
 
   const ss = field("passwordAgain", "", [matchField(s)], {
-    valid: true,
+    valid: false,
   });
-  export let password = s;
+  export let password = ss;
 </script>
 
 <div class="form-control w-full">
