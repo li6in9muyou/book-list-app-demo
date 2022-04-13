@@ -22,10 +22,7 @@
   $: showing_count = results.length;
 </script>
 
-<div
-  class="grid items-center items-stretch gap-4
-            sm:flex"
->
+<div class="grid items-center items-stretch gap-1 sm:flex">
   <input
     autocapitalize="off"
     autocomplete="off"
@@ -37,7 +34,7 @@
     spellcheck="false"
     type="text"
   />
-  <div class="flex gap-2">
+  <div class="flex gap-1">
     <label
       class="label flex-1 cursor-pointer rounded border px-4 shadow
                   sm:gap-2"

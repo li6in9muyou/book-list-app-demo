@@ -15,12 +15,12 @@
 
   let error = {};
   let books_to_show: Book[] = [];
-  let showing_count = books_to_show.length;
+  $: showing_count = books_to_show.length;
 </script>
 
 <div class="h-full w-full">
   <main class="mx-auto flex h-full max-w-4xl flex-col">
-    <div class="flex flex-col justify-between gap-4 p-4">
+    <div class="flex flex-col justify-between gap-2 p-4 pb-1">
       <SearchBar
         bind:error
         bind:hay={all_fucking_ebooks}
