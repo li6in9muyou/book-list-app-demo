@@ -7,8 +7,8 @@
   export let shouldShow = false;
 </script>
 
-<div class="mt-4">
-  {#if thisBook !== -1 && shouldShow}
+{#if shouldShow}
+  <div class="mt-4">
     {#await fetchBookDetail(thisBook)}
       <div class="border-info border rounded pr-2">
         <PleaseWait msg="详情加载中" />
@@ -16,5 +16,5 @@
     {:then detail}
       <TextDisplay text={detail} />
     {/await}
-  {/if}
-</div>
+  </div>
+{/if}

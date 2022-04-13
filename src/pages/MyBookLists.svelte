@@ -19,7 +19,7 @@
             </tr>
           </thead>
           <tbody>
-            {#if true || isEmpty(bookLists)}
+            {#if isEmpty(bookLists)}
               <tr>
                 <td colspan="3" class="p-2">
                   <EmbeddedAlert color="info" text="您还没有书单" />
