@@ -2,8 +2,15 @@
   import DebugOverride from "../../pages/DebugOverride.svelte";
   import UserLogIn from "../../components/userProfile/UserLogIn.svelte";
   import UserSignUp from "../../components/userProfile/UserSignUp.svelte";
+  import { get } from "lodash";
 
-  let who = "debug";
+  let component = {
+    login: UserLogIn,
+    signup: UserSignUp,
+    debug: DebugOverride,
+  };
+  const defaultComponent = import.meta.env.DEV ? "debug" : "login";
+  let who = defaultComponent;
 </script>
 
 <div class="tabs tabs-boxed justify-evenly p-2">
@@ -31,27 +38,22 @@
       />
     </div>
   </label>
-  <label>
-    <div class="tab tab-sm " class:tab-active={who === "debug"}>
-      排错超控
-      <input
-        bind:group={who}
-        value="debug"
-        type="radio"
-        name="nav"
-        class="radio radio-primary hidden"
-        checked
-      />
-    </div>
-  </label>
+  {#if import.meta.env.DEV}
+    <label>
+      <div class="tab tab-sm" class:tab-active={who === "debug"}>
+        排错超控
+        <input
+          bind:group={who}
+          value="debug"
+          type="radio"
+          name="nav"
+          class="radio radio-primary hidden"
+        />
+      </div>
+    </label>
+  {/if}
 </div>
 
 <div>
-  {#if who === "debug"}
-    <DebugOverride />
-  {:else if who === "login"}
-    <UserLogIn />
-  {:else if who === "signup"}
-    <UserSignUp />
-  {/if}
+  <svelte:component this={get(component, who, defaultComponent)} />
 </div>
