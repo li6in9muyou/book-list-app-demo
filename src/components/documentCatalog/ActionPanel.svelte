@@ -13,7 +13,7 @@
   let shouldShowDetail = false;
 </script>
 
-<div>
+<div class="flex flex-1 flex-col gap-2">
   <main class="space-x-6">
     <label
       class="btn btn-outline btn-secondary btn-sm content-center items-end"
