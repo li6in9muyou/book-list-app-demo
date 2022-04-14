@@ -8,7 +8,7 @@
 
   async function routeEvent(event) {
     function isEvent(e: string) {
-      return get(event, `detail.${e}`, false);
+      return get(event, "detail.type", "") === e;
     }
 
     if (isEvent("afterLogIn")) {

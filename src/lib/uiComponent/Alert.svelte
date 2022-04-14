@@ -1,17 +1,43 @@
-<script>
+<script lang="ts">
   import { get } from "lodash/object.js";
   import FaInfo from "svelte-icons/fa/FaInfo.svelte";
+  import MdWarning from "svelte-icons/md/MdWarning.svelte";
+  import FaCheck from "svelte-icons/fa/FaCheck.svelte";
+  import FaTimes from "svelte-icons/fa/FaTimes.svelte";
+  import FaBell from "svelte-icons/fa/FaBell.svelte";
   import { fly, scale } from "svelte/transition";
 
-  export let notification = {};
+  export let notification = {
+    text: "一条示例消息 A Sample Notification",
+  };
   export let color = get(notification, "color", "");
+  export let onRemove = () => {};
+  export let withoutStyles = false;
+
+  let icon;
+  switch (color) {
+    case "error":
+      icon = FaTimes;
+      break;
+    case "warning":
+      icon = MdWarning;
+      break;
+    case "success":
+      icon = FaCheck;
+      break;
+    case "info":
+      icon = FaInfo;
+      break;
+    default:
+      icon = FaBell;
+  }
 </script>
 
 <div
   in:fly={{ x: -400, duration: 1000 }}
   out:scale
-  class="alert z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center
-   justify-between rounded-lg rounded p-2 px-4 shadow shadow-lg
+  class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center gap-2
+   rounded-lg rounded p-2 px-4 shadow shadow-lg
    md:relative md:right-1/3 xl:relative xl:right-96"
   class:alert-error={"error" === color}
   class:alert-info={"info" === color}
@@ -19,7 +45,7 @@
   class:alert-warning={"warning" === color}
 >
   <span class="h-6 w-6">
-    <FaInfo />
+    <svelte:component this={icon} />
   </span>
-  <span class="flex-1 break-all">{notification.text}</span>
+  <span class="flex-1 break-words text-lg">{notification.text}</span>
 </div>
