@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { setContext } from "svelte";
   import FaArchive from "svelte-icons/fa/FaArchive.svelte";
   import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
@@ -7,7 +7,7 @@
   import BookDetail from "./BookDetail.svelte";
 
   export let thisBook = -1;
-  setContext("thisBook", thisBook);
+  setContext<number>("thisBook", thisBook);
 
   let shouldShowAddToBookListModal = false;
   let shouldShowDetail = false;

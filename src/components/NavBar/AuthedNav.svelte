@@ -5,7 +5,7 @@
   import FaSignOutAlt from "svelte-icons/fa/FaSignOutAlt.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
   import { links } from "../../routes.js";
-  import { getNotify } from "../../lib/utility.js";
+  import { getNotify } from "../../lib/utility";
   import { getNotificationsContext } from "svelte-notifications";
   import DebugNav from "../../lib/uiComponent/DebugNav.svelte";
 

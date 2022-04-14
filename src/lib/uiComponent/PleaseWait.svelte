@@ -1,5 +1,5 @@
 <script>
-  import { sleep } from "../utility.js";
+  import { sleep } from "../utility.ts";
   import FaExclamation from "svelte-icons/fa/FaExclamation.svelte";
 
   export let msg = "加载中";

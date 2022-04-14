@@ -1,13 +1,17 @@
-export function textSearch(
-  query,
-  hay,
-  getKey,
+export function textSearch<T>(
+  query: string,
+  hay: T[],
+  getKey: (item: T) => string,
   options = { ignoreCase: true, useRegex: false }
-) {
+): {
+  results: T[];
+  success: boolean;
+  error: { detail: string };
+} {
   const { ignoreCase, useRegex } = options;
 
   let _getKey = getKey;
-  let queryRgx;
+  let queryRgx: RegExp;
 
   try {
     if (!useRegex && !ignoreCase) {
@@ -29,7 +33,7 @@ export function textSearch(
     };
   }
 
-  let predicate = (key) => queryRgx.test(key);
+  let predicate = (key: string) => queryRgx.test(key);
   let success = true;
   const ans = hay.filter((item) => {
     const key = _getKey(item);

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { fetchBookDetail } from "../../lib/backendService/BookDetailService.js";
   import TextDisplay from "../../lib/uiComponent/TextDisplay.svelte";
   import PleaseWait from "../../lib/uiComponent/PleaseWait.svelte";

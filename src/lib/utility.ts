@@ -1,6 +1,7 @@
 import { readable } from "svelte/store";
+import type { addNotification } from "svelte-notifications/index";
 
-export const takeExtension = (pp) => {
+export const takeExtension = (pp: string) => {
   try {
     return pp.match(/\.([0-9a-z]+)$/i)[1];
   } catch {
@@ -8,7 +9,7 @@ export const takeExtension = (pp) => {
   }
 };
 
-export const fileNameWithoutExtension = (pp) => {
+export const fileNameWithoutExtension = (pp: string) => {
   const fileName = pp.split("\\").pop().split("/").pop();
   const parts = fileName.match(/(.*)\.([0-9a-z]+)$/i);
   if (null === parts) {
@@ -18,11 +19,11 @@ export const fileNameWithoutExtension = (pp) => {
   }
 };
 
-export async function sleep(duration) {
-  await new Promise((resolve) => setTimeout(resolve, duration));
+export async function sleep(duration: number): Promise<void> {
+  await new Promise<void>((resolve) => setTimeout(resolve, duration));
 }
 
-export function getNotify(addNotification) {
+export function getNotify(addNotification: addNotification) {
   const buildOptions = (color, msg) => ({
     text: msg,
     removeAfter: 5000,
@@ -30,11 +31,11 @@ export function getNotify(addNotification) {
     color: color,
   });
   return {
-    notify: (msg) => addNotification(buildOptions("", msg)),
-    info: (msg) => addNotification(buildOptions("info", msg)),
-    success: (msg) => addNotification(buildOptions("success", msg)),
-    warning: (msg) => addNotification(buildOptions("warning", msg)),
-    error: (msg) => addNotification(buildOptions("error", msg)),
+    notify: (msg: string) => addNotification(buildOptions("", msg)),
+    info: (msg: string) => addNotification(buildOptions("info", msg)),
+    success: (msg: string) => addNotification(buildOptions("success", msg)),
+    warning: (msg: string) => addNotification(buildOptions("warning", msg)),
+    error: (msg: string) => addNotification(buildOptions("error", msg)),
   };
 }
 

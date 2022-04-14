@@ -12,7 +12,7 @@
   export let min_length = 4;
   let new_bookList_title = "";
   const thisBook = getContext<number>("thisBook");
-  const pleaseCloseModal = getContext("pleaseCloseModal");
+  const pleaseCloseModal = getContext<() => void>("pleaseCloseModal");
   let shouldShow = false;
 
   const newListName = field(

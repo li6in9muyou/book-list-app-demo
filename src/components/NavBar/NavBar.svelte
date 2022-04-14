@@ -1,7 +1,7 @@
 <script>
   import ExpandedNav from "./ExpandedNav.svelte";
   import Nav from "./Nav.svelte";
-  import { md } from "../../lib/utility.js";
+  import { md } from "../../lib/utility";
   import { links } from "../../routes.js";
 </script>
 

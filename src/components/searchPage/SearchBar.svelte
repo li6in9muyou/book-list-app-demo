@@ -1,5 +1,5 @@
 <script>
-  import { textSearch } from "../../lib/searchEengine.js";
+  import { textSearch } from "../../lib/searchEengine.ts";
   import { identity } from "lodash";
 
   export let hay = [];

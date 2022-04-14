@@ -7,7 +7,7 @@
   import { get } from "lodash/object.js";
 
   async function routeEvent(event) {
-    function isEvent(e) {
+    function isEvent(e: string) {
       return get(event, `detail.${e}`, false);
     }
 
