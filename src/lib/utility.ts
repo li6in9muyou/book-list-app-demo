@@ -23,7 +23,7 @@ export async function sleep(duration: number): Promise<void> {
   await new Promise<void>((resolve) => setTimeout(resolve, duration));
 }
 
-export function getNotify(addNotification: addNotification) {
+export function getNotify({ addNotification }) {
   const buildOptions = (color, msg) => ({
     text: msg,
     removeAfter: 5000,
