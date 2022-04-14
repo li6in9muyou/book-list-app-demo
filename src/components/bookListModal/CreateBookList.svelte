@@ -3,12 +3,33 @@
   import { BookList_create } from "../../lib/backendService/BookList.service";
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../../lib/utility.js";
+  import { field } from "svelte-forms";
+  import { max, min, not, pattern, required } from "svelte-forms/validators";
+  import { find, isEmpty, join, sampleSize } from "lodash";
+  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
 
-  export let max_length = 150;
+  export let max_length = 20;
+  export let min_length = 4;
   let new_bookList_title = "";
   const thisBook = getContext<number>("thisBook");
   const pleaseCloseModal = getContext("pleaseCloseModal");
   let shouldShow = false;
+
+  const newListName = field(
+    "newListName",
+    "",
+    [required(), not(pattern(/ /)), min(min_length), max(max_length)],
+    {
+      stopAtFirstError: true,
+      checkOnInit: true,
+    }
+  );
+
+  function handleRandomizeName() {
+    const lorem = "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉戌亥".split("");
+    $newListName.value = "未命名-" + join(sampleSize(lorem, 6), "");
+  }
+  handleRandomizeName();
 
   const { success } = getNotify(getNotificationsContext().addNotification);
 </script>
@@ -33,26 +54,52 @@
   </div>
   <div class="collapse-content">
     <div class="form-control w-full">
-      <label class="label">
-        <span class="label-text">名称</span>
-        <span class="label-text">{new_bookList_title.length}/{max_length}</span>
+      <label class="label py-0 pl-0" on:click={handleRandomizeName}>
+        <span class="btn btn-ghost btn-sm label-text w-fit px-1 font-normal">
+          名称，点击随机生成
+        </span>
+        <span
+          class="label-text"
+          class:text-error={$newListName.value.length > max_length}
+          class:text-success={$newListName.value.length <= max_length}
+          >{$newListName.value.length}/{max_length}</span
+        >
       </label>
       <input
-        bind:value={new_bookList_title}
+        bind:value={$newListName.value}
         class="input input-bordered input-secondary input-sm"
         placeholder="书单的名称"
         type="text"
       />
-      <button
-        class="btn btn-accent btn-sm ml-auto mt-2"
-        on:click={() => {
-          BookList_create(new_bookList_title, [thisBook]);
-          success("成功加入书单");
-          pleaseCloseModal();
-        }}
-      >
-        创建
-      </button>
+      <label class="label">
+        <PleaseCorrectMe
+          prompt="名字不可以包含空格"
+          shouldShow={$newListName.errors.indexOf("pattern") !== -1}
+        />
+        <PleaseCorrectMe
+          prompt="一定要填写书单名字"
+          shouldShow={find($newListName.errors, (err) => {
+            return err === "required";
+          })}
+        />
+        <PleaseCorrectMe
+          prompt={`书单名字至少${min_length}个字至多${max_length}个字`}
+          shouldShow={find($newListName.errors, (err) => {
+            return err === "min" || err === "max";
+          })}
+        />
+        <button
+          class="btn btn-accent btn-sm ml-auto mt-2"
+          class:btn-disabled={!isEmpty($newListName.errors)}
+          on:click={() => {
+            BookList_create(new_bookList_title, [thisBook]);
+            success("成功加入书单");
+            pleaseCloseModal();
+          }}
+        >
+          创建
+        </button>
+      </label>
     </div>
   </div>
 </div>
