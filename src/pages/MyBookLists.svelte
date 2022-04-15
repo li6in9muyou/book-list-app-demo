@@ -1,15 +1,15 @@
 <script lang="ts">
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
   import { fetchBookListsByUserId } from "../lib/backendService/bookList.service";
-  import { CurrentUserInfo } from "../lib/backendService/user.service";
   import { get, isEmpty } from "lodash";
   import PleaseProvideAuth from "../lib/uiComponent/PleaseProvideAuth.svelte";
+  import { CurrentUserId } from "../lib/backendService/user.service.js";
 </script>
 
 <PleaseProvideAuth>
   <div class="p-4">
     <div class="mb-4 text-xl font-bold text-accent">我的书单</div>
-    {#await fetchBookListsByUserId($CurrentUserInfo.id) then bookLists}
+    {#await fetchBookListsByUserId($CurrentUserId) then bookLists}
       <div class="flex flex-col gap-4">
         <table class="table w-full table-fixed">
           <thead>
