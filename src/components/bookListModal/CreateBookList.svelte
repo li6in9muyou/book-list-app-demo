@@ -10,7 +10,6 @@
 
   export let max_length = 20;
   export let min_length = 4;
-  let new_bookList_title = "";
   const thisBook = getContext<number>("thisBook");
   const pleaseCloseModal = getContext<() => void>("pleaseCloseModal");
   let shouldShow = false;
@@ -31,7 +30,7 @@
   }
   handleRandomizeName();
 
-  const { success } = getNotify(getNotificationsContext().addNotification);
+  const { success } = getNotify(getNotificationsContext());
 </script>
 
 <div class="collapse" tabindex="0">
@@ -55,7 +54,7 @@
   <div class="collapse-content">
     <div class="form-control w-full">
       <label class="label py-0 pl-0" on:click={handleRandomizeName}>
-        <span class="btn btn-ghost btn-sm label-text w-fit px-1 font-normal">
+        <span class="btn btn-ghost label-text btn-sm w-fit px-1 font-normal">
           名称，点击随机生成
         </span>
         <span
@@ -92,7 +91,7 @@
           class="btn btn-accent btn-sm ml-auto mt-2"
           class:btn-disabled={!isEmpty($newListName.errors)}
           on:click={() => {
-            BookList_create(new_bookList_title, [thisBook]);
+            BookList_create($newListName.value, [thisBook]);
             success("成功加入书单");
             pleaseCloseModal();
           }}

@@ -8,21 +8,34 @@
   import { getNotify } from "../utility.js";
   import { getContext } from "svelte";
 
-  const { success, info } = getNotify(
-    getNotificationsContext().addNotification
-  );
+  const { success, info } = getNotify(getNotificationsContext());
 
   export let thisList: BookList;
   export let thisBook: number = getContext("thisBook");
+  export let thisGroup: number[] = getContext("thisGroup");
   let bookInBookList = thisList.books.indexOf(thisBook) !== -1;
+  let groupContainedByBookList = thisGroup.every((book) => {
+    return thisList.books.indexOf(book) !== -1;
+  });
 
   async function handleChange() {
-    if (bookInBookList) {
-      await BookList_addBooks(thisList.id, [thisBook]);
-      success(`已加入书单"${thisList.title}"`);
+    if (thisBook !== -1) {
+      if (bookInBookList) {
+        await BookList_addBooks(thisList.id, [thisBook]);
+        success(`已加入书单"${thisList.title}"`);
+      } else {
+        await BookList_removeBooks(thisList.id, [thisBook]);
+        info(`已从书单"${thisList.title}"中移除`);
+      }
     } else {
-      await BookList_removeBooks(thisList.id, [thisBook]);
-      info(`已从书单"${thisList.title}"中移除`);
+      console.log("batchUpdate");
+      if (bookInBookList) {
+        await BookList_addBooks(thisList.id, thisGroup);
+        success(`已加入书单"${thisList.title}"`);
+      } else {
+        await BookList_removeBooks(thisList.id, thisGroup);
+        info(`已从书单"${thisList.title}"中移除`);
+      }
     }
   }
 </script>

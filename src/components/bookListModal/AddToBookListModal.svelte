@@ -7,6 +7,7 @@
 
   export let shouldShow = false;
   export let thisBook: number;
+  export let thisGroup: number[];
 
   if (thisBook === undefined) {
     console.error("AddToBookListModal was created without an attached bookId");
@@ -17,6 +18,8 @@
 
   setContext<() => void>("pleaseCloseModal", () => (shouldShow = false));
   setContext<number>("thisBook", thisBook);
+  console.log(thisGroup);
+  setContext<number[]>("thisGroup", thisGroup);
 </script>
 
 {#if shouldShow}
