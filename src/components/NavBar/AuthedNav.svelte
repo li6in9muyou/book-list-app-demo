@@ -9,7 +9,7 @@
   import { getNotificationsContext } from "svelte-notifications";
   import DebugNav from "../../lib/uiComponent/DebugNav.svelte";
 
-  const { notify } = getNotify(getNotificationsContext().addNotification);
+  const { notify } = getNotify(getNotificationsContext());
 
   const { landing, myBookLists, myInfo } = links;
   const handleLogOut = async () => {

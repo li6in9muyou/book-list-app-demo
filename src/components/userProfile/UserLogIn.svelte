@@ -13,9 +13,7 @@
   import { derived } from "svelte/store";
 
   const dispatch = createEventDispatcher();
-  const { success, notify, error, info } = getNotify(
-    getNotificationsContext().addNotification
-  );
+  const { success, notify, error, info } = getNotify(getNotificationsContext());
 
   let displayName, password, formValid;
   onMount(() => {

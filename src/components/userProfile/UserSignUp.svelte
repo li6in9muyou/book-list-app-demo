@@ -14,7 +14,7 @@
 
   const dispatch = createEventDispatcher();
   const { warning, success, notify, error, info } = getNotify(
-    getNotificationsContext().addNotification
+    getNotificationsContext()
   );
 
   let displayName, password, formValid;
