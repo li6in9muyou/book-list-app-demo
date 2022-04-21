@@ -43,6 +43,7 @@
   class:alert-info={"info" === color}
   class:alert-success={"success" === color}
   class:alert-warning={"warning" === color}
+  class:bg-base-100={"" === color}
 >
   <span class="h-6 w-6">
     <svelte:component this={icon} />

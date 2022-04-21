@@ -1,7 +1,9 @@
-import { CurrentUserInfo, CurrentUserId } from "./user.service";
+import { CurrentUserId, CurrentUserInfo } from "./user.service";
 import { get, Writable, writable } from "svelte/store";
-import { pullAll, concat, last, toNumber } from "lodash";
+import { concat, isEmpty, last, pullAll } from "lodash";
 import PouchDB from "pouchdb";
+import type { Book } from "./book.service";
+import { fetchBooksById } from "./book.service";
 
 export class BookList {
   userId: number;
@@ -12,7 +14,11 @@ export class BookList {
     return genId(this.userId, this.title);
   }
 
-  constructor(userId: number, title: string, books: number[]) {
+  async getBooksInfo(): Promise<Book[]> {
+    return await fetchBooksById(this.books);
+  }
+
+  constructor(userId: number, title: string, books: number[] = []) {
     this.userId = userId;
     this.title = title;
     this.books = books;
@@ -90,10 +96,9 @@ export async function fetchBookListsByUserId(
     startkey: userId.toString(),
     endkey: userId.toString() + "\ufff0",
   });
-  console.table(doc.rows);
-  const lists = doc.rows.map(({ doc }) => BookList.fromPouchDocument(doc));
-  console.table(lists);
-  return lists;
+  return doc.rows
+    .filter(({ doc }) => !isEmpty(doc))
+    .map(({ doc }) => BookList.fromPouchDocument(doc));
 }
 
 export async function BookList_removeBooks(
