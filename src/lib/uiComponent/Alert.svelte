@@ -45,11 +45,11 @@
 <div
   in:fly={{ x: -400, duration: 1000 }}
   out:scale
-  class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center
-   gap-2 rounded-lg rounded p-2 px-4 shadow shadow-lg
+  class="m-4 ml-auto flex w-fit max-w-xs flex-row items-center
+   rounded-lg rounded p-2 px-4 pr-1 shadow shadow-lg
    md:relative md:right-1/3 xl:relative xl:right-96"
   class:bg-base-100={$dynamic.color === "" || $dynamic.color === "notify"}
-  class:bg-base-content={$dynamic.color === "" || $dynamic.color === "notify"}
+  class:text-base-content={$dynamic.color === "" || $dynamic.color === "notify"}
   class:alert-error={"error" === $dynamic.color}
   class:alert-info={"info" === $dynamic.color}
   class:alert-success={"success" === $dynamic.color}
@@ -59,8 +59,13 @@
     <svelte:component this={icon} />
   </span>
   {#key $dynamic.text}
-    <span in:fade={{ duration: 200 }} class="flex-1 break-words text-lg">
+    <span in:fade={{ duration: 200 }} class="mx-2 flex-1 break-words text-lg">
       {$dynamic.text}
     </span>
   {/key}
+  <div class="btn btn-ghost btn-circle btn-sm mx-0" on:click|once={onRemove}>
+    <div class="h-4 w-4">
+      <FaTimes />
+    </div>
+  </div>
 </div>
