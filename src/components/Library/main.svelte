@@ -46,7 +46,7 @@
   });
   let showSubListing = false;
 
-  function deselect({ detail }) {
+  function unselect({ detail }) {
     console.log("deselect", detail);
     $selected = pullAllBy($selected, [detail.book], "id");
     showSubListing = false;
@@ -79,14 +79,16 @@
         >
           {$selected.length > 99 ? "99+" : $selected.length.toString()}
         </span>
-        <div class="btn btn-accent btn-circle">
+        <div class="btn btn-circle btn-accent">
           <div class="h-full w-full">
             <FaShoppingCart />
           </div>
         </div>
       </div>
-      <div class="dropdown-content z-30 bg-base-100">
-        <BookBagListing on:unselect={deselect} />
+      <div
+        class="dropdown-content relative -left-4 -top-4 z-30 rounded rounded-lg bg-base-100"
+      >
+        <BookBagListing on:unselect={unselect} />
       </div>
     </div>
   </div>
