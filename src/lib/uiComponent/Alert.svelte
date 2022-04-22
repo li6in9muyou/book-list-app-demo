@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { fade } from "svelte/transition";
   import { get } from "lodash/object.js";
   import FaInfo from "svelte-icons/fa/FaInfo.svelte";
   import MdWarning from "svelte-icons/md/MdWarning.svelte";
@@ -56,5 +57,9 @@
   <span class="h-6 w-6">
     <svelte:component this={icon} />
   </span>
-  <span class="flex-1 break-words text-lg">{$dynamic.text}</span>
+  {#key $dynamic.text}
+    <span in:fade={{ duration: 200 }} class="flex-1 break-words text-lg">
+      {$dynamic.text}
+    </span>
+  {/key}
 </div>
