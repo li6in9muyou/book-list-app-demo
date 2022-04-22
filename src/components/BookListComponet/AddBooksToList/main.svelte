@@ -2,7 +2,7 @@
   import Append from "../Append.svelte";
   import Create from "../Create.svelte";
   import { fetchBookListsByUserId } from "../../../lib/backendService/BookList.service.ts";
-  import { Book } from "../../../lib/backendService/book.service.ts";
+  import { Book } from "../../Book/services";
 
   export let thisBooks: Book[];
   export let userId: number;
