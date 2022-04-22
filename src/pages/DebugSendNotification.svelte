@@ -6,7 +6,8 @@
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../lib/utility";
   import { toPairs } from "lodash";
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, onDestroy } from "svelte";
+  import { readable } from "svelte/store";
 
   const dispath = createEventDispatcher();
 
@@ -15,6 +16,9 @@
   const userLifeCycleEvent = (ev) => {
     dispath("routeEvent", { type: ev });
   };
+  onDestroy(() => {
+    getNotificationsContext().removeNotification("demo");
+  });
 </script>
 
 <div class="flex flex-col gap-4 p-4">
@@ -27,7 +31,27 @@
     <button
       class="btn btn-accent btn-lg font-mono normal-case"
       on:click={() => {
-        func(`颜色是${type}，消息一般有十个字。`);
+        if (type !== "dynamic") {
+          func(`颜色是${type}，消息一般有十个字。`);
+        } else {
+          func(
+            "demo",
+            readable({ text: "稍等" }, (set) => {
+              const colors = ["info", "success", "error", "warning", ""];
+              let idx = 0;
+              const i = setInterval(() => {
+                idx %= colors.length - 1;
+                set({
+                  text: `动态示例消息：${new Date().toLocaleTimeString()}`,
+                  color: colors[++idx],
+                });
+              }, 200);
+              return () => {
+                clearInterval(i);
+              };
+            })
+          );
+        }
       }}
     >
       send {type}

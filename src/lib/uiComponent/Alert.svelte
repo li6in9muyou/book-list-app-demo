@@ -6,46 +6,55 @@
   import FaTimes from "svelte-icons/fa/FaTimes.svelte";
   import FaBell from "svelte-icons/fa/FaBell.svelte";
   import { fly, scale } from "svelte/transition";
+  import { readable } from "svelte/store";
 
-  export let notification = {
-    text: "一条示例消息 A Sample Notification",
-  };
-  export let color = get(notification, "color", "");
+  export let notification = {};
+  export let dynamic = get(
+    notification,
+    "dynamic",
+    readable({
+      text: get(notification, "text"),
+      color: get(notification, "color", ""),
+    })
+  );
   export let onRemove = () => {};
   export let withoutStyles = false;
 
   let icon;
-  switch (color) {
-    case "error":
-      icon = FaTimes;
-      break;
-    case "warning":
-      icon = MdWarning;
-      break;
-    case "success":
-      icon = FaCheck;
-      break;
-    case "info":
-      icon = FaInfo;
-      break;
-    default:
-      icon = FaBell;
+  $: {
+    switch ($dynamic.color) {
+      case "error":
+        icon = FaTimes;
+        break;
+      case "warning":
+        icon = MdWarning;
+        break;
+      case "success":
+        icon = FaCheck;
+        break;
+      case "info":
+        icon = FaInfo;
+        break;
+      default:
+        icon = FaBell;
+    }
   }
 </script>
 
 <div
   in:fly={{ x: -400, duration: 1000 }}
   out:scale
-  class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center gap-2
-   rounded-lg rounded p-2 px-4 shadow shadow-lg
+  class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center
+   gap-2 rounded-lg rounded p-2 px-4 shadow shadow-lg
    md:relative md:right-1/3 xl:relative xl:right-96"
-  class:alert-error={"error" === color}
-  class:alert-info={"info" === color}
-  class:alert-success={"success" === color}
-  class:alert-warning={"warning" === color}
+  class:bg-base-100={$dynamic.color === "" || $dynamic === "notify"}
+  class:alert-error={"error" === $dynamic.color}
+  class:alert-info={"info" === $dynamic.color}
+  class:alert-success={"success" === $dynamic.color}
+  class:alert-warning={"warning" === $dynamic.color}
 >
   <span class="h-6 w-6">
     <svelte:component this={icon} />
   </span>
-  <span class="flex-1 break-words text-lg">{notification.text}</span>
+  <span class="flex-1 break-words text-lg">{$dynamic.text}</span>
 </div>

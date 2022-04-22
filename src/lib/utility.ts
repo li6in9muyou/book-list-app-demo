@@ -1,4 +1,4 @@
-import { readable } from "svelte/store";
+import { Readable, readable } from "svelte/store";
 import type { addNotification } from "svelte-notifications/index";
 
 export const takeExtension = (pp: string) => {
@@ -31,6 +31,14 @@ export function getNotify({ addNotification }) {
     color: color,
   });
   return {
+    dynamic: (id: string, store: Readable<any>) => {
+      return addNotification({
+        id,
+        text: "placeholder",
+        position: "bottom-right",
+        dynamic: store,
+      });
+    },
     notify: (msg: string) => addNotification(buildOptions("", msg)),
     info: (msg: string) => addNotification(buildOptions("info", msg)),
     success: (msg: string) => addNotification(buildOptions("success", msg)),

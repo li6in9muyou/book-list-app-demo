@@ -1,26 +1,42 @@
 <script>
-  import FaCheck from "svelte-icons/fa/FaCheck.svelte";
-  import FaTimes from "svelte-icons/fa/FaTimes.svelte";
-  import FaQuestion from "svelte-icons/fa/FaQuestion.svelte";
-  import EmbeddedAlert from "../../lib/uiComponent/EmbeddedAlert.svelte";
-  import { fade } from "svelte/transition";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
+  import { onDestroy, onMount } from "svelte";
+  import { writable } from "svelte/store";
 
   export let showing_count;
   export let good;
 
-  const { success, info, error } = getNotify(getNotificationsContext());
+  const { dynamic } = getNotify(getNotificationsContext());
+  const { removeNotification } = getNotificationsContext();
+
+  const tip = writable({});
 
   $: {
     if (good) {
       if (showing_count > 0) {
-        success(`展示了${showing_count}条记录`);
+        tip.set({
+          color: "success",
+          text: `展示了${showing_count}条记录`,
+        });
       } else {
-        info("没有记录");
+        tip.set({
+          color: "info",
+          text: "没有记录",
+        });
       }
     } else {
-      error("搜索词错误");
+      tip.set({
+        color: "error",
+        text: "搜索词错误",
+      });
     }
   }
+
+  onMount(() => {
+    dynamic("searchTip", tip);
+  });
+  onDestroy(() => {
+    removeNotification("searchTip");
+  });
 </script>
