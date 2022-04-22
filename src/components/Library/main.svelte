@@ -9,8 +9,9 @@
   import BatchOp from "./BatchOp.svelte";
   import BookBagListing from "./BookBagListing.svelte";
   import AddBooksToList from "../BookListComponet/AddBooksToList/main.svelte";
+  import SearchTip from "../searchPage/SearchTip.svelte";
   // depends:
-  import { Book, fetchAllBooks } from "../../lib/backendService/book.service";
+  import { Book, fetchAllBooks } from "../Book/services";
   import { CurrentUserId } from "../../lib/backendService/user.service.js";
 
   let all_entries = writable<Book[]>([]);

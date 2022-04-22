@@ -1,7 +1,7 @@
 <script lang="ts">
   import ActionPanel from "../documentCatalog/ActionPanel.svelte";
   import { createEventDispatcher, getContext } from "svelte";
-  import { Book } from "../../lib/backendService/book.service";
+  import { Book } from "../Book/services";
   import { find } from "lodash";
   const dispatch = createEventDispatcher();
 

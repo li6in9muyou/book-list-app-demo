@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DocumentCard from "./DocWithDetail.svelte";
+  import DocumentCard from "../../lib/uiComponent/DocumentCard.svelte";
   import VirtualScroll from "@sveltejs/svelte-virtual-list";
   import { derived, writable } from "svelte/store";
   import PouchDB from "pouchdb";

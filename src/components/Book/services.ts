@@ -1,4 +1,8 @@
-import { sleep } from "../../lib/utility";
+import {
+  fileNameWithoutExtension,
+  sleep,
+  takeExtension,
+} from "../../lib/utility";
 import { map } from "lodash";
 
 export { fetchBooksById, fetchAllBooks, Book };
@@ -19,6 +23,13 @@ class Book {
   constructor(id: number, path: string) {
     this.id = id;
     this.path = path;
+  }
+
+  get title() {
+    return fileNameWithoutExtension(this.path);
+  }
+  get format() {
+    return takeExtension(this.path);
   }
 }
 

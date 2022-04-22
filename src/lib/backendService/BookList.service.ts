@@ -2,8 +2,8 @@ import { CurrentUserId, CurrentUserInfo } from "./user.service";
 import { get, Writable, writable } from "svelte/store";
 import { concat, isEmpty, last, pullAll } from "lodash";
 import PouchDB from "pouchdb";
-import type { Book } from "./book.service";
-import { fetchBooksById } from "./book.service";
+import type { Book } from "../../components/Book/services";
+import { fetchBooksById } from "../../components/Book/services";
 
 export class BookList {
   userId: number;
