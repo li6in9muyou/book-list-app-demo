@@ -1,3 +1,37 @@
+export function buildSearchFilter(
+  query: string,
+  options = { ignoreCase: true, useRegex: false }
+) {
+  const { ignoreCase, useRegex } = options;
+
+  let queryRgx: RegExp;
+
+  try {
+    if (!useRegex && !ignoreCase) {
+      queryRgx = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "");
+    } else if (!useRegex && ignoreCase) {
+      queryRgx = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
+    } else if (useRegex && !ignoreCase) {
+      queryRgx = new RegExp(query, "");
+    } else if (useRegex && ignoreCase) {
+      queryRgx = new RegExp(query, "i");
+    }
+  } catch (e) {
+    return {
+      predicate() {
+        return false;
+      },
+      errors: ["正则表达式错误"],
+    };
+  }
+  return {
+    predicate(key: string) {
+      return queryRgx.test(key);
+    },
+    errors: [],
+  };
+}
+
 export function textSearch<T>(
   query: string,
   hay: T[],

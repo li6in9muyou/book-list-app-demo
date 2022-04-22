@@ -14,9 +14,9 @@
   export let thisBook: number = getContext("thisBook");
   export let thisGroup: number[] = getContext("thisGroup");
   let bookInBookList = thisList.books.indexOf(thisBook) !== -1;
-  let groupContainedByBookList = thisGroup.every((book) => {
-    return thisList.books.indexOf(book) !== -1;
-  });
+  // let groupContainedByBookList = thisGroup.every((book) => {
+  //   return thisList.books.indexOf(book) !== -1;
+  // });
 
   async function handleChange() {
     if (thisBook !== -1) {

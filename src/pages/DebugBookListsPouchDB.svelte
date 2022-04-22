@@ -4,10 +4,13 @@
   import { getNotify } from "../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AddToActiveBucket from "../lib/uiComponent/AddToActiveBookList.svelte";
+  import {
+    createBookList,
+    deleteBookList,
+    updateBooksBookList,
+  } from "../lib/backendService/BookList.service";
 
-  const { info, error, success, notify } = getNotify(
-    getNotificationsContext().addNotification
-  );
+  const { info, error, success, notify } = getNotify(getNotificationsContext());
 
   const db = new PouchDB("dbBookLists");
 
@@ -19,59 +22,37 @@
   }
   const genId = (user, list) => `${user} ${list}`;
   const getList = (id) => last(id.split(" "));
-  const handleBookChange = (ev) => {
-    let { bookId: subject, expected: shouldInList } = ev.detail;
-    subject = toInteger(subject);
-    db.get(genId(createdBy, listName))
-      .then((doc) => {
-        if (shouldInList) {
-          doc.books.push(subject);
-        } else {
-          remove(doc.books, (b) => b === subject);
-        }
-
-        db.put({
-          books: doc.books,
-
-          _id: doc._id,
-          _rev: doc._rev,
-          createdBy,
-        }).then(() => {
-          notify(shouldInList ? "添加成功" : "移出成功");
-        });
-      })
-      .catch((err) => {
-        const { docId, message, name } = err;
-        console.log(err);
-        error([docId, name, message].join(" "));
-      });
+  const handleBookChange = async (ev) => {
+    const { bookId, expected: shouldInList } = ev.detail;
+    try {
+      await updateBooksBookList(
+        createdBy,
+        listName,
+        [toInteger(bookId)],
+        shouldInList
+      );
+    } catch (e) {
+      error("出错了：" + e.message);
+      console.error(e);
+    }
   };
+
   const handleDeleteBookList = async () => {
-    const id = genId(createdBy, listName);
-    db.get(id)
-      .then((doc) => {
-        doc._deleted = true;
-        db.put(doc).then((r) => {
-          notify("成功删除");
-        });
-      })
-      .catch((err) => {
-        console.error("error when deleting", id, err);
-      });
+    try {
+      await deleteBookList(createdBy, listName);
+      info("成功删除");
+    } catch (e) {
+      error("出错了：" + e.message);
+      console.error(e);
+    }
   };
 
   const handleCreateBookList = async () => {
-    const id = genId(createdBy, listName);
     try {
-      await db.get(id);
-      info(`"${getList(id)}"是已经存在的`);
+      await createBookList(createdBy, listName, []);
+      success("成功创建");
     } catch (e) {
-      db.put({
-        books: [],
-
-        _id: id,
-        createdBy,
-      }).then(() => notify(`成功创建：${listName}`));
+      error("出错了：" + e.message);
     }
   };
 </script>
