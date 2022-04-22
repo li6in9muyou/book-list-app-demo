@@ -32,3 +32,8 @@
   font-family: "noto_serif_sc";
   src: url("/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf");
 }
+
+.position-bottom-right,
+.position-top-left {
+  z-index: 50;
+}
