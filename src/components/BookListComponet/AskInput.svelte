@@ -2,6 +2,7 @@
   import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
   import { isEmpty } from "lodash";
   import { createEventDispatcher } from "svelte";
+
   const dispatch = createEventDispatcher();
 
   export let prompt = "请输入信息";

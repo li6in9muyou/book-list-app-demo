@@ -36,10 +36,10 @@
     spellcheck="false"
     type="text"
   />
-  <div class="dropdown-end dropdown dropdown-top">
+  <div class="dropdown dropdown-end dropdown-top">
     <label
       tabindex="0"
-      class="btn btn-square btn-outline btn-secondary btn-sm  rounded-l-none border-l-0"
+      class="btn btn-outline btn-secondary btn-square btn-sm  rounded-l-none border-l-0"
     >
       <span class="h-4 w-4"><FaCog /></span>
     </label>

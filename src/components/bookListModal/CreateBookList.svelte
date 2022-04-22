@@ -54,7 +54,7 @@
   <div class="collapse-content">
     <div class="form-control w-full">
       <label class="label py-0 pl-0" on:click={handleRandomizeName}>
-        <span class="btn btn-ghost label-text btn-sm w-fit px-1 font-normal">
+        <span class="btn btn-ghost btn-sm label-text w-fit px-1 font-normal">
           名称，点击随机生成
         </span>
         <span

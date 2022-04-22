@@ -5,6 +5,7 @@
   import { Book } from "../../../lib/backendService/book.service";
   import AskConsentConfirm from "../AskConsentConfirm.svelte";
   import { createEventDispatcher } from "svelte";
+
   const dispatch = createEventDispatcher();
 
   export let books: Book[] = [];

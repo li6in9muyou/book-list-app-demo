@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { scale } from "svelte/transition";
   import FaTrashAlt from "svelte-icons/fa/FaTrashAlt.svelte";
   import VirtualScroll from "@sveltejs/svelte-virtual-list";
   import EmbeddedAlert from "../../lib/uiComponent/EmbeddedAlert.svelte";

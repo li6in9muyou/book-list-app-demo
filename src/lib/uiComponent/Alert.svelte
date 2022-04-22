@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { fade } from "svelte/transition";
+  import { fade, fly, scale } from "svelte/transition";
   import { get } from "lodash/object.js";
   import FaInfo from "svelte-icons/fa/FaInfo.svelte";
   import MdWarning from "svelte-icons/md/MdWarning.svelte";
   import FaCheck from "svelte-icons/fa/FaCheck.svelte";
   import FaTimes from "svelte-icons/fa/FaTimes.svelte";
   import FaBell from "svelte-icons/fa/FaBell.svelte";
-  import { fly, scale } from "svelte/transition";
   import { readable } from "svelte/store";
 
   export let notification = {};
@@ -63,7 +62,7 @@
       {$dynamic.text}
     </span>
   {/key}
-  <div class="btn btn-ghost btn-circle btn-sm mx-0" on:click|once={onRemove}>
+  <div class="btn btn-circle btn-ghost btn-sm mx-0" on:click|once={onRemove}>
     <div class="h-4 w-4">
       <FaTimes />
     </div>

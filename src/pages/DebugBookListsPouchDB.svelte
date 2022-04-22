@@ -1,6 +1,6 @@
 <script lang="ts">
   import PouchDB from "pouchdb";
-  import { last, random, remove, toInteger } from "lodash";
+  import { last, random, toInteger } from "lodash";
   import { getNotify } from "../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AddToActiveBucket from "../lib/uiComponent/AddToActiveBookList.svelte";

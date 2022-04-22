@@ -5,7 +5,7 @@
   import { isAuthenticated } from "../../lib/backendService/user.service";
 </script>
 
-<div class="dropdown-end dropdown w-1/2">
+<div class="dropdown dropdown-end w-1/2">
   <div class="flex max-w-full justify-end">
     <UserAvatar />
   </div>

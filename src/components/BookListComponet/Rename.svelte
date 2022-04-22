@@ -1,8 +1,8 @@
 <script lang="ts">
   import RejectBadName from "./RejectBadName.svelte";
   import { debounce } from "lodash";
-  import { getContext } from "svelte";
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, getContext } from "svelte";
+
   const dispatch = createEventDispatcher();
 
   const old_name = getContext("book_list_name");

@@ -4,6 +4,7 @@
   import { CurrentUserId } from "../../lib/backendService/user.service";
   import RejectBadName from "./RejectBadName.svelte";
   import { createEventDispatcher } from "svelte";
+
   const dispatch = createEventDispatcher();
 
   export let init_books = [];

@@ -1,7 +1,6 @@
 <script lang="ts">
   import PouchDB from "pouchdb";
   import PouchDBFind from "pouchdb-find";
-  PouchDB.plugin(PouchDBFind);
   import {
     addListener,
     borrowBook,
@@ -10,6 +9,8 @@
   import { random } from "lodash";
   import { returnBook } from "../lib/backendService/borrow.service.js";
   import { onDestroy } from "svelte";
+
+  PouchDB.plugin(PouchDBFind);
 
   let user = 1000;
   let book = random(0, 1800, false);

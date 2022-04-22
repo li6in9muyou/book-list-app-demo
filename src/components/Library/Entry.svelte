@@ -3,6 +3,7 @@
   import { createEventDispatcher, getContext } from "svelte";
   import { Book } from "../Book/services";
   import { find } from "lodash";
+
   const dispatch = createEventDispatcher();
 
   export let book: Book;

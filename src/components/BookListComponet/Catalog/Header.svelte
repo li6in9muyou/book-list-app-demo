@@ -19,8 +19,8 @@
   class="flex items-center justify-between rounded rounded-lg rounded-br-none rounded-bl-none bg-secondary p-2 text-secondary-content shadow"
 >
   <span class="ml-4 font-mono text-xl font-bold">{title}</span>
-  <div class="dropdown-end dropdown">
-    <label tabindex="0" class="btn btn-square btn-ghost btn-sm border p-0">
+  <div class="dropdown dropdown-end">
+    <label tabindex="0" class="btn btn-ghost btn-square btn-sm border p-0">
       <span class="h-4 w-4"><MdMoreVert /></span>
     </label>
     <ul

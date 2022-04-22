@@ -14,20 +14,19 @@
   import { CurrentUserId } from "../../lib/backendService/user.service.js";
 
   let all_entries = writable<Book[]>([]);
+  setContext("AllEntries", all_entries);
 
   let filter = writable((book: Book) => {
     return true;
   });
+  setContext("Filter", filter);
 
   let showing = derived([all_entries, filter], ([items, fn]) =>
     items.filter(fn)
   );
+  setContext("Showing", showing);
 
   let selected = writable<Book[]>([]);
-
-  setContext("AllEntries", all_entries);
-  setContext("Showing", showing);
-  setContext("Filter", filter);
   setContext("Selected", selected);
 
   setContext("toggle", (b: Book, expected) => {

@@ -4,8 +4,9 @@
     updateBooksBookList,
   } from "../../lib/backendService/BookList.service";
   import { Book } from "../../lib/backendService/book.service";
-  import { first, map } from "lodash";
+  import { map } from "lodash";
   import { createEventDispatcher } from "svelte";
+
   const dispatch = createEventDispatcher();
 
   export let thisBookList: BookList;

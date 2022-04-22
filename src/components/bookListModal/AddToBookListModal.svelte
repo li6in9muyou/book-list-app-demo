@@ -27,7 +27,7 @@
     <div class="modal modal-open">
       <div class="modal-box relative max-w-sm">
         <label
-          class="btn btn-accent btn-circle btn-xs absolute right-2 top-2"
+          class="btn btn-circle btn-accent btn-xs absolute right-2 top-2"
           on:click={() => (shouldShow = false)}
         >
           <span class="h-6 w-6">
