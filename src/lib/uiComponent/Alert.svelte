@@ -48,7 +48,8 @@
   class="z-40 m-4 ml-auto flex w-fit max-w-xs flex-row items-center
    gap-2 rounded-lg rounded p-2 px-4 shadow shadow-lg
    md:relative md:right-1/3 xl:relative xl:right-96"
-  class:bg-base-100={$dynamic.color === "" || $dynamic === "notify"}
+  class:bg-base-100={$dynamic.color === "" || $dynamic.color === "notify"}
+  class:bg-base-content={$dynamic.color === "" || $dynamic.color === "notify"}
   class:alert-error={"error" === $dynamic.color}
   class:alert-info={"info" === $dynamic.color}
   class:alert-success={"success" === $dynamic.color}
