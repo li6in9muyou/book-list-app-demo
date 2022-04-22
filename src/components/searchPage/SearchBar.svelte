@@ -25,11 +25,8 @@
 
 <div class="flex">
   <div class="dropdown">
-    <label
-      tabindex="0"
-      class="btn btn-outline btn-sm rounded-r-none bg-base-300 text-base-content"
-    >
-      <span class="h-6 w-6"><FaCog /></span>
+    <label tabindex="0" class="btn btn-outline btn-sm rounded-r-none">
+      <span class="h-4 w-4 text-accent"><FaCog /></span>
     </label>
     <ul
       tabindex="0"
