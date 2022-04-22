@@ -1,11 +1,11 @@
 <script lang="ts">
-  import DocumentCard from "../documentCatalog/DocumentCard.svelte";
+  import DocumentCard from "./DocWithDetail.svelte";
   import VirtualScroll from "@sveltejs/svelte-virtual-list";
   import { derived, writable } from "svelte/store";
   import PouchDB from "pouchdb";
   import { CurrentUserId } from "../../lib/backendService/user.service.js";
   import { concat, last, map, partition } from "lodash";
-  import { Book } from "../../lib/backendService/book.service";
+  import { Book } from "../Book/services";
   import AddToBookListModal from "../bookListModal/AddToBookListModal.svelte";
 
   export let books_to_show: Book[] = [];

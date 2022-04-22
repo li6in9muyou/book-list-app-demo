@@ -1,12 +1,10 @@
 <script lang="ts">
-  import DocumentCard from "./documentCatalog/DocumentCard.svelte";
-  import VirtualScroll from "@sveltejs/svelte-virtual-list";
   import PleaseWait from "../lib/uiComponent/PleaseWait.svelte";
   import SearchBar from "./searchPage/SearchBar.svelte";
   import { fileNameWithoutExtension } from "../lib/utility.js";
   import SearchTip from "./searchPage/SearchTip.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { Book, fetchAllBooks } from "../lib/backendService/book.service.ts";
+  import { Book, fetchAllBooks } from "./Book/services";
   import Catalog from "./documentCatalog/Catalog.svelte";
 
   let all_fucking_ebooks: Book[] = [];
