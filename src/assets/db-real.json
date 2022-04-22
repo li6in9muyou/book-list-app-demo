@@ -1,4 +1,32 @@
 {
+  "copies": [
+    {
+      "bookId": 1840,
+      "count": 10,
+      "can_borrow": true
+    },
+    {
+      "bookId": 1009,
+      "count": 0,
+      "can_borrow": false
+    }
+  ],
+  "borrow": [
+    {
+      "userId": 1000,
+      "bookId": 1840,
+      "issued_date": "2022-04-21",
+      "returned_date": null,
+      "id": 1
+    },
+    {
+      "userId": 1000,
+      "bookId": 1840,
+      "issued_date": "2022-04-21",
+      "returned_date": null,
+      "id": 2
+    }
+  ],
   "users": [
     {
       "email": "li6q@example.com",

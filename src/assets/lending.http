@@ -1,0 +1,33 @@
+### use raw query to borrow book
+POST http://localhost:8081/borrow
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": 1000,
+  "bookId": 1840,
+  "issued_date": "2022-04-21",
+  "returned_date": null
+}
+
+### use api to borrow book
+POST http://localhost:8081/api/borrow
+Accept: application/json
+Content-Type: application/json
+
+{
+  "userId": 1000,
+  "bookId": 1840,
+  "issued_date": "2022-04-21",
+  "returned_date": null
+}
+
+### use raw query
+GET http://localhost:8081/api/copies?bookId=1840
+Accept: application/json
+
+### use api
+GET http://localhost:8081/api/lending/1840
+Accept: application/json
+
+###

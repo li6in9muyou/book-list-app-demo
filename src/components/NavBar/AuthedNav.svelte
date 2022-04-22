@@ -1,4 +1,5 @@
 <script>
+  import MdLibraryBooks from "svelte-icons/md/MdLibraryBooks.svelte";
   import { logout } from "../../lib/backendService/user.service";
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
   import MdBook from "svelte-icons/md/MdBook.svelte";
@@ -11,7 +12,7 @@
 
   const { notify } = getNotify(getNotificationsContext());
 
-  const { landing, myBookLists, myInfo } = links;
+  const { landing, myBookLists, myInfo, myBorrowing } = links;
   const handleLogOut = async () => {
     logout();
     notify("您已注销");
@@ -22,6 +23,13 @@
   <div class="text-secondary">
     <a href={myBookLists}>
       <MenuItem Icon={MdBook} text="我的书单" />
+    </a>
+  </div>
+</li>
+<li>
+  <div class="text-primary">
+    <a href={myBorrowing}>
+      <MenuItem Icon={MdLibraryBooks} text="我借的书" />
     </a>
   </div>
 </li>
