@@ -12,7 +12,7 @@
 
   const { notify } = getNotify(getNotificationsContext());
 
-  const { landing, myBookLists, myInfo, myBorrowing } = links;
+  const { landing, myBookLists, myBorrowing } = links;
   const handleLogOut = async () => {
     logout();
     notify("您已注销");
@@ -30,13 +30,6 @@
   <div class="text-primary">
     <a href={myBorrowing}>
       <MenuItem Icon={MdLibraryBooks} text="我借的书" />
-    </a>
-  </div>
-</li>
-<li>
-  <div class="text-secondary">
-    <a href={myInfo}>
-      <MenuItem Icon={MdPerson} text="个人信息" />
     </a>
   </div>
 </li>

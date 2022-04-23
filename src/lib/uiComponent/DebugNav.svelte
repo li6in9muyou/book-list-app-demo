@@ -7,6 +7,7 @@
   import { links } from "../../routes.js";
   import { createEventDispatcher } from "svelte";
   import { authDebugUser } from "../backendService/user.service.js";
+  import MdPerson from "svelte-icons/md/MdPerson.svelte";
 
   const dispatch = createEventDispatcher();
 </script>
@@ -42,6 +43,13 @@
         <div class="w-full text-warning">
           <a href={links.debugBookList}>
             <MenuItem text="新书单实现" Icon={GiSoapExperiment} />
+          </a>
+        </div>
+      </li>
+      <li>
+        <div class="text-secondary">
+          <a href={links.debugNotifications}>
+            <MenuItem Icon={MdPerson} text="发送全局信号通知" />
           </a>
         </div>
       </li>
