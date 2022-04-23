@@ -2,7 +2,7 @@
   import ActionPanel from "../documentCatalog/ActionPanel.svelte";
   import { createEventDispatcher, getContext } from "svelte";
   import { Book } from "../Book/services";
-  import { find } from "lodash";
+  import { find, repeat } from "lodash";
 
   const dispatch = createEventDispatcher();
 
@@ -27,7 +27,7 @@
   <section class="card-body pb-2">
     <div class="indicator">
       <div
-        class="badge indicator-item badge-lg badge-outline badge-accent -left-12 -top-2 uppercase"
+        class="badge indicator-item badge-outline badge-lg badge-accent -left-12 -top-2 uppercase"
       >
         {book.format}
       </div>

@@ -53,7 +53,7 @@
 </script>
 
 <div class="mx-auto w-screen max-w-4xl">
-  <main class="flex h-screen w-full flex-col border-4 border-amber-400">
+  <main class="flex h-screen w-full flex-col px-1 md:px-4">
     <Listing entries={showing} />
   </main>
   <div
