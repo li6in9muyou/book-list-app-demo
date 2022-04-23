@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class="h-72 w-full max-w-xs overflow-auto rounded rounded-lg border bg-base-200 p-2 shadow-lg"
+  class="h-72 w-full max-w-xs overflow-auto rounded rounded-lg border bg-base-200 p-2 shadow-lg md:h-96 md:max-w-lg"
 >
   {#if isEmpty($books)}
     <div class="w-60 p-4">

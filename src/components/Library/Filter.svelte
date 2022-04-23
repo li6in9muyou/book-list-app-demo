@@ -31,15 +31,16 @@
     bind:value={query}
     autocapitalize="off"
     autocomplete="off"
-    class="input input-bordered input-secondary input-sm w-full rounded-r-none border-r-0 font-mono text-lg shadow md:text-xl"
+    class="input input-bordered input-secondary input-sm w-full rounded-r-none border-r-0 font-mono text-lg shadow
+           md:input-md md:text-xl"
     placeholder="搜索……"
     spellcheck="false"
     type="text"
   />
-  <div class="dropdown dropdown-end dropdown-top">
+  <div class="dropdown-top dropdown dropdown-end">
     <label
       tabindex="0"
-      class="btn btn-outline btn-secondary btn-square btn-sm  rounded-l-none border-l-0"
+      class="btn btn-outline btn-secondary btn-square btn-sm rounded-l-none border-l-0 md:btn-md"
     >
       <span class="h-4 w-4"><FaCog /></span>
     </label>
@@ -50,11 +51,7 @@
       <li>
         <label class="label cursor-pointer rounded border px-4 shadow sm:gap-2">
           <span class="label-text">用正则表达</span>
-          <input
-            bind:checked={useRegex}
-            class="toggle toggle-sm"
-            type="checkbox"
-          />
+          <input bind:checked={useRegex} class="toggle" type="checkbox" />
         </label>
       </li>
       <li>
