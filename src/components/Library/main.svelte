@@ -47,74 +47,81 @@
   let showSubListing = false;
 
   function unselect({ detail }) {
-    console.log("deselect", detail);
-    $selected = pullAllBy($selected, [detail.book], "id");
-    showSubListing = false;
+    console.log("unselect", detail);
+    $selected = pullAllBy($selected, [detail.item], "id");
   }
 </script>
 
-<main class="mx-auto flex h-screen max-w-4xl flex-col">
-  <Listing entries={showing} />
-</main>
-<div
-  class="sticky bottom-0 z-30 flex max-w-lg items-stretch gap-2 bg-base-300 p-2 pb-4"
->
-  <div class="flex w-1/4 items-center">
-    <div
-      class="dropdown dropdown-top m-auto mb-0"
-      class:dropdown-open={showSubListing}
-    >
+<div class="mx-auto w-screen max-w-4xl">
+  <main class="flex h-screen w-full flex-col border-4 border-amber-400">
+    <Listing entries={showing} />
+  </main>
+  <div
+    class="sticky bottom-0 z-30 mx-auto flex w-full items-stretch gap-2 bg-base-300 p-2 pb-4"
+  >
+    <div class="flex w-1/4 items-center">
       <div
-        class="indicator"
-        on:click={debounce(
-          () => {
-            showSubListing = !showSubListing;
-          },
-          1000,
-          { leading: true }
-        )}
+        class="dropdown-top dropdown m-auto mb-0"
+        class:dropdown-open={showSubListing}
       >
-        <span
-          class="badge indicator-item badge-secondary top-2 right-2 font-mono"
+        <div
+          class="indicator -rotate-12"
+          on:click={debounce(
+            () => {
+              showSubListing = !showSubListing;
+            },
+            1000,
+            { leading: true }
+          )}
         >
-          {$selected.length > 99 ? "99+" : $selected.length.toString()}
-        </span>
-        <div class="btn btn-circle btn-accent">
-          <div class="h-full w-full">
-            <FaShoppingCart />
+          <span
+            class="badge indicator-item badge-secondary top-0 right-2 font-mono"
+          >
+            {$selected.length > 99 ? "99+" : $selected.length.toString()}
+          </span>
+
+          <div class="btn btn-circle btn-accent scale-150">
+            <div class="h-full w-full">
+              <FaShoppingCart />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="dropdown-content relative -left-4 -top-4 z-30 rounded rounded-lg bg-base-100"
-      >
-        <BookBagListing on:unselect={unselect} />
+        <div
+          class="dropdown-content relative -left-4 -top-4 z-30 rounded rounded-lg bg-base-100"
+        >
+          <BookBagListing on:unselect={unselect} />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="flex w-full flex-col gap-2">
-    <Filter />
-    <div class="flex w-full items-center gap-4">
-      <div class="ml-auto">
-        <BatchOp
-          on:all={() => {
-            $selected = $showing;
-          }}
-          on:clear={() => {
-            $selected = [];
-          }}
-          on:reverse={() => {
-            $selected = pullAllBy([...$all_entries], $selected, "id");
-          }}
-        />
+    <div
+      class="flex w-full flex-col gap-2 md:flex-row md:items-center md:gap-4"
+    >
+      <div class="md:w-full">
+        <Filter />
       </div>
-      <label
-        for="addToList"
-        class:btn-disabled={$selected.length === 0}
-        class="btn btn-primary btn-sm w-full flex-1 border text-primary-content shadow"
-      >
-        结算
-      </label>
+      <div class="flex w-full items-center gap-4">
+        <div class="ml-auto md:mx-auto">
+          <BatchOp
+            on:all={() => {
+              $selected = $showing;
+            }}
+            on:clear={() => {
+              $selected = [];
+            }}
+            on:reverse={() => {
+              $selected = pullAllBy([...$all_entries], $selected, "id");
+            }}
+          />
+        </div>
+        <label
+          for="addToList"
+          class:btn-disabled={$selected.length === 0}
+          class="btn btn-primary btn-sm w-full flex-1 border text-primary-content shadow
+                 md:btn-circle md:btn-md"
+        >
+          结算
+        </label>
+      </div>
     </div>
   </div>
 </div>
