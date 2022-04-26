@@ -36,7 +36,15 @@
     notify("正在注册");
     const dmp = $displayName.value;
     const pwd = $password.value;
-    if (!(await checkDisplayNameDoNotExists(dmp))) {
+
+    let noSuchUser: boolean;
+    try {
+      noSuchUser = await checkDisplayNameDoNotExists(dmp);
+    } catch (e) {
+      error(`失败了，原因是：${e.message}`);
+      throw e;
+    }
+    if (!noSuchUser) {
       error(`"${dmp}" 已经注册过了`);
       onFailure();
     } else {
