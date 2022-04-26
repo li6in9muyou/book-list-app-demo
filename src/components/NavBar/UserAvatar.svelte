@@ -3,6 +3,7 @@
     CurrentUser,
     isAuthenticated,
   } from "../../lib/backendService/user.service";
+  import { md } from "../../lib/utility.js";
 </script>
 
 {#if $isAuthenticated}
