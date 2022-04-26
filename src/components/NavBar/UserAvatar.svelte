@@ -11,7 +11,8 @@
   </label>
 {:else}
   <button
-    class="btn btn-outline btn-md rounded-xl rounded border-2 btn-secondary items-center"
+    class="btn btn-outline btn-md rounded-xl rounded items-center"
+    class:btn-disabled={$md}
   >
     <span>还没有登录</span>
   </button>
