@@ -1,5 +1,5 @@
 <script lang="ts">
-  import RejectBadName from "./RejectBadName.svelte";
+  import RejectBadName from "./utility/RejectBadName.svelte";
   import { debounce } from "lodash";
   import { createEventDispatcher, getContext } from "svelte";
 

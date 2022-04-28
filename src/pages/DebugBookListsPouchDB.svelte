@@ -8,7 +8,7 @@
     createBookList,
     deleteBookList,
     updateBooksBookList,
-  } from "../lib/backendService/BookList.service";
+  } from "../components/BookListComponet/BookList.service";
 
   const { info, error, success, notify } = getNotify(getNotificationsContext());
 

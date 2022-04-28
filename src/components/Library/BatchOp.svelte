@@ -4,8 +4,8 @@
   const dispatch = createEventDispatcher();
 </script>
 
-<div class="dropdown dropdown-top w-full">
-  <label tabindex="0" class="btn  btn-sm w-full">批量选择</label>
+<div class="dropdown-top dropdown w-full">
+  <label tabindex="0" class="btn btn-sm w-full">批量选择</label>
   <div
     tabindex="0"
     class="dropdown-content mb-4 flex w-full flex-col gap-2 rounded"

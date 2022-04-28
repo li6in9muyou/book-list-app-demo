@@ -6,20 +6,10 @@
   import PleaseProvideAuth from "../../userProfile/PleaseProvideAuth.svelte";
 
   export let shouldShow = false;
-  export let thisBook: number;
   export let thisGroup: number[];
 
-  if (thisBook === undefined) {
-    console.error("AddToBookListModal was created without an attached bookId");
-    console.debug("attach one with: setContext('thisBook', <number>)");
-    console.debug("defaults to -1");
-    thisBook = -1;
-  }
-
   setContext<() => void>("pleaseCloseModal", () => (shouldShow = false));
-  setContext<number>("thisBook", thisBook);
-  console.log(thisGroup);
-  setContext<number[]>("thisGroup", thisGroup);
+  setContext<number>("thisBook", thisGroup);
 </script>
 
 {#if shouldShow}
@@ -27,7 +17,7 @@
     <div class="modal modal-open">
       <div class="modal-box relative max-w-sm">
         <label
-          class="btn btn-accent btn-circle btn-xs absolute right-2 top-2"
+          class="btn btn-circle btn-accent btn-xs absolute right-2 top-2"
           on:click={() => (shouldShow = false)}
         >
           <span class="h-6 w-6">

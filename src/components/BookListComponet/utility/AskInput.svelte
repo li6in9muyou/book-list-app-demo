@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
+  import PleaseCorrectMe from "../../../lib/uiComponent/PleaseCorrectMe.svelte";
   import { isEmpty } from "lodash";
   import { createEventDispatcher } from "svelte";
 

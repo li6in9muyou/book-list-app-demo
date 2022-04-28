@@ -30,7 +30,7 @@
       >
         {book.format}
       </div>
-      <div class="mb-4 max-w-2xl break-words border-b border-b-neutral">
+      <div class="mb-4 w-full break-words border-b border-b-neutral">
         {book.title}
       </div>
     </div>

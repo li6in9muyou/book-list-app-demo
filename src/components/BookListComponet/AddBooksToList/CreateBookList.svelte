@@ -93,7 +93,7 @@
           on:click={() => {
             BookList_create($newListName.value, [thisBook]);
             success("成功加入书单");
-            pleaseCloseModal();
+            dispatch("pleaseCloseModal");
           }}
         >
           创建

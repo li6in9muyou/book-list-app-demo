@@ -115,7 +115,7 @@
           />
         </div>
         <label
-          for="addToList"
+          on:click={() => (showBatchAdd = true)}
           class:btn-disabled={$selected.length === 0}
           class="btn btn-primary btn-sm w-full flex-1 border text-primary-content shadow
                  md:btn-circle md:btn-md"
@@ -126,12 +126,4 @@
     </div>
   </div>
 </div>
-<input type="checkbox" id="addToList" class="modal-toggle" />
-<div class="modal">
-  <div class="modal-box relative p-0">
-    <label for="addToList" class="btn btn-circle btn-sm absolute right-2 top-2">
-      <MdClose />
-    </label>
-    <AddBooksToList userId={$CurrentUserId} thisBooks={$selected} />
-  </div>
-</div>
+<AddToBookListModal bind:shouldShow={showBatchAdd} thisBooks={$selected} />

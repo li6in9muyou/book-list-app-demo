@@ -1,9 +1,6 @@
 <script lang="ts">
-  import {
-    BookList,
-    updateBooksBookList,
-  } from "../../lib/backendService/BookList.service";
-  import { Book } from "../../lib/backendService/book.service";
+  import { BookList, updateBooksBookList } from "./BookList.service";
+  import { Book } from "../Book/services";
   import { map } from "lodash";
   import { createEventDispatcher } from "svelte";
 

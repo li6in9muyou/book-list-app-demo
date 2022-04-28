@@ -3,7 +3,7 @@
     BookList,
     BookList_addBooks,
     BookList_removeBooks,
-  } from "../backendService/BookList.service";
+  } from "../../components/BookListComponet/BookList.service";
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../utility.js";
   import { getContext } from "svelte";

@@ -53,7 +53,7 @@
   <comment>
     <AddToBookListModal
       bind:shouldShow={shouldShowAddToBookListModal}
-      {thisBook}
+      thisBooks={[thisBook]}
     />
     <BookDetail bind:shouldShow={shouldShowDetail} {thisBook} />
   </comment>

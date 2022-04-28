@@ -1,5 +1,5 @@
 <script lang="ts">
-  import AskConsentConfirm from "../AskConsentConfirm.svelte";
+  import AskConsentConfirm from "../utility/AskConsentConfirm.svelte";
   import MdMoreVert from "svelte-icons/md/MdMoreVert.svelte";
   import Rename from "../Rename.svelte";
   import { createEventDispatcher, setContext } from "svelte";

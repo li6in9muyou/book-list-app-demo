@@ -2,10 +2,10 @@
   import Rename from "./Rename.svelte";
   import Create from "./Create.svelte";
   import { setContext } from "svelte";
-  import AskConsentConfirm from "./AskConsentConfirm.svelte";
-  import AskInput from "./AskInput.svelte";
+  import AskConsentConfirm from "./utility/AskConsentConfirm.svelte";
+  import AskInput from "./utility/AskInput.svelte";
   import BookListTable from "./Catalog/Table.svelte";
-  import { fetchBookListsByUserId } from "../../lib/backendService/BookList.service";
+  import { fetchBookListsByUserId } from "./BookList.service";
   import BookListHeader from "./Catalog/Header.svelte";
 
   setContext("book_list_name", "旧的书单名字示例");

@@ -34,7 +34,7 @@ class Book {
 }
 
 async function fetchAllBooks(): Promise<Book[]> {
-  const url = import.meta.env.VITE_DEV_DB_URL + `/api/books`;
+  const url = import.meta.env.VITE_DEV_DB_URL + `/catalog/api/books/`;
   return map(
     await (await fetch(url)).json(),
     (book) => new Book(book.id, book.path)
