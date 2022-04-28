@@ -1,12 +1,14 @@
 <script lang="ts">
-  import { getContext } from "svelte";
-  import { BookList_create } from "../../lib/backendService/BookList.service";
+  import { createEventDispatcher, getContext } from "svelte";
+  import { BookList_create } from "../BookList.service";
   import { getNotificationsContext } from "svelte-notifications";
-  import { getNotify } from "../../lib/utility.js";
+  import { getNotify } from "../../../lib/utility.js";
   import { field } from "svelte-forms";
   import { max, min, not, pattern, required } from "svelte-forms/validators";
   import { find, isEmpty, join, sampleSize } from "lodash";
-  import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
+  import PleaseCorrectMe from "../../../lib/uiComponent/PleaseCorrectMe.svelte";
+
+  const dispatch = createEventDispatcher();
 
   export let max_length = 20;
   export let min_length = 4;

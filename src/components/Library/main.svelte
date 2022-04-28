@@ -62,7 +62,7 @@
   >
     <div class="flex w-1/4 items-center">
       <div
-        class="dropdown dropdown-top m-auto mb-0"
+        class="dropdown-top dropdown m-auto mb-0"
         class:dropdown-open={showSubListing}
       >
         <div
@@ -81,7 +81,7 @@
             {$selected.length > 99 ? "99+" : $selected.length.toString()}
           </span>
 
-          <div class="btn btn-accent btn-circle scale-150">
+          <div class="btn btn-circle btn-accent scale-150">
             <div class="h-full w-full">
               <FaShoppingCart />
             </div>
