@@ -1,6 +1,6 @@
-<script>
-  import { isAuthenticated } from "../backendService/user.service";
+<script lang="ts">
   import AuthPrompt from "./AuthPrompt.svelte";
+  import { isAuthenticated } from "./stores";
 
   export let params = {};
 </script>

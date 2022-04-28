@@ -1,13 +1,13 @@
 <script lang="ts">
-  import {
-    CurrentAccessToken,
-    CurrentUser,
-  } from "../lib/backendService/user.service";
   import { getNotificationsContext } from "svelte-notifications";
   import { getNotify } from "../lib/utility";
   import { toPairs } from "lodash";
   import { createEventDispatcher, onDestroy } from "svelte";
   import { readable } from "svelte/store";
+  import {
+    CurrentAccessToken,
+    CurrentUsername,
+  } from "../components/userProfile/stores";
 
   const dispath = createEventDispatcher();
 
@@ -25,7 +25,7 @@
   <div
     class="break-all rounded rounded-lg bg-primary p-4 text-xl text-primary-content"
   >
-    我的书单页面，我是{$CurrentUser}，我的accessToken是{$CurrentAccessToken}
+    我的书单页面，我是{$CurrentUsername}，我的accessToken是{$CurrentAccessToken}
   </div>
   {#each msgTypes as [type, func]}
     <button

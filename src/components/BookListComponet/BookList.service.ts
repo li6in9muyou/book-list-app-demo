@@ -1,38 +1,7 @@
-import { CurrentUserId, CurrentUserInfo } from "./user.service";
 import { get, Writable, writable } from "svelte/store";
 import { concat, isEmpty, last, pullAll } from "lodash";
 import PouchDB from "pouchdb";
-import type { Book } from "../../components/Book/services";
-import { fetchBooksById } from "../../components/Book/services";
-
-export class BookList {
-  userId: number;
-  title: string;
-  books: number[];
-
-  get id() {
-    return genId(this.userId, this.title);
-  }
-
-  async getBooksInfo(): Promise<Book[]> {
-    return await fetchBooksById(this.books);
-  }
-
-  constructor(userId: number, title: string, books: number[] = []) {
-    this.userId = userId;
-    this.title = title;
-    this.books = books;
-  }
-
-  static fromPouchDocument(doc: {
-    _id: string;
-    createdBy: number;
-    books: number[];
-  }) {
-    const title = last(doc._id.split(" "));
-    return new BookList(doc.createdBy, title, doc.books);
-  }
-}
+import { CurrentUserId, CurrentUserInfo } from "../userProfile/stores";
 
 const db = new PouchDB("dbBookLists");
 

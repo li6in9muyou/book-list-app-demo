@@ -1,11 +1,11 @@
 <script lang="ts">
   import { fetchBooksById } from "../../components/Book/services.js";
   import { allBorrowedBooks } from "../../components/Lending/services.js";
-  import { CurrentUserId } from "../../lib/backendService/user.service.js";
   import { isEmpty, map } from "lodash";
   import DocumentCard from "../../lib/uiComponent/DocumentCard.svelte";
   import Return from "../../components/Lending/Return/main.svelte";
   import EmbeddedAlert from "../../lib/uiComponent/EmbeddedAlert.svelte";
+  import { CurrentUserId } from "../../components/userProfile/stores";
 
   const fetchBorrow = async () => {
     const borrowed = await allBorrowedBooks($CurrentUserId);

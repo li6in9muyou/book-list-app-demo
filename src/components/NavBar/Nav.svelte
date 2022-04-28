@@ -2,7 +2,7 @@
   import AuthedNav from "./AuthedNav.svelte";
   import GuestNav from "./GuestNav.svelte";
   import UserAvatar from "./UserAvatar.svelte";
-  import { isAuthenticated } from "../../lib/backendService/user.service";
+  import { isAuthenticated } from "../userProfile/stores";
 </script>
 
 <div class="dropdown dropdown-end w-1/2">

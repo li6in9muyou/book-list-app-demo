@@ -1,14 +1,11 @@
-<script>
-  import {
-    CurrentUser,
-    isAuthenticated,
-  } from "../../lib/backendService/user.service";
+<script lang="ts">
   import { md } from "../../lib/utility.js";
+  import { CurrentUsername, isAuthenticated } from "../userProfile/stores";
 </script>
 
 {#if $isAuthenticated}
   <label class="btn btn-ghost max-w-full justify-center px-2" tabindex="0">
-    <span class="truncate"> {$CurrentUser} </span>
+    <span class="truncate"> {$CurrentUsername} </span>
   </label>
 {:else}
   <button

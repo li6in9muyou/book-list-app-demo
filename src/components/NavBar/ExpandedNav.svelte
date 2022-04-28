@@ -1,8 +1,8 @@
-<script>
-  import { isAuthenticated } from "../../lib/backendService/user.service";
+<script lang="ts">
   import AuthedNav from "./AuthedNav.svelte";
   import GuestNav from "./GuestNav.svelte";
   import UserAvatar from "./UserAvatar.svelte";
+  import { isAuthenticated } from "../userProfile/stores";
 </script>
 
 <div class="w-3/4 max-w-fit items-stretch xl:justify-end">

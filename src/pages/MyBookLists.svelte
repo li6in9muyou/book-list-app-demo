@@ -1,9 +1,9 @@
 <script lang="ts">
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { fetchBookListsByUserId } from "../lib/backendService/bookList.service";
+  import { fetchBookListsByUserId } from "../components/BookListComponet/BookList.service";
   import { get, isEmpty } from "lodash";
-  import PleaseProvideAuth from "../lib/uiComponent/PleaseProvideAuth.svelte";
-  import { CurrentUserId } from "../lib/backendService/user.service.js";
+  import PleaseProvideAuth from "../components/userProfile/PleaseProvideAuth.svelte";
+  import { CurrentUserId } from "../components/userProfile/stores";
 </script>
 
 <PleaseProvideAuth>

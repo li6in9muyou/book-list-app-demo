@@ -2,16 +2,14 @@
   import { onMount, setContext } from "svelte";
   import { derived, writable } from "svelte/store";
   import FaShoppingCart from "svelte-icons/fa/FaShoppingCart.svelte";
-  import MdClose from "svelte-icons/md/MdClose.svelte";
   import Filter from "./Filter.svelte";
   import { debounce, pull, pullAllBy } from "lodash";
   import Listing from "./Listing.svelte";
   import BatchOp from "./BatchOp.svelte";
   import BookBagListing from "./BookBagListing.svelte";
-  import AddBooksToList from "../BookListComponet/AddBooksToList/main.svelte";
   // depends:
   import { Book, fetchAllBooks } from "../Book/services";
-  import { CurrentUserId } from "../../lib/backendService/user.service.js";
+  import AddToBookListModal from "../BookListComponet/AddBooksToList/AddToBookListModal.svelte";
 
   let all_entries = writable<Book[]>([]);
   setContext("AllEntries", all_entries);
@@ -43,6 +41,7 @@
 
   onMount(async () => {
     $all_entries = await fetchAllBooks();
+    $all_entries = $all_entries.slice(0, 5);
   });
   let showSubListing = false;
 
@@ -50,6 +49,8 @@
     console.log("unselect", detail);
     $selected = pullAllBy($selected, [detail.item], "id");
   }
+
+  let showBatchAdd = false;
 </script>
 
 <div class="mx-auto w-screen max-w-4xl">
@@ -61,7 +62,7 @@
   >
     <div class="flex w-1/4 items-center">
       <div
-        class="dropdown-top dropdown m-auto mb-0"
+        class="dropdown dropdown-top m-auto mb-0"
         class:dropdown-open={showSubListing}
       >
         <div
@@ -80,7 +81,7 @@
             {$selected.length > 99 ? "99+" : $selected.length.toString()}
           </span>
 
-          <div class="btn btn-circle btn-accent scale-150">
+          <div class="btn btn-accent btn-circle scale-150">
             <div class="h-full w-full">
               <FaShoppingCart />
             </div>

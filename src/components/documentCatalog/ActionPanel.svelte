@@ -3,10 +3,10 @@
   import FaArchive from "svelte-icons/fa/FaArchive.svelte";
   import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
   import FaArrowUp from "svelte-icons/fa/FaArrowUp.svelte";
-  import AddToBookListModal from "../bookListModal/AddToBookListModal.svelte";
+  import AddToBookListModal from "../BookListComponet/AddBooksToList/AddToBookListModal.svelte";
   import BookDetail from "./BookDetail.svelte";
   import Borrow from "../Lending/Borrow/main.svelte";
-  import { CurrentUserId } from "../../lib/backendService/user.service.js";
+  import { CurrentUserId } from "../userProfile/stores";
 
   export let thisBook = -1;
   setContext<number>("thisBook", thisBook);
@@ -18,7 +18,7 @@
 <div class="flex flex-1 flex-col gap-2">
   <main class="flex flex-wrap gap-2">
     <label>
-      <Borrow book={thisBook} userId={$CurrentUserId} />
+      <Borrow bookId={thisBook} userId={$CurrentUserId} />
     </label>
     <label
       class="btn btn-outline btn-secondary btn-sm content-center items-end"

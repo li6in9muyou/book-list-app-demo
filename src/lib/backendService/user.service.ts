@@ -1,20 +1,11 @@
-import { derived, writable } from "svelte/store";
-import { debounce, isEmpty, trim } from "lodash";
-import { localStorage, persist } from "@macfja/svelte-persistent-store";
+import { debounce, trim } from "lodash";
+import {
+  CurrentAccessToken,
+  CurrentUserId,
+  CurrentUsername,
+} from "../../components/userProfile/stores";
 
 const displayNameToEmail = (name) => `${trim(name)}@dev.dev`;
-
-export const checkDisplayNameDoNotExists = debounce(
-  async (displayName) => {
-    const query =
-      import.meta.env.VITE_DEV_DB_URL +
-      `/api/users?email=${displayNameToEmail(displayName)}`;
-    const querySet = await (await fetch(query)).json();
-    return isEmpty(querySet);
-  },
-  1000,
-  { leading: true }
-);
 
 interface IAuthRequest {
   email: string;
@@ -61,28 +52,6 @@ class ServerAuthResponse implements IUserInfo {
   }
 }
 
-export const CurrentUser = persist(writable(""), localStorage(), "CurrentUser");
-
-export const CurrentUserId = persist(
-  writable(0),
-  localStorage(),
-  "CurrentUserId"
-);
-
-export const CurrentAccessToken = persist(
-  writable(""),
-  localStorage(),
-  "CurrentUserAccessToken"
-);
-
-export const isAuthenticated = derived(CurrentUser, (user) => {
-  return user.length > 0;
-});
-
-export const CurrentUserInfo = derived(CurrentUserId, (id) => ({
-  id: id,
-}));
-
 async function authUser(
   endpoint: string,
   chg: UserAuthInput
@@ -90,7 +59,7 @@ async function authUser(
   const q = await fetch(import.meta.env.VITE_DEV_DB_URL + endpoint, {
     method: "POST",
     body: JSON.stringify({
-      email: displayNameToEmail(chg.displayName),
+      username: chg.displayName,
       password: chg.password,
     }),
     headers: {
@@ -110,7 +79,7 @@ export const createUser = debounce(
       "/api/users/",
       new UserAuthInput({ displayName: dmp, password: pwd })
     );
-    CurrentUser.set(auth.displayName);
+    CurrentUsername.set(auth.displayName);
     CurrentUserId.set(auth.id);
     CurrentAccessToken.set(auth.accessToken);
   },
@@ -120,7 +89,7 @@ export const createUser = debounce(
 
 export const authDebugUser = debounce(
   () => {
-    CurrentUser.set("debugUser");
+    CurrentUsername.set("debugUser");
     CurrentUserId.set(1000);
     CurrentAccessToken.set("");
   },
@@ -131,10 +100,10 @@ export const authDebugUser = debounce(
 export const loginUser = debounce(
   async (dmp: string, pwd: string) => {
     const auth = await authUser(
-      "/login",
+      "/accounts/api/jwt/create",
       new UserAuthInput({ displayName: dmp, password: pwd })
     );
-    CurrentUser.set(auth.displayName);
+    CurrentUsername.set(auth.displayName);
     CurrentUserId.set(auth.id);
     CurrentAccessToken.set(auth.accessToken);
   },
@@ -144,7 +113,7 @@ export const loginUser = debounce(
 
 export const logout = debounce(
   async () => {
-    CurrentUser.set("");
+    CurrentUsername.set("");
     CurrentUserId.set(0);
     CurrentAccessToken.set("");
   },

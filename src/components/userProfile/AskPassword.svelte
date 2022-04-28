@@ -2,10 +2,11 @@
   import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
   import { combined, field } from "svelte-forms";
   import { matchField, max, min, required } from "svelte-forms/validators";
+  import { includes } from "lodash";
 
   export let repeatPassword = false;
 
-  export let pwd = field("pwd", "", [required(), min(4), max(20)], {
+  export let pwd = field("pwd", "", [required(), min(8), max(20)], {
     stopAtFirstError: true,
     checkOnInit: true,
   });
@@ -36,12 +37,12 @@
   />
   <label class="label">
     <PleaseCorrectMe
-      prompt="密码至少四个字符"
-      shouldShow={$pwd.errors.indexOf("min") !== -1}
+      prompt="密码至少八个字符"
+      shouldShow={includes($pwd.errors, "min")}
     />
     <PleaseCorrectMe
       prompt="密码至多二十个字符"
-      shouldShow={$pwd.errors.indexOf("max") !== -1}
+      shouldShow={includes($pwd.errors, "max")}
     />
   </label>
 </div>

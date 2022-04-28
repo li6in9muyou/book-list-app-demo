@@ -1,9 +1,6 @@
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import {
-    checkDisplayNameDoNotExists,
-    loginUser,
-  } from "../../lib/backendService/user.service";
+  import { loginUser } from "./services";
   import { getNotify } from "../../lib/utility.js";
   import { getNotificationsContext } from "svelte-notifications";
   import AskDisplayName from "./AskDisplayName.svelte";
@@ -11,6 +8,7 @@
   import { createEventDispatcher, onMount } from "svelte";
   import { links } from "../../routes.js";
   import { derived } from "svelte/store";
+  import { defaultTo } from "lodash";
 
   const dispatch = createEventDispatcher();
   const { success, notify, error, info } = getNotify(getNotificationsContext());
@@ -34,30 +32,18 @@
     notify("正在登录");
     const dmp = $displayName.value;
     const pwd = $password.value;
-    let noSuchUser: boolean;
+
     try {
-      noSuchUser = await checkDisplayNameDoNotExists(dmp);
+      await loginUser(dmp, pwd);
+      success("登录成功了");
+      dispatch("routeEvent", {
+        afterLogIn: true,
+        redirect: links.myBookLists,
+      });
     } catch (e) {
-      error(`失败了，原因是：${e.message}`);
-      throw e;
-    }
-    if (noSuchUser) {
-      error(`"${dmp}" 还没有注册`);
+      error(`失败了，原因是：${defaultTo(e.message, JSON.stringify(e))}`);
       onFailure();
-    } else {
-      try {
-        await loginUser(dmp, pwd);
-        success("登录成功了");
-        dispatch("routeEvent", {
-          afterLogIn: true,
-          redirect: links.myBookLists,
-        });
-      } catch (e) {
-        error(`失败了，原因是：${e.message}`);
-        throw e;
-      } finally {
-        onFailure();
-      }
+      throw e;
     }
   }
 </script>

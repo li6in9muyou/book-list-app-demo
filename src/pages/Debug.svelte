@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { fetchUserBookLists } from "../lib/backendService/BookList.service";
+  import { fetchUserBookLists } from "../components/BookListComponet/BookList.service";
   import { get } from "lodash/object.js";
-  import AddToBookListModal from "../components/bookListModal/AddToBookListModal.svelte";
+  import AddToBookListModal from "../components/BookListComponet/AddBooksToList/main.svelte";
   import EmbeddedAlert from "../lib/uiComponent/EmbeddedAlert.svelte";
-  import { CurrentUserId } from "../lib/backendService/user.service";
+  import { CurrentUserId } from "../components/userProfile/stores";
 
   let shouldShow = false;
   let thisBook = 1111;

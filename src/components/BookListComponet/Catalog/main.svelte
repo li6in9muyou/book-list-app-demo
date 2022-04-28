@@ -1,13 +1,13 @@
 <script lang="ts">
   import Table from "./Table.svelte";
   import Header from "./Header.svelte";
-  import { CurrentUserId } from "../../../lib/backendService/user.service.js";
   import {
     createBookList,
     deleteBookList,
     fetchBookListsByUserId,
     updateBooksBookList,
-  } from "../../../lib/backendService/BookList.service.js";
+  } from "../BookList.service.js";
+  import { CurrentUserId } from "../../userProfile/stores";
 
   const removeList = async (e) => {
     await deleteBookList($CurrentUserId, e.detail.book_list_title);

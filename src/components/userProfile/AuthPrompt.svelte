@@ -1,7 +1,7 @@
 <script>
   import DebugOverride from "../../pages/DebugOverride.svelte";
-  import UserLogIn from "../../components/userProfile/UserLogIn.svelte";
-  import UserSignUp from "../../components/userProfile/UserSignUp.svelte";
+  import UserLogIn from "./UserLogIn.svelte";
+  import UserSignUp from "./UserSignUp.svelte";
   import { get } from "lodash";
 
   let component = {
