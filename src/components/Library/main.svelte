@@ -3,7 +3,7 @@
   import { derived, writable } from "svelte/store";
   import FaShoppingCart from "svelte-icons/fa/FaShoppingCart.svelte";
   import Filter from "./Filter.svelte";
-  import { debounce, pull, pullAllBy, shuffle } from "lodash";
+  import { debounce, pull, pullAllBy } from "lodash";
   import Listing from "./Listing.svelte";
   import BatchOp from "./BatchOp.svelte";
   import BookBagListing from "./BookBagListing.svelte";
@@ -40,7 +40,7 @@
   });
 
   onMount(async () => {
-    $all_entries = shuffle(await fetchAllBooks());
+    $all_entries = await fetchAllBooks();
   });
   let showSubListing = false;
 
