@@ -3,7 +3,7 @@
   import { derived, writable } from "svelte/store";
   import FaShoppingCart from "svelte-icons/fa/FaShoppingCart.svelte";
   import Filter from "./Filter.svelte";
-  import { debounce, pull, pullAllBy } from "lodash";
+  import { debounce, pull, pullAllBy, shuffle } from "lodash";
   import Listing from "./Listing.svelte";
   import BatchOp from "./BatchOp.svelte";
   import BookBagListing from "./BookBagListing.svelte";
@@ -40,8 +40,7 @@
   });
 
   onMount(async () => {
-    $all_entries = await fetchAllBooks();
-    $all_entries = $all_entries.slice(0, 5);
+    $all_entries = shuffle(await fetchAllBooks());
   });
   let showSubListing = false;
 
@@ -81,7 +80,7 @@
             {$selected.length > 99 ? "99+" : $selected.length.toString()}
           </span>
 
-          <div class="btn btn-circle btn-accent scale-150">
+          <div class="btn btn-accent btn-circle scale-150">
             <div class="h-full w-full">
               <FaShoppingCart />
             </div>

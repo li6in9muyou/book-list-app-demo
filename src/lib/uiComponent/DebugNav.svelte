@@ -6,7 +6,7 @@
   import GiSoapExperiment from "svelte-icons/gi/GiSoapExperiment.svelte";
   import { links } from "../../routes.js";
   import { createEventDispatcher } from "svelte";
-  import { authDebugUser } from "../backendService/user.service.js";
+  import { authDebugUser } from "../../components/userProfile/services";
   import MdPerson from "svelte-icons/md/MdPerson.svelte";
 
   const dispatch = createEventDispatcher();

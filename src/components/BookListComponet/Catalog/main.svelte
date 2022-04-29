@@ -1,19 +1,15 @@
 <script lang="ts">
   import Table from "./Table.svelte";
   import Header from "./Header.svelte";
-  import {
-    createBookList,
-    deleteBookList,
-    fetchBookListsByUserId,
-    updateBooksBookList,
-  } from "../BookList.service.js";
+  import { createBookList, deleteBookList } from "../BookList.service.js";
+  import { fetchBookListsByUserId, updateBookList } from "../services";
   import { CurrentUserId } from "../../userProfile/stores";
 
   const removeList = async (e) => {
     await deleteBookList($CurrentUserId, e.detail.book_list_title);
   };
   const removeBook = async (book_list_title, e) => {
-    await updateBooksBookList(
+    await updateBookList(
       $CurrentUserId,
       book_list_title,
       [e.detail.book_id],

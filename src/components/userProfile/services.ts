@@ -1,18 +1,14 @@
-import { get } from "svelte/store";
 import {
   CurrentAccessToken,
   CurrentRefreshToken,
   CurrentUserId,
   CurrentUsername,
+  Token,
 } from "./stores";
 import { debounce, defaultTo, flatten, flow, join, values } from "lodash";
+import { get } from "svelte/store";
 
-interface Token {
-  access: string;
-  refresh: string;
-}
-
-export async function fetchToken(
+export async function fetchAccessTokenWithCredential(
   username: string,
   password: string
 ): Promise<Token> {
@@ -55,7 +51,7 @@ export async function fetchProfile(): Promise<UserProfile> {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${get(CurrentAccessToken)}`,
+      Authorization: `Bearer ${await CurrentAccessToken()}`,
     },
   });
   const obj = await q.json();
@@ -66,8 +62,7 @@ export async function fetchProfile(): Promise<UserProfile> {
 }
 
 export async function loginUser(username: string, password: string) {
-  const obj = await fetchToken(username, password);
-  CurrentAccessToken.set(obj.access);
+  const obj = await fetchAccessTokenWithCredential(username, password);
   CurrentRefreshToken.set(obj.refresh);
   const { id, username: u } = await fetchProfile();
   CurrentUserId.set(id);
@@ -93,8 +88,10 @@ export async function createUser(username: string, password: string) {
   const { id, username: u } = await q.json();
   CurrentUserId.set(id);
   CurrentUsername.set(u);
-  const { access, refresh } = await fetchToken(username, password);
-  CurrentAccessToken.set(access);
+  const { access, refresh } = await fetchAccessTokenWithCredential(
+    username,
+    password
+  );
   CurrentRefreshToken.set(refresh);
 }
 
@@ -109,3 +106,11 @@ export const usernameExists = debounce(
   1000,
   { leading: true }
 );
+
+export function authDebugUser() {
+  loginUser("li6q", "devdev");
+}
+
+export function logout() {
+  console.log(get(CurrentUsername), "logout");
+}

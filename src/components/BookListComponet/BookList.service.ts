@@ -2,6 +2,7 @@ import { get, Writable, writable } from "svelte/store";
 import { concat, isEmpty, last, pullAll } from "lodash";
 import PouchDB from "pouchdb";
 import { CurrentUserId, CurrentUserInfo } from "../userProfile/stores";
+import { BookList } from "./services";
 
 const db = new PouchDB("dbBookLists");
 

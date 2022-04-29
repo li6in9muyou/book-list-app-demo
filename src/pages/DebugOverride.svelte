@@ -1,5 +1,5 @@
-<script>
-  import { authDebugUser } from "../lib/backendService/user.service.js";
+<script lang="ts">
+  import { authDebugUser } from "../components/userProfile/services";
   import { createEventDispatcher } from "svelte";
   import { fade } from "svelte/transition";
 

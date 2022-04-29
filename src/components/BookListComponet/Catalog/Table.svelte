@@ -2,7 +2,7 @@
   import MdExpandMore from "svelte-icons/md/MdExpandMore.svelte";
   import EmbeddedAlert from "../../../lib/uiComponent/EmbeddedAlert.svelte";
   import { isEmpty } from "lodash";
-  import { Book } from "../../../lib/backendService/book.service";
+  import { Book } from "../../Book/services";
   import AskConsentConfirm from "../utility/AskConsentConfirm.svelte";
   import { createEventDispatcher } from "svelte";
 

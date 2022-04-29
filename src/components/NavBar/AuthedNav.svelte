@@ -1,7 +1,6 @@
 <script>
   import MdLibraryBooks from "svelte-icons/md/MdLibraryBooks.svelte";
-  import { logout } from "../../lib/backendService/user.service";
-  import MdPerson from "svelte-icons/md/MdPerson.svelte";
+  import { logout } from "../../components/userProfile/services";
   import MdBook from "svelte-icons/md/MdBook.svelte";
   import FaSignOutAlt from "svelte-icons/fa/FaSignOutAlt.svelte";
   import MenuItem from "../../lib/uiComponent/MenuItem.svelte";
