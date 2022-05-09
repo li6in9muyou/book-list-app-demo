@@ -26,7 +26,7 @@
   <section class="card-body pb-2">
     <div class="indicator" on:click={handleToggle}>
       <div
-        class="badge indicator-item badge-outline badge-lg badge-accent -left-12 -top-2 text-xs uppercase"
+        class="badge indicator-item badge-outline badge-sm badge-accent -left-6 -top-2 text-xs uppercase"
       >
         {book.format}
       </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BookList, updateBooksBookList } from "./BookList.service";
+  import { addManyBooks, BookList } from "./services";
   import { Book } from "../Book/services";
   import { map } from "lodash";
   import { createEventDispatcher } from "svelte";
@@ -14,11 +14,10 @@
   let disabled = false;
   const handleAppend = async () => {
     loading = true;
-    await updateBooksBookList(
+    await addManyBooks(
       userId,
-      thisBookList.title,
-      map(thisBooks, (book) => book.id),
-      true
+      thisBookList.id,
+      map(thisBooks, (book) => book.id)
     );
     loading = false;
     disabled = true;

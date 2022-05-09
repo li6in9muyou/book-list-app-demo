@@ -25,7 +25,9 @@
   <div
     class="break-all rounded rounded-lg bg-primary p-4 text-xl text-primary-content"
   >
-    我的书单页面，我是{$CurrentUsername}，我的accessToken是{$CurrentAccessToken}
+    我的书单页面，我是{$CurrentUsername}，我的accessToken是{JSON.stringify(
+      CurrentAccessToken()
+    )}
   </div>
   {#each msgTypes as [type, func]}
     <button

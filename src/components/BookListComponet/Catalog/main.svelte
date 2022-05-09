@@ -30,7 +30,7 @@
   };
 </script>
 
-<div class="m-auto max-w-lg p-4">
+<div class="p-4 md:mx-auto md:max-w-lg">
   <div class="mb-4 text-xl text-primary">我的书单</div>
   {#await fetchBookListsByUserId($CurrentUserId) then bookLists}
     <div class="flex flex-col gap-6">
@@ -42,7 +42,7 @@
             on:rename={rename}
           />
           {#await bookList.getBooksInfo() then books}
-            <Table {books} on:remove={(e) => removeBook(bookList.title, e)} />
+            <Table {books} on:remove={(e) => removeBook(bookList.id, e)} />
           {/await}
         </div>
       {/each}

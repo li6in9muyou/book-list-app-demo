@@ -4,13 +4,14 @@
   import { onDestroy, onMount } from "svelte";
   import { writable } from "svelte/store";
 
-  export let showing_count;
-  export let good;
+  export let showing;
+  export let good = true;
 
   const { dynamic } = getNotify(getNotificationsContext());
   const { removeNotification } = getNotificationsContext();
 
   const tip = writable({});
+  $: showing_count = $showing.length;
 
   $: {
     if (good) {

@@ -3,15 +3,17 @@
   import { derived, writable } from "svelte/store";
   import FaShoppingCart from "svelte-icons/fa/FaShoppingCart.svelte";
   import Filter from "./Filter.svelte";
-  import { debounce, pull, pullAllBy } from "lodash";
+  import { debounce, map, pull, pullAllBy } from "lodash";
   import Listing from "./Listing.svelte";
   import BatchOp from "./BatchOp.svelte";
   import BookBagListing from "./BookBagListing.svelte";
   // depends:
   import { Book, fetchAllBooks } from "../Book/services";
   import AddToBookListModal from "../BookListComponet/AddBooksToList/AddToBookListModal.svelte";
+  import SearchTip from "../../components/searchPage/SearchTip.svelte";
+  import { BookCatalog } from "../Book/stores";
 
-  let all_entries = writable<Book[]>([]);
+  let all_entries = BookCatalog;
   setContext("AllEntries", all_entries);
 
   let filter = writable((book: Book) => {
@@ -52,6 +54,7 @@
   let showBatchAdd = false;
 </script>
 
+<SearchTip {showing} />
 <div class="mx-auto w-screen max-w-4xl">
   <main class="flex h-screen w-full flex-col px-1 md:px-4">
     <Listing entries={showing} />
@@ -61,7 +64,7 @@
   >
     <div class="flex w-1/4 items-center">
       <div
-        class="dropdown-top dropdown m-auto mb-0"
+        class="dropdown dropdown-top m-auto mb-0"
         class:dropdown-open={showSubListing}
       >
         <div
@@ -125,4 +128,7 @@
     </div>
   </div>
 </div>
-<AddToBookListModal bind:shouldShow={showBatchAdd} thisBooks={$selected} />
+<AddToBookListModal
+  bind:shouldShow={showBatchAdd}
+  thisBooks={map($selected, (b) => b.id)}
+/>

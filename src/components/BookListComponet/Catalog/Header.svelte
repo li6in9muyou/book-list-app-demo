@@ -25,7 +25,7 @@
     </label>
     <ul
       tabindex="0"
-      class="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-base-content shadow"
+      class="dropdown-content menu rounded-box bg-base-100 p-2 text-base-content shadow"
     >
       <div>
         <Rename on:rename />

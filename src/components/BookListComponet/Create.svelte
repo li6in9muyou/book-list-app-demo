@@ -6,12 +6,12 @@
   import { max, min, not, pattern, required } from "svelte-forms/validators";
   import { debounce, find, isEmpty, join, sampleSize } from "lodash";
   import PleaseCorrectMe from "../../lib/uiComponent/PleaseCorrectMe.svelte";
-  import { createBookList } from "./BookList.service";
+  import { createBookList } from "./services";
   import { CurrentUserId } from "../userProfile/stores";
 
   const dispatch = createEventDispatcher();
 
-  export let init_books = [];
+  export let init_books: number[] = [];
   export let max_length = 20;
   export let min_length = 4;
   const thisBook = getContext<number>("thisBook");
@@ -40,8 +40,8 @@
       console.log(detail);
       const m = await createBookList(
         $CurrentUserId,
-        detail.value,
-        init_books.map((b) => b.id)
+        $newListName.value,
+        init_books
       );
       console.log(m);
       dispatch("created");

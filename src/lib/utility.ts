@@ -35,7 +35,7 @@ export function getNotify({ addNotification }) {
       return addNotification({
         id,
         text: "placeholder",
-        position: "bottom-right",
+        position: "top-left",
         dynamic: store,
       });
     },

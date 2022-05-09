@@ -6,7 +6,7 @@
 
   export let repeatPassword = false;
 
-  export let pwd = field("pwd", "", [required(), min(8), max(20)], {
+  export let pwd = field("pwd", "", [required(), min(4), max(20)], {
     stopAtFirstError: true,
     checkOnInit: true,
   });
@@ -37,7 +37,7 @@
   />
   <label class="label">
     <PleaseCorrectMe
-      prompt="密码至少八个字符"
+      prompt="密码至少四个字符"
       shouldShow={includes($pwd.errors, "min")}
     />
     <PleaseCorrectMe
